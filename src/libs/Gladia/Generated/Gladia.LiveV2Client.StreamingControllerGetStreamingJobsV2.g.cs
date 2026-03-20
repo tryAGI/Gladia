@@ -33,7 +33,6 @@ namespace Gladia
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get live jobs based on query parameters
         /// </summary>
@@ -47,10 +46,10 @@ namespace Gladia
         /// Example: 2026-03-20
         /// </param>
         /// <param name="beforeDate">
-        /// Example: 2026-03-20T12:00:02.533Z
+        /// Example: 2026-03-20T12:00:08.608Z
         /// </param>
         /// <param name="afterDate">
-        /// Example: 2026-03-20T12:00:02.533Z
+        /// Example: 2026-03-20T12:00:08.608Z
         /// </param>
         /// <param name="status">
         /// Example: [done]

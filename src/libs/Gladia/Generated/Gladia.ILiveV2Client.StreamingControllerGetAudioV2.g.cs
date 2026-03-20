@@ -4,7 +4,6 @@ namespace Gladia
 {
     public partial interface ILiveV2Client
     {
-
         /// <summary>
         /// Download the audio file used for this live job
         /// </summary>

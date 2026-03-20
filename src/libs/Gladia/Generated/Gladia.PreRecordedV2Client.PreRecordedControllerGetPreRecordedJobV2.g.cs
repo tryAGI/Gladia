@@ -21,7 +21,6 @@ namespace Gladia
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get the pre recorded job's metadata
         /// </summary>

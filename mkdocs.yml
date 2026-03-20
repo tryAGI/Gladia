@@ -2,6 +2,8 @@ site_name: Gladia .NET Documentation
 nav:
 - Overview: index.md
 # EXAMPLES:START
+- Examples:
+  - List Transcription Jobs: examples/list-transcription-jobs.md
 # EXAMPLES:END
         
 theme:

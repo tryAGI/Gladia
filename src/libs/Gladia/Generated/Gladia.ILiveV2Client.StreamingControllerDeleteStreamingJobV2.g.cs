@@ -4,6 +4,7 @@ namespace Gladia
 {
     public partial interface ILiveV2Client
     {
+
         /// <summary>
         /// Delete the live job
         /// </summary>

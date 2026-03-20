@@ -21,6 +21,7 @@ namespace Gladia
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get the transcription job's metadata
         /// </summary>

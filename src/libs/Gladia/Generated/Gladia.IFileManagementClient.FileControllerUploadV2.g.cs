@@ -4,9 +4,11 @@ namespace Gladia
 {
     public partial interface IFileManagementClient
     {
+
         /// <summary>
         /// Upload an audio file or provide an audio URL for processing
         /// </summary>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>

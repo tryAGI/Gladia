@@ -4,9 +4,11 @@ namespace Gladia
 {
     public partial interface IPreRecordedV2Client
     {
+
         /// <summary>
         /// Initiate a new pre recorded job
         /// </summary>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>

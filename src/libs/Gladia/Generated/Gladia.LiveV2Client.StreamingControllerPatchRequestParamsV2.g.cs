@@ -18,12 +18,14 @@ namespace Gladia
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+
         /// <summary>
         /// For debugging purposes, send post session metadata in the request params of the job
         /// </summary>
         /// <param name="id">
         /// Example: 45463597-20b7-4af7-b3b3-f5fb778203ab
         /// </param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>

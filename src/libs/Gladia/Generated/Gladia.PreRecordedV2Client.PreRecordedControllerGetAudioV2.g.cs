@@ -21,6 +21,7 @@ namespace Gladia
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref byte[] content);
 
+
         /// <summary>
         /// Download the audio file used for this pre recorded job
         /// </summary>

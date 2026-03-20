@@ -4,7 +4,6 @@ namespace Gladia
 {
     public partial interface IPreRecordedV2Client
     {
-
         /// <summary>
         /// Get the pre recorded job's metadata
         /// </summary>

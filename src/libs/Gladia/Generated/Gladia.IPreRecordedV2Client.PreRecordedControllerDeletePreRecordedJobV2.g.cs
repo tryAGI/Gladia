@@ -4,7 +4,6 @@ namespace Gladia
 {
     public partial interface IPreRecordedV2Client
     {
-
         /// <summary>
         /// Delete the pre recorded job
         /// </summary>

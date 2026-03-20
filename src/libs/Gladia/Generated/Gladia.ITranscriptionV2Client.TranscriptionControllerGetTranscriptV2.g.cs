@@ -4,7 +4,6 @@ namespace Gladia
 {
     public partial interface ITranscriptionV2Client
     {
-
         /// <summary>
         /// Get the transcription job's metadata
         /// </summary>

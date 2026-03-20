@@ -4,7 +4,6 @@ namespace Gladia
 {
     public partial interface ILiveV2Client
     {
-
         /// <summary>
         /// Get the live job's metadata
         /// </summary>

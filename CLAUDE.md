@@ -31,4 +31,7 @@ var client = new GladiaClient(apiKey); // GLADIA_API_KEY env var
 
 - OpenAPI spec: `https://api.gladia.io/openapi.json` (3.1.0)
 - Spec uses `apiKey` type in `x-gladia-key` header; `generate.sh` converts to `http/bearer` via `jq`
-- MEAI candidate: `ISpeechToTextClient` interface
+- MEAI: `ISpeechToTextClient` implemented in `Extensions/GladiaClient.SpeechToTextClient.cs`
+  - Uploads audio stream via `/v2/upload`, initiates job via `/v2/pre-recorded`, polls until done
+  - Maps `SpeechLanguage` to `TranscriptionLanguageCodeEnum` via `LanguageConfig`
+  - Supports `RawRepresentationFactory` for pre-built `InitTranscriptionRequest`

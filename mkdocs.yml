@@ -4,6 +4,9 @@ nav:
 # EXAMPLES:START
 - Examples:
   - List Transcription Jobs: examples/list-transcription-jobs.md
+  - Speech To Text Client Get Text Async: examples/speech-to-text-client-get-text-async.md
+  - Speech To Text Client Get Service Metadata: examples/speech-to-text-client-get-service-metadata.md
+  - Speech To Text Client Get Service Self: examples/speech-to-text-client-get-service-self.md
 # EXAMPLES:END
         
 theme:

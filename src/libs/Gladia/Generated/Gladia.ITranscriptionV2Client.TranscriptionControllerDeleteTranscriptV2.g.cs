@@ -4,6 +4,7 @@ namespace Gladia
 {
     public partial interface ITranscriptionV2Client
     {
+
         /// <summary>
         /// Delete the transcription job
         /// </summary>

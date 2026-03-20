@@ -4,9 +4,11 @@ namespace Gladia
 {
     public partial interface ITranscriptionV2Client
     {
+
         /// <summary>
         /// Initiate a new transcription job
         /// </summary>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>

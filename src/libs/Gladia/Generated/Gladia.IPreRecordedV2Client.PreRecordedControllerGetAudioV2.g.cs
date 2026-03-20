@@ -4,6 +4,7 @@ namespace Gladia
 {
     public partial interface IPreRecordedV2Client
     {
+
         /// <summary>
         /// Download the audio file used for this pre recorded job
         /// </summary>

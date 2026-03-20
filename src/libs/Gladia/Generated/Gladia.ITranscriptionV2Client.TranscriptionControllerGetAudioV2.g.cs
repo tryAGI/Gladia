@@ -4,6 +4,7 @@ namespace Gladia
 {
     public partial interface ITranscriptionV2Client
     {
+
         /// <summary>
         /// Download the audio file used for this transcription job
         /// </summary>

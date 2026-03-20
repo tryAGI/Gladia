@@ -46,10 +46,10 @@ namespace Gladia
         /// Example: 2026-03-20
         /// </param>
         /// <param name="beforeDate">
-        /// Example: 2026-03-20T12:00:08.608Z
+        /// Example: 2026-03-20T21:00:10.111Z
         /// </param>
         /// <param name="afterDate">
-        /// Example: 2026-03-20T12:00:08.608Z
+        /// Example: 2026-03-20T21:00:10.111Z
         /// </param>
         /// <param name="status">
         /// Example: [done]

@@ -1,0 +1,51 @@
+
+#nullable enable
+
+namespace Gladia
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum ListTranscriptionResponseItemsDiscriminatorKind
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        PreRecorded,
+        /// <summary>
+        /// 
+        /// </summary>
+        Live,
+    }
+
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class ListTranscriptionResponseItemsDiscriminatorKindExtensions
+    {
+        /// <summary>
+        /// Converts an enum to a string.
+        /// </summary>
+        public static string ToValueString(this ListTranscriptionResponseItemsDiscriminatorKind value)
+        {
+            return value switch
+            {
+                ListTranscriptionResponseItemsDiscriminatorKind.PreRecorded => "pre-recorded",
+                ListTranscriptionResponseItemsDiscriminatorKind.Live => "live",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
+        }
+        /// <summary>
+        /// Converts an string to a enum.
+        /// </summary>
+        public static ListTranscriptionResponseItemsDiscriminatorKind? ToEnum(string value)
+        {
+            return value switch
+            {
+                "pre-recorded" => ListTranscriptionResponseItemsDiscriminatorKind.PreRecorded,
+                "live" => ListTranscriptionResponseItemsDiscriminatorKind.Live,
+                _ => null,
+            };
+        }
+    }
+}

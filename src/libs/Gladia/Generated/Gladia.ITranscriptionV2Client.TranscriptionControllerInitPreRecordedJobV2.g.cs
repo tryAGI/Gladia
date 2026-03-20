@@ -1,0 +1,170 @@
+#nullable enable
+
+namespace Gladia
+{
+    public partial interface ITranscriptionV2Client
+    {
+        /// <summary>
+        /// Initiate a new transcription job
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Gladia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Gladia.InitPreRecordedTranscriptionResponse> TranscriptionControllerInitPreRecordedJobV2Async(
+
+            global::Gladia.InitTranscriptionRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Initiate a new transcription job
+        /// </summary>
+        /// <param name="customVocabulary">
+        /// **[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="customVocabularyConfig">
+        /// **[Beta]** Custom vocabulary configuration, if `custom_vocabulary` is enabled
+        /// </param>
+        /// <param name="callback">
+        /// Enable callback for this transcription. If true, the `callback_config` property will be used to customize the callback behaviour<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="callbackConfig">
+        /// Customize the callback behaviour (url and http method)
+        /// </param>
+        /// <param name="subtitles">
+        /// Enable subtitles generation for this transcription<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="subtitlesConfig">
+        /// Configuration for subtitles generation if `subtitles` is enabled
+        /// </param>
+        /// <param name="diarization">
+        /// Enable speaker recognition (diarization) for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="diarizationConfig">
+        /// Speaker recognition configuration, if `diarization` is enabled
+        /// </param>
+        /// <param name="translation">
+        /// **[Beta]** Enable translation for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="translationConfig">
+        /// **[Beta]** Translation configuration, if `translation` is enabled
+        /// </param>
+        /// <param name="summarization">
+        /// **[Beta]** Enable summarization for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="summarizationConfig">
+        /// **[Beta]** Summarization configuration, if `summarization` is enabled
+        /// </param>
+        /// <param name="moderation">
+        /// **[Alpha]** Enable moderation for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="namedEntityRecognition">
+        /// **[Alpha]** Enable named entity recognition for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="chapterization">
+        /// **[Alpha]** Enable chapterization for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="nameConsistency">
+        /// **[Alpha]** Enable names consistency for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="customSpelling">
+        /// **[Alpha]** Enable custom spelling for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="customSpellingConfig">
+        /// **[Alpha]** Custom spelling configuration, if `custom_spelling` is enabled
+        /// </param>
+        /// <param name="structuredDataExtraction">
+        /// **[Alpha]** Enable structured data extraction for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="structuredDataExtractionConfig">
+        /// **[Alpha]** Structured data extraction configuration, if `structured_data_extraction` is enabled
+        /// </param>
+        /// <param name="sentimentAnalysis">
+        /// Enable sentiment analysis for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="audioToLlm">
+        /// **[Alpha]** Enable audio to llm processing for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="audioToLlmConfig">
+        /// **[Alpha]** Audio to llm configuration, if `audio_to_llm` is enabled
+        /// </param>
+        /// <param name="piiRedaction">
+        /// Enable PII redaction for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="piiRedactionConfig">
+        /// PII redaction configuration, if `pii_redaction` is enabled
+        /// </param>
+        /// <param name="customMetadata">
+        /// Custom metadata you can attach to this transcription<br/>
+        /// Example: {"user":"John Doe"}
+        /// </param>
+        /// <param name="sentences">
+        /// Enable sentences for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="displayMode">
+        /// **[Alpha]** Allows to change the output display_mode for this audio. The output will be reordered, creating new utterances when speakers overlapped<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="punctuationEnhanced">
+        /// **[Alpha]** Use enhanced punctuation for this audio<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="languageConfig">
+        /// Specify the language configuration
+        /// </param>
+        /// <param name="audioUrl">
+        /// URL to a Gladia file or to an external audio or video file<br/>
+        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::Gladia.InitPreRecordedTranscriptionResponse> TranscriptionControllerInitPreRecordedJobV2Async(
+            string audioUrl,
+            bool? customVocabulary = default,
+            global::Gladia.CustomVocabularyConfigDTO? customVocabularyConfig = default,
+            bool? callback = default,
+            global::Gladia.CallbackConfigDto? callbackConfig = default,
+            bool? subtitles = default,
+            global::Gladia.SubtitlesConfigDTO? subtitlesConfig = default,
+            bool? diarization = default,
+            global::Gladia.DiarizationConfigDTO? diarizationConfig = default,
+            bool? translation = default,
+            global::Gladia.TranslationConfigDTO? translationConfig = default,
+            bool? summarization = default,
+            global::Gladia.SummarizationConfigDTO? summarizationConfig = default,
+            bool? moderation = default,
+            bool? namedEntityRecognition = default,
+            bool? chapterization = default,
+            bool? nameConsistency = default,
+            bool? customSpelling = default,
+            global::Gladia.CustomSpellingConfigDTO? customSpellingConfig = default,
+            bool? structuredDataExtraction = default,
+            global::Gladia.StructuredDataExtractionConfigDTO? structuredDataExtractionConfig = default,
+            bool? sentimentAnalysis = default,
+            bool? audioToLlm = default,
+            global::Gladia.AudioToLlmListConfigDTO? audioToLlmConfig = default,
+            bool? piiRedaction = default,
+            global::Gladia.PiiRedactionConfigDTO? piiRedactionConfig = default,
+            object? customMetadata = default,
+            bool? sentences = default,
+            bool? displayMode = default,
+            bool? punctuationEnhanced = default,
+            global::Gladia.LanguageConfig? languageConfig = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

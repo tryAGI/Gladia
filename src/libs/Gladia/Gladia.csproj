@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>Generated C# SDK for Gladia — speech-to-text transcription in 100+ languages with pre-recorded and live streaming support.</Description>
+    <PackageTags>gladia;speech-to-text;transcription;stt;audio;live;streaming;api;sdk;dotnet;openapi;generated</PackageTags>
+  </PropertyGroup>
+
+</Project>

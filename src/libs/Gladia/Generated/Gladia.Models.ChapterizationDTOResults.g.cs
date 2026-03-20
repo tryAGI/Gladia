@@ -1,0 +1,18 @@
+
+#nullable enable
+
+namespace Gladia
+{
+    /// <summary>
+    /// If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.
+    /// </summary>
+    public sealed partial class ChapterizationDTOResults
+    {
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+    }
+}

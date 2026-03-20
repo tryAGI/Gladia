@@ -1,6 +1,8 @@
 site_name: Gladia .NET Documentation
 nav:
 - Overview: index.md
+- Guides:
+  - Microsoft.Extensions.AI: guides/meai.md
 # EXAMPLES:START
 - Examples:
   - List Transcription Jobs: examples/list-transcription-jobs.md

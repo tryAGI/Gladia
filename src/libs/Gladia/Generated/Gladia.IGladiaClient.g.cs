@@ -42,27 +42,12 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        public FileManagementClient FileManagement { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public PreRecordedV2Client PreRecordedV2 { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TranscriptionV2Client TranscriptionV2 { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public AudioToTextClient AudioToText { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public TranscriptionV1Client TranscriptionV1 { get; }
+        public FileManagementClient FileManagement { get; }
 
         /// <summary>
         /// 
@@ -73,6 +58,21 @@ namespace Gladia
         /// 
         /// </summary>
         public LiveV2Client LiveV2 { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PreRecordedV2Client PreRecordedV2 { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TranscriptionV1Client TranscriptionV1 { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TranscriptionV2Client TranscriptionV2 { get; }
 
     }
 }

@@ -39,33 +39,6 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        public FileManagementClient FileManagement => new FileManagementClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public PreRecordedV2Client PreRecordedV2 => new PreRecordedV2Client(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TranscriptionV2Client TranscriptionV2 => new TranscriptionV2Client(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
         public AudioToTextClient AudioToText => new AudioToTextClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
@@ -75,7 +48,7 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        public TranscriptionV1Client TranscriptionV1 => new TranscriptionV1Client(HttpClient, authorizations: Authorizations)
+        public FileManagementClient FileManagement => new FileManagementClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -94,6 +67,33 @@ namespace Gladia
         /// 
         /// </summary>
         public LiveV2Client LiveV2 => new LiveV2Client(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PreRecordedV2Client PreRecordedV2 => new PreRecordedV2Client(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TranscriptionV1Client TranscriptionV1 => new TranscriptionV1Client(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TranscriptionV2Client TranscriptionV2 => new TranscriptionV2Client(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,

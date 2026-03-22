@@ -19,9 +19,9 @@ namespace Gladia
 
         /// <summary>
         /// Date of creation of the message. The date is formatted as an ISO 8601 string<br/>
-        /// Example: 2021-09-01T12:00:00.123Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </summary>
-        /// <example>2021-09-01T12:00:00.123Z</example>
+        /// <example>2024-01-01T00:00:00.000Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string CreatedAt { get; set; }
@@ -58,7 +58,7 @@ namespace Gladia
         /// </param>
         /// <param name="createdAt">
         /// Date of creation of the message. The date is formatted as an ISO 8601 string<br/>
-        /// Example: 2021-09-01T12:00:00.123Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
         /// <param name="type">
         /// Default Value: end_recording<br/>

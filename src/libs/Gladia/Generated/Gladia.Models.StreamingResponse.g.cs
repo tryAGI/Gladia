@@ -45,18 +45,18 @@ namespace Gladia
 
         /// <summary>
         /// Creation date<br/>
-        /// Example: 2023-12-28T09:04:17.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </summary>
-        /// <example>2023-12-28T09:04:17.210Z</example>
+        /// <example>2024-01-01T00:00:00.000Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Completion date when status is "done" or "error"<br/>
-        /// Example: 2023-12-28T09:04:37.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </summary>
-        /// <example>2023-12-28T09:04:37.210Z</example>
+        /// <example>2024-01-01T00:00:00.000Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("completed_at")]
         public global::System.DateTime? CompletedAt { get; set; }
 
@@ -137,11 +137,11 @@ namespace Gladia
         /// </param>
         /// <param name="createdAt">
         /// Creation date<br/>
-        /// Example: 2023-12-28T09:04:17.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
         /// <param name="completedAt">
         /// Completion date when status is "done" or "error"<br/>
-        /// Example: 2023-12-28T09:04:37.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
         /// <param name="customMetadata">
         /// Custom metadata given in the initial request<br/>

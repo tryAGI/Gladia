@@ -165,7 +165,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },
@@ -176,7 +176,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },
@@ -533,7 +533,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },
@@ -544,7 +544,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },
@@ -1515,7 +1515,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },
@@ -1526,7 +1526,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },
@@ -1725,7 +1725,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },
@@ -1736,7 +1736,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T00:00:04.605Z",
+              "example": "2026-03-22T00:00:04.537Z",
               "type": "string"
             }
           },

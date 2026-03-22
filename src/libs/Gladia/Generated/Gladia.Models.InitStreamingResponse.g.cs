@@ -19,9 +19,9 @@ namespace Gladia
 
         /// <summary>
         /// Creation date<br/>
-        /// Example: 2023-12-28T09:04:17.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </summary>
-        /// <example>2023-12-28T09:04:17.210Z</example>
+        /// <example>2024-01-01T00:00:00.000Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
@@ -50,7 +50,7 @@ namespace Gladia
         /// </param>
         /// <param name="createdAt">
         /// Creation date<br/>
-        /// Example: 2023-12-28T09:04:17.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
         /// <param name="url">
         /// The websocket url to connect to for sending audio data. The url will contain the temporary token to authenticate the session.<br/>

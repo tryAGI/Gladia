@@ -165,7 +165,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -176,7 +176,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -533,7 +533,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -544,7 +544,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -1515,7 +1515,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -1526,7 +1526,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -1725,7 +1725,7 @@
             "description": "Include items that occurred before the specified date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -1736,7 +1736,7 @@
             "description": "Filter for items after the specified date. Use with `before_date` for a range. Date in ISO format.",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-22T12:00:18.560Z",
+              "example": "2024-01-01T00:00:00.000Z",
               "type": "string"
             }
           },
@@ -3180,7 +3180,7 @@
           "timestamp": {
             "type": "string",
             "description": "Date of when the error occurred",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "path": {
             "type": "string",
@@ -3228,7 +3228,7 @@
           "timestamp": {
             "type": "string",
             "description": "Date of when the error occurred",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "path": {
             "type": "string",
@@ -3265,7 +3265,7 @@
           "timestamp": {
             "type": "string",
             "description": "Date of when the error occurred",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "path": {
             "type": "string",
@@ -4555,13 +4555,13 @@
             "type": "string",
             "description": "Creation date",
             "format": "date-time",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "completed_at": {
             "type": "string",
             "description": "Completion date when status is \"done\" or \"error\"",
             "format": "date-time",
-            "example": "2023-12-28T09:04:37.210Z",
+            "example": "2024-01-01T00:00:00.000Z",
             "nullable": true
           },
           "custom_metadata": {
@@ -4636,7 +4636,7 @@
           "timestamp": {
             "type": "string",
             "description": "Date of when the error occurred",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "path": {
             "type": "string",
@@ -4710,7 +4710,7 @@
           "timestamp": {
             "type": "string",
             "description": "Date of when the error occurred",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "path": {
             "type": "string",
@@ -5300,13 +5300,13 @@
             "type": "string",
             "description": "Creation date",
             "format": "date-time",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "completed_at": {
             "type": "string",
             "description": "Completion date when status is \"done\" or \"error\"",
             "format": "date-time",
-            "example": "2023-12-28T09:04:37.210Z",
+            "example": "2024-01-01T00:00:00.000Z",
             "nullable": true
           },
           "custom_metadata": {
@@ -5589,7 +5589,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "acknowledged": {
             "type": "boolean",
@@ -5689,7 +5689,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -5758,7 +5758,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -5867,7 +5867,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "error": {
             "description": "Error message if the addon failed",
@@ -6001,7 +6001,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "error": {
             "description": "Error message if the addon failed",
@@ -6173,7 +6173,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "error": {
             "description": "Error message if the addon failed",
@@ -6318,7 +6318,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -6399,7 +6399,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "error": {
             "description": "Error message if the addon failed",
@@ -6480,7 +6480,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -6610,7 +6610,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "error": {
             "description": "Error message if the addon failed",
@@ -6691,7 +6691,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -6751,7 +6751,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -6830,7 +6830,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "acknowledged": {
             "type": "boolean",
@@ -6945,7 +6945,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -7033,7 +7033,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -7102,7 +7102,7 @@
           "created_at": {
             "type": "string",
             "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2021-09-01T12:00:00.123Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "type": {
             "type": "string",
@@ -7303,7 +7303,7 @@
             "type": "string",
             "description": "Creation date",
             "format": "date-time",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "url": {
             "type": "string",
@@ -7365,7 +7365,7 @@
           "timestamp": {
             "type": "string",
             "description": "Date of when the error occurred",
-            "example": "2023-12-28T09:04:17.210Z"
+            "example": "2024-01-01T00:00:00.000Z"
           },
           "path": {
             "type": "string",

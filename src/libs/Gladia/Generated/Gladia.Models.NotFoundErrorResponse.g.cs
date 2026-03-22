@@ -10,9 +10,9 @@ namespace Gladia
     {
         /// <summary>
         /// Date of when the error occurred<br/>
-        /// Example: 2023-12-28T09:04:17.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </summary>
-        /// <example>2023-12-28T09:04:17.210Z</example>
+        /// <example>2024-01-01T00:00:00.000Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Timestamp { get; set; }
@@ -64,7 +64,7 @@ namespace Gladia
         /// </summary>
         /// <param name="timestamp">
         /// Date of when the error occurred<br/>
-        /// Example: 2023-12-28T09:04:17.210Z
+        /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
         /// <param name="path">
         /// Path to the API endpoint<br/>

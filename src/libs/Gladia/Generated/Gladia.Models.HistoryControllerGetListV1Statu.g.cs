@@ -11,7 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Queued,
+        Done,
+        /// <summary>
+        /// 
+        /// </summary>
+        Error,
         /// <summary>
         /// 
         /// </summary>
@@ -19,11 +23,7 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Done,
-        /// <summary>
-        /// 
-        /// </summary>
-        Error,
+        Queued,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Gladia
         {
             return value switch
             {
-                HistoryControllerGetListV1Statu.Queued => "queued",
-                HistoryControllerGetListV1Statu.Processing => "processing",
                 HistoryControllerGetListV1Statu.Done => "done",
                 HistoryControllerGetListV1Statu.Error => "error",
+                HistoryControllerGetListV1Statu.Processing => "processing",
+                HistoryControllerGetListV1Statu.Queued => "queued",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Gladia
         {
             return value switch
             {
-                "queued" => HistoryControllerGetListV1Statu.Queued,
-                "processing" => HistoryControllerGetListV1Statu.Processing,
                 "done" => HistoryControllerGetListV1Statu.Done,
                 "error" => HistoryControllerGetListV1Statu.Error,
+                "processing" => HistoryControllerGetListV1Statu.Processing,
+                "queued" => HistoryControllerGetListV1Statu.Queued,
                 _ => null,
             };
         }

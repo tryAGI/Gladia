@@ -11,7 +11,11 @@ namespace Gladia
         /// <summary>
         /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
         /// </summary>
-        Queued,
+        Done,
+        /// <summary>
+        /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
+        /// </summary>
+        Error,
         /// <summary>
         /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
         /// </summary>
@@ -19,11 +23,7 @@ namespace Gladia
         /// <summary>
         /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
         /// </summary>
-        Done,
-        /// <summary>
-        /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
-        /// </summary>
-        Error,
+        Queued,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Gladia
         {
             return value switch
             {
-                PreRecordedResponseStatus.Queued => "queued",
-                PreRecordedResponseStatus.Processing => "processing",
                 PreRecordedResponseStatus.Done => "done",
                 PreRecordedResponseStatus.Error => "error",
+                PreRecordedResponseStatus.Processing => "processing",
+                PreRecordedResponseStatus.Queued => "queued",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Gladia
         {
             return value switch
             {
-                "queued" => PreRecordedResponseStatus.Queued,
-                "processing" => PreRecordedResponseStatus.Processing,
                 "done" => PreRecordedResponseStatus.Done,
                 "error" => PreRecordedResponseStatus.Error,
+                "processing" => PreRecordedResponseStatus.Processing,
+                "queued" => PreRecordedResponseStatus.Queued,
                 _ => null,
             };
         }

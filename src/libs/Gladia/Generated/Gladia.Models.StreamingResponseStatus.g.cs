@@ -11,7 +11,11 @@ namespace Gladia
         /// <summary>
         /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
         /// </summary>
-        Queued,
+        Done,
+        /// <summary>
+        /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
+        /// </summary>
+        Error,
         /// <summary>
         /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
         /// </summary>
@@ -19,11 +23,7 @@ namespace Gladia
         /// <summary>
         /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
         /// </summary>
-        Done,
-        /// <summary>
-        /// the job has been queued. "processing": the job is being processed. "done": the job has been processed and the result is available. "error": an error occurred during the job's processing.
-        /// </summary>
-        Error,
+        Queued,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Gladia
         {
             return value switch
             {
-                StreamingResponseStatus.Queued => "queued",
-                StreamingResponseStatus.Processing => "processing",
                 StreamingResponseStatus.Done => "done",
                 StreamingResponseStatus.Error => "error",
+                StreamingResponseStatus.Processing => "processing",
+                StreamingResponseStatus.Queued => "queued",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Gladia
         {
             return value switch
             {
-                "queued" => StreamingResponseStatus.Queued,
-                "processing" => StreamingResponseStatus.Processing,
                 "done" => StreamingResponseStatus.Done,
                 "error" => StreamingResponseStatus.Error,
+                "processing" => StreamingResponseStatus.Processing,
+                "queued" => StreamingResponseStatus.Queued,
                 _ => null,
             };
         }

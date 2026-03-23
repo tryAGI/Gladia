@@ -11,11 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        PreRecorded,
+        Live,
         /// <summary>
         /// 
         /// </summary>
-        Live,
+        PreRecorded,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Gladia
         {
             return value switch
             {
-                HistoryControllerGetListV1KindItem.PreRecorded => "pre-recorded",
                 HistoryControllerGetListV1KindItem.Live => "live",
+                HistoryControllerGetListV1KindItem.PreRecorded => "pre-recorded",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Gladia
         {
             return value switch
             {
-                "pre-recorded" => HistoryControllerGetListV1KindItem.PreRecorded,
                 "live" => HistoryControllerGetListV1KindItem.Live,
+                "pre-recorded" => HistoryControllerGetListV1KindItem.PreRecorded,
                 _ => null,
             };
         }

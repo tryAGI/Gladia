@@ -11,11 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        UsWest,
+        EuWest,
         /// <summary>
         /// 
         /// </summary>
-        EuWest,
+        UsWest,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Gladia
         {
             return value switch
             {
-                StreamingSupportedRegions.UsWest => "us-west",
                 StreamingSupportedRegions.EuWest => "eu-west",
+                StreamingSupportedRegions.UsWest => "us-west",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Gladia
         {
             return value switch
             {
-                "us-west" => StreamingSupportedRegions.UsWest,
                 "eu-west" => StreamingSupportedRegions.EuWest,
+                "us-west" => StreamingSupportedRegions.UsWest,
                 _ => null,
             };
         }

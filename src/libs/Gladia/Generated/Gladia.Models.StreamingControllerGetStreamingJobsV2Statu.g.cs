@@ -11,7 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Queued,
+        Done,
+        /// <summary>
+        /// 
+        /// </summary>
+        Error,
         /// <summary>
         /// 
         /// </summary>
@@ -19,11 +23,7 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Done,
-        /// <summary>
-        /// 
-        /// </summary>
-        Error,
+        Queued,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Gladia
         {
             return value switch
             {
-                StreamingControllerGetStreamingJobsV2Statu.Queued => "queued",
-                StreamingControllerGetStreamingJobsV2Statu.Processing => "processing",
                 StreamingControllerGetStreamingJobsV2Statu.Done => "done",
                 StreamingControllerGetStreamingJobsV2Statu.Error => "error",
+                StreamingControllerGetStreamingJobsV2Statu.Processing => "processing",
+                StreamingControllerGetStreamingJobsV2Statu.Queued => "queued",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Gladia
         {
             return value switch
             {
-                "queued" => StreamingControllerGetStreamingJobsV2Statu.Queued,
-                "processing" => StreamingControllerGetStreamingJobsV2Statu.Processing,
                 "done" => StreamingControllerGetStreamingJobsV2Statu.Done,
                 "error" => StreamingControllerGetStreamingJobsV2Statu.Error,
+                "processing" => StreamingControllerGetStreamingJobsV2Statu.Processing,
+                "queued" => StreamingControllerGetStreamingJobsV2Statu.Queued,
                 _ => null,
             };
         }

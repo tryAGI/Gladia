@@ -11,11 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        PreRecorded,
+        Live,
         /// <summary>
         /// 
         /// </summary>
-        Live,
+        PreRecorded,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Gladia
         {
             return value switch
             {
-                ListHistoryResponseItemsDiscriminatorKind.PreRecorded => "pre-recorded",
                 ListHistoryResponseItemsDiscriminatorKind.Live => "live",
+                ListHistoryResponseItemsDiscriminatorKind.PreRecorded => "pre-recorded",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Gladia
         {
             return value switch
             {
-                "pre-recorded" => ListHistoryResponseItemsDiscriminatorKind.PreRecorded,
                 "live" => ListHistoryResponseItemsDiscriminatorKind.Live,
+                "pre-recorded" => ListHistoryResponseItemsDiscriminatorKind.PreRecorded,
                 _ => null,
             };
         }

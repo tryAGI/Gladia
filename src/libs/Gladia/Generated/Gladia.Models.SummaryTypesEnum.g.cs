@@ -11,15 +11,15 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        General,
-        /// <summary>
-        /// 
-        /// </summary>
         BulletPoints,
         /// <summary>
         /// 
         /// </summary>
         Concise,
+        /// <summary>
+        /// 
+        /// </summary>
+        General,
     }
 
     /// <summary>
@@ -34,9 +34,9 @@ namespace Gladia
         {
             return value switch
             {
-                SummaryTypesEnum.General => "general",
                 SummaryTypesEnum.BulletPoints => "bullet_points",
                 SummaryTypesEnum.Concise => "concise",
+                SummaryTypesEnum.General => "general",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +47,9 @@ namespace Gladia
         {
             return value switch
             {
-                "general" => SummaryTypesEnum.General,
                 "bullet_points" => SummaryTypesEnum.BulletPoints,
                 "concise" => SummaryTypesEnum.Concise,
+                "general" => SummaryTypesEnum.General,
                 _ => null,
             };
         }

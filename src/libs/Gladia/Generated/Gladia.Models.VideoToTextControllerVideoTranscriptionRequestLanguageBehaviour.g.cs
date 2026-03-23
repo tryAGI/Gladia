@@ -11,11 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        AutomaticSingleLanguage,
+        AutomaticMultipleLanguages,
         /// <summary>
         /// 
         /// </summary>
-        AutomaticMultipleLanguages,
+        AutomaticSingleLanguage,
         /// <summary>
         /// 
         /// </summary>
@@ -34,8 +34,8 @@ namespace Gladia
         {
             return value switch
             {
-                VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.AutomaticSingleLanguage => "automatic single language",
                 VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.AutomaticMultipleLanguages => "automatic multiple languages",
+                VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.AutomaticSingleLanguage => "automatic single language",
                 VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.Manual => "manual",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -47,8 +47,8 @@ namespace Gladia
         {
             return value switch
             {
-                "automatic single language" => VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.AutomaticSingleLanguage,
                 "automatic multiple languages" => VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.AutomaticMultipleLanguages,
+                "automatic single language" => VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.AutomaticSingleLanguage,
                 "manual" => VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour.Manual,
                 _ => null,
             };

@@ -11,7 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Queued,
+        Done,
+        /// <summary>
+        /// 
+        /// </summary>
+        Error,
         /// <summary>
         /// 
         /// </summary>
@@ -19,11 +23,7 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Done,
-        /// <summary>
-        /// 
-        /// </summary>
-        Error,
+        Queued,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Gladia
         {
             return value switch
             {
-                TranscriptionControllerListV2Statu.Queued => "queued",
-                TranscriptionControllerListV2Statu.Processing => "processing",
                 TranscriptionControllerListV2Statu.Done => "done",
                 TranscriptionControllerListV2Statu.Error => "error",
+                TranscriptionControllerListV2Statu.Processing => "processing",
+                TranscriptionControllerListV2Statu.Queued => "queued",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Gladia
         {
             return value switch
             {
-                "queued" => TranscriptionControllerListV2Statu.Queued,
-                "processing" => TranscriptionControllerListV2Statu.Processing,
                 "done" => TranscriptionControllerListV2Statu.Done,
                 "error" => TranscriptionControllerListV2Statu.Error,
+                "processing" => TranscriptionControllerListV2Statu.Processing,
+                "queued" => TranscriptionControllerListV2Statu.Queued,
                 _ => null,
             };
         }

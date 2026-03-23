@@ -15,19 +15,19 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Srt,
-        /// <summary>
-        /// 
-        /// </summary>
-        Vtt,
-        /// <summary>
-        /// 
-        /// </summary>
         Plain,
         /// <summary>
         /// 
         /// </summary>
+        Srt,
+        /// <summary>
+        /// 
+        /// </summary>
         Txt,
+        /// <summary>
+        /// 
+        /// </summary>
+        Vtt,
     }
 
     /// <summary>
@@ -43,10 +43,10 @@ namespace Gladia
             return value switch
             {
                 AudioToTextControllerAudioTranscriptionRequestOutputFormat.Json => "json",
-                AudioToTextControllerAudioTranscriptionRequestOutputFormat.Srt => "srt",
-                AudioToTextControllerAudioTranscriptionRequestOutputFormat.Vtt => "vtt",
                 AudioToTextControllerAudioTranscriptionRequestOutputFormat.Plain => "plain",
+                AudioToTextControllerAudioTranscriptionRequestOutputFormat.Srt => "srt",
                 AudioToTextControllerAudioTranscriptionRequestOutputFormat.Txt => "txt",
+                AudioToTextControllerAudioTranscriptionRequestOutputFormat.Vtt => "vtt",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -58,10 +58,10 @@ namespace Gladia
             return value switch
             {
                 "json" => AudioToTextControllerAudioTranscriptionRequestOutputFormat.Json,
-                "srt" => AudioToTextControllerAudioTranscriptionRequestOutputFormat.Srt,
-                "vtt" => AudioToTextControllerAudioTranscriptionRequestOutputFormat.Vtt,
                 "plain" => AudioToTextControllerAudioTranscriptionRequestOutputFormat.Plain,
+                "srt" => AudioToTextControllerAudioTranscriptionRequestOutputFormat.Srt,
                 "txt" => AudioToTextControllerAudioTranscriptionRequestOutputFormat.Txt,
+                "vtt" => AudioToTextControllerAudioTranscriptionRequestOutputFormat.Vtt,
                 _ => null,
             };
         }

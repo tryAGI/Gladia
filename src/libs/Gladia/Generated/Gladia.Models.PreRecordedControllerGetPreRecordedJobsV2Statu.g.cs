@@ -11,7 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Queued,
+        Done,
+        /// <summary>
+        /// 
+        /// </summary>
+        Error,
         /// <summary>
         /// 
         /// </summary>
@@ -19,11 +23,7 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Done,
-        /// <summary>
-        /// 
-        /// </summary>
-        Error,
+        Queued,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Gladia
         {
             return value switch
             {
-                PreRecordedControllerGetPreRecordedJobsV2Statu.Queued => "queued",
-                PreRecordedControllerGetPreRecordedJobsV2Statu.Processing => "processing",
                 PreRecordedControllerGetPreRecordedJobsV2Statu.Done => "done",
                 PreRecordedControllerGetPreRecordedJobsV2Statu.Error => "error",
+                PreRecordedControllerGetPreRecordedJobsV2Statu.Processing => "processing",
+                PreRecordedControllerGetPreRecordedJobsV2Statu.Queued => "queued",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Gladia
         {
             return value switch
             {
-                "queued" => PreRecordedControllerGetPreRecordedJobsV2Statu.Queued,
-                "processing" => PreRecordedControllerGetPreRecordedJobsV2Statu.Processing,
                 "done" => PreRecordedControllerGetPreRecordedJobsV2Statu.Done,
                 "error" => PreRecordedControllerGetPreRecordedJobsV2Statu.Error,
+                "processing" => PreRecordedControllerGetPreRecordedJobsV2Statu.Processing,
+                "queued" => PreRecordedControllerGetPreRecordedJobsV2Statu.Queued,
                 _ => null,
             };
         }

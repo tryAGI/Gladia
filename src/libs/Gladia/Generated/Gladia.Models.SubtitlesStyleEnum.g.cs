@@ -11,11 +11,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Default,
+        Compliance,
         /// <summary>
         /// 
         /// </summary>
-        Compliance,
+        Default,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Gladia
         {
             return value switch
             {
-                SubtitlesStyleEnum.Default => "default",
                 SubtitlesStyleEnum.Compliance => "compliance",
+                SubtitlesStyleEnum.Default => "default",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Gladia
         {
             return value switch
             {
-                "default" => SubtitlesStyleEnum.Default,
                 "compliance" => SubtitlesStyleEnum.Compliance,
+                "default" => SubtitlesStyleEnum.Default,
                 _ => null,
             };
         }

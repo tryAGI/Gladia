@@ -15,11 +15,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        WavPcm,
+        WavAlaw,
         /// <summary>
         /// 
         /// </summary>
-        WavAlaw,
+        WavPcm,
         /// <summary>
         /// 
         /// </summary>
@@ -38,8 +38,8 @@ namespace Gladia
         {
             return value switch
             {
-                StreamingSupportedEncodingEnum.WavPcm => "wav/pcm",
                 StreamingSupportedEncodingEnum.WavAlaw => "wav/alaw",
+                StreamingSupportedEncodingEnum.WavPcm => "wav/pcm",
                 StreamingSupportedEncodingEnum.WavUlaw => "wav/ulaw",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -51,8 +51,8 @@ namespace Gladia
         {
             return value switch
             {
-                "wav/pcm" => StreamingSupportedEncodingEnum.WavPcm,
                 "wav/alaw" => StreamingSupportedEncodingEnum.WavAlaw,
+                "wav/pcm" => StreamingSupportedEncodingEnum.WavPcm,
                 "wav/ulaw" => StreamingSupportedEncodingEnum.WavUlaw,
                 _ => null,
             };

@@ -15,19 +15,19 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        Srt,
-        /// <summary>
-        /// 
-        /// </summary>
-        Vtt,
-        /// <summary>
-        /// 
-        /// </summary>
         Plain,
         /// <summary>
         /// 
         /// </summary>
+        Srt,
+        /// <summary>
+        /// 
+        /// </summary>
         Txt,
+        /// <summary>
+        /// 
+        /// </summary>
+        Vtt,
     }
 
     /// <summary>
@@ -43,10 +43,10 @@ namespace Gladia
             return value switch
             {
                 VideoToTextControllerVideoTranscriptionRequestOutputFormat.Json => "json",
-                VideoToTextControllerVideoTranscriptionRequestOutputFormat.Srt => "srt",
-                VideoToTextControllerVideoTranscriptionRequestOutputFormat.Vtt => "vtt",
                 VideoToTextControllerVideoTranscriptionRequestOutputFormat.Plain => "plain",
+                VideoToTextControllerVideoTranscriptionRequestOutputFormat.Srt => "srt",
                 VideoToTextControllerVideoTranscriptionRequestOutputFormat.Txt => "txt",
+                VideoToTextControllerVideoTranscriptionRequestOutputFormat.Vtt => "vtt",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -58,10 +58,10 @@ namespace Gladia
             return value switch
             {
                 "json" => VideoToTextControllerVideoTranscriptionRequestOutputFormat.Json,
-                "srt" => VideoToTextControllerVideoTranscriptionRequestOutputFormat.Srt,
-                "vtt" => VideoToTextControllerVideoTranscriptionRequestOutputFormat.Vtt,
                 "plain" => VideoToTextControllerVideoTranscriptionRequestOutputFormat.Plain,
+                "srt" => VideoToTextControllerVideoTranscriptionRequestOutputFormat.Srt,
                 "txt" => VideoToTextControllerVideoTranscriptionRequestOutputFormat.Txt,
+                "vtt" => VideoToTextControllerVideoTranscriptionRequestOutputFormat.Vtt,
                 _ => null,
             };
         }

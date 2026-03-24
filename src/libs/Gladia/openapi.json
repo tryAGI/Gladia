@@ -2381,19 +2381,6 @@
           "vocabulary"
         ]
       },
-      "CodeSwitchingConfigDTO": {
-        "type": "object",
-        "properties": {
-          "languages": {
-            "type": "array",
-            "description": "Specify the languages you want to use when detecting multiple languages",
-            "default": [],
-            "items": {
-              "$ref": "#/components/schemas/TranscriptionLanguageCodeEnum"
-            }
-          }
-        }
-      },
       "CallbackMethodEnum": {
         "type": "string",
         "enum": [
@@ -2440,7 +2427,7 @@
           "default",
           "compliance"
         ],
-        "description": "Style of the subtitles. Compliance mode refers to : https://loc.gov/preservation/digital/formats//fdd/fdd000569.shtml#:~:text=SRT%20files%20are%20basic%20text,alongside%2C%20example%3A%20%22MyVideo123 "
+        "description": "Style of the subtitles. Compliance mode refers to : https://loc.gov/preservation/digital/formats//fdd/fdd000569.shtml#:~:text=SRT%20files%20are%20basic%20text,alongside%2C%20example%3A%20%22MyVideo123"
       },
       "SubtitlesConfigDTO": {
         "type": "object",
@@ -2482,7 +2469,7 @@
             "maximum": 5
           },
           "style": {
-            "description": "Style of the subtitles. Compliance mode refers to : https://loc.gov/preservation/digital/formats//fdd/fdd000569.shtml#:~:text=SRT%20files%20are%20basic%20text,alongside%2C%20example%3A%20%22MyVideo123 ",
+            "description": "Style of the subtitles. Compliance mode refers to : https://loc.gov/preservation/digital/formats//fdd/fdd000569.shtml#:~:text=SRT%20files%20are%20basic%20text,alongside%2C%20example%3A%20%22MyVideo123",
             "default": "default",
             "allOf": [
               {
@@ -2730,26 +2717,6 @@
           "spelling_dictionary"
         ]
       },
-      "StructuredDataExtractionConfigDTO": {
-        "type": "object",
-        "properties": {
-          "classes": {
-            "description": "The list of classes to extract from the audio transcription",
-            "example": [
-              "Persons",
-              "Organizations"
-            ],
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "type": "array"
-            }
-          }
-        },
-        "required": [
-          "classes"
-        ]
-      },
       "AudioToLlmListConfigDTO": {
         "type": "object",
         "properties": {
@@ -2913,11 +2880,6 @@
       "InitTranscriptionRequest": {
         "type": "object",
         "properties": {
-          "context_prompt": {
-            "type": "string",
-            "description": "**[Deprecated]** Context to feed the transcription model with for possible better accuracy",
-            "deprecated": true
-          },
           "custom_vocabulary": {
             "type": "boolean",
             "description": "**[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with",
@@ -2928,37 +2890,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/CustomVocabularyConfigDTO"
-              }
-            ]
-          },
-          "detect_language": {
-            "type": "boolean",
-            "description": "**[Deprecated]** Use `language_config` instead. Detect the language from the given audio",
-            "default": true,
-            "deprecated": true
-          },
-          "enable_code_switching": {
-            "type": "boolean",
-            "description": "**[Deprecated]** Use `language_config` instead.Detect multiple languages in the given audio",
-            "default": false,
-            "deprecated": true
-          },
-          "code_switching_config": {
-            "description": "**[Deprecated]** Use `language_config` instead. Specify the configuration for code switching",
-            "deprecated": true,
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CodeSwitchingConfigDTO"
-              }
-            ]
-          },
-          "language": {
-            "description": "**[Deprecated]** Use `language_config` instead. Set the spoken language for the given audio (ISO 639 standard)",
-            "example": "en",
-            "deprecated": true,
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TranscriptionLanguageCodeEnum"
               }
             ]
           },
@@ -3034,24 +2965,9 @@
               }
             ]
           },
-          "moderation": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable moderation for this audio",
-            "default": false
-          },
           "named_entity_recognition": {
             "type": "boolean",
             "description": "**[Alpha]** Enable named entity recognition for this audio",
-            "default": false
-          },
-          "chapterization": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable chapterization for this audio",
-            "default": false
-          },
-          "name_consistency": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable names consistency for this audio",
             "default": false
           },
           "custom_spelling": {
@@ -3064,19 +2980,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/CustomSpellingConfigDTO"
-              }
-            ]
-          },
-          "structured_data_extraction": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable structured data extraction for this audio",
-            "default": false
-          },
-          "structured_data_extraction_config": {
-            "description": "**[Alpha]** Structured data extraction configuration, if `structured_data_extraction` is enabled",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/StructuredDataExtractionConfigDTO"
               }
             ]
           },
@@ -3122,11 +3025,6 @@
           "sentences": {
             "type": "boolean",
             "description": "Enable sentences for this audio",
-            "default": false
-          },
-          "display_mode": {
-            "type": "boolean",
-            "description": "**[Alpha]** Allows to change the output display_mode for this audio. The output will be reordered, creating new utterances when speakers overlapped",
             "default": false
           },
           "punctuation_enhanced": {
@@ -3338,11 +3236,6 @@
       "PreRecordedRequestParamsResponse": {
         "type": "object",
         "properties": {
-          "context_prompt": {
-            "type": "string",
-            "description": "**[Deprecated]** Context to feed the transcription model with for possible better accuracy",
-            "deprecated": true
-          },
           "custom_vocabulary": {
             "type": "boolean",
             "description": "**[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with",
@@ -3353,37 +3246,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/CustomVocabularyConfigDTO"
-              }
-            ]
-          },
-          "detect_language": {
-            "type": "boolean",
-            "description": "**[Deprecated]** Use `language_config` instead. Detect the language from the given audio",
-            "default": true,
-            "deprecated": true
-          },
-          "enable_code_switching": {
-            "type": "boolean",
-            "description": "**[Deprecated]** Use `language_config` instead.Detect multiple languages in the given audio",
-            "default": false,
-            "deprecated": true
-          },
-          "code_switching_config": {
-            "description": "**[Deprecated]** Use `language_config` instead. Specify the configuration for code switching",
-            "deprecated": true,
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CodeSwitchingConfigDTO"
-              }
-            ]
-          },
-          "language": {
-            "description": "**[Deprecated]** Use `language_config` instead. Set the spoken language for the given audio (ISO 639 standard)",
-            "example": "en",
-            "deprecated": true,
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TranscriptionLanguageCodeEnum"
               }
             ]
           },
@@ -3459,24 +3321,9 @@
               }
             ]
           },
-          "moderation": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable moderation for this audio",
-            "default": false
-          },
           "named_entity_recognition": {
             "type": "boolean",
             "description": "**[Alpha]** Enable named entity recognition for this audio",
-            "default": false
-          },
-          "chapterization": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable chapterization for this audio",
-            "default": false
-          },
-          "name_consistency": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable names consistency for this audio",
             "default": false
           },
           "custom_spelling": {
@@ -3489,19 +3336,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/CustomSpellingConfigDTO"
-              }
-            ]
-          },
-          "structured_data_extraction": {
-            "type": "boolean",
-            "description": "**[Alpha]** Enable structured data extraction for this audio",
-            "default": false
-          },
-          "structured_data_extraction_config": {
-            "description": "**[Alpha]** Structured data extraction configuration, if `structured_data_extraction` is enabled",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/StructuredDataExtractionConfigDTO"
               }
             ]
           },
@@ -3539,11 +3373,6 @@
           "sentences": {
             "type": "boolean",
             "description": "Enable sentences for this audio",
-            "default": false
-          },
-          "display_mode": {
-            "type": "boolean",
-            "description": "**[Alpha]** Allows to change the output display_mode for this audio. The output will be reordered, creating new utterances when speakers overlapped",
             "default": false
           },
           "punctuation_enhanced": {

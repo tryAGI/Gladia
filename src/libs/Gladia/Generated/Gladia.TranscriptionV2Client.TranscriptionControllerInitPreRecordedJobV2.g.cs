@@ -338,20 +338,8 @@ namespace Gladia
         /// <param name="summarizationConfig">
         /// **[Beta]** Summarization configuration, if `summarization` is enabled
         /// </param>
-        /// <param name="moderation">
-        /// **[Alpha]** Enable moderation for this audio<br/>
-        /// Default Value: false
-        /// </param>
         /// <param name="namedEntityRecognition">
         /// **[Alpha]** Enable named entity recognition for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="chapterization">
-        /// **[Alpha]** Enable chapterization for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="nameConsistency">
-        /// **[Alpha]** Enable names consistency for this audio<br/>
         /// Default Value: false
         /// </param>
         /// <param name="customSpelling">
@@ -360,13 +348,6 @@ namespace Gladia
         /// </param>
         /// <param name="customSpellingConfig">
         /// **[Alpha]** Custom spelling configuration, if `custom_spelling` is enabled
-        /// </param>
-        /// <param name="structuredDataExtraction">
-        /// **[Alpha]** Enable structured data extraction for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="structuredDataExtractionConfig">
-        /// **[Alpha]** Structured data extraction configuration, if `structured_data_extraction` is enabled
         /// </param>
         /// <param name="sentimentAnalysis">
         /// Enable sentiment analysis for this audio<br/>
@@ -392,10 +373,6 @@ namespace Gladia
         /// </param>
         /// <param name="sentences">
         /// Enable sentences for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="displayMode">
-        /// **[Alpha]** Allows to change the output display_mode for this audio. The output will be reordered, creating new utterances when speakers overlapped<br/>
         /// Default Value: false
         /// </param>
         /// <param name="punctuationEnhanced">
@@ -425,14 +402,9 @@ namespace Gladia
             global::Gladia.TranslationConfigDTO? translationConfig = default,
             bool? summarization = default,
             global::Gladia.SummarizationConfigDTO? summarizationConfig = default,
-            bool? moderation = default,
             bool? namedEntityRecognition = default,
-            bool? chapterization = default,
-            bool? nameConsistency = default,
             bool? customSpelling = default,
             global::Gladia.CustomSpellingConfigDTO? customSpellingConfig = default,
-            bool? structuredDataExtraction = default,
-            global::Gladia.StructuredDataExtractionConfigDTO? structuredDataExtractionConfig = default,
             bool? sentimentAnalysis = default,
             bool? audioToLlm = default,
             global::Gladia.AudioToLlmListConfigDTO? audioToLlmConfig = default,
@@ -440,7 +412,6 @@ namespace Gladia
             global::Gladia.PiiRedactionConfigDTO? piiRedactionConfig = default,
             object? customMetadata = default,
             bool? sentences = default,
-            bool? displayMode = default,
             bool? punctuationEnhanced = default,
             global::Gladia.LanguageConfig? languageConfig = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -459,14 +430,9 @@ namespace Gladia
                 TranslationConfig = translationConfig,
                 Summarization = summarization,
                 SummarizationConfig = summarizationConfig,
-                Moderation = moderation,
                 NamedEntityRecognition = namedEntityRecognition,
-                Chapterization = chapterization,
-                NameConsistency = nameConsistency,
                 CustomSpelling = customSpelling,
                 CustomSpellingConfig = customSpellingConfig,
-                StructuredDataExtraction = structuredDataExtraction,
-                StructuredDataExtractionConfig = structuredDataExtractionConfig,
                 SentimentAnalysis = sentimentAnalysis,
                 AudioToLlm = audioToLlm,
                 AudioToLlmConfig = audioToLlmConfig,
@@ -474,7 +440,6 @@ namespace Gladia
                 PiiRedactionConfig = piiRedactionConfig,
                 CustomMetadata = customMetadata,
                 Sentences = sentences,
-                DisplayMode = displayMode,
                 PunctuationEnhanced = punctuationEnhanced,
                 LanguageConfig = languageConfig,
                 AudioUrl = audioUrl,

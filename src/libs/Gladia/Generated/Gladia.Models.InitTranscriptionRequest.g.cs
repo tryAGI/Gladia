@@ -9,13 +9,6 @@ namespace Gladia
     public sealed partial class InitTranscriptionRequest
     {
         /// <summary>
-        /// **[Deprecated]** Context to feed the transcription model with for possible better accuracy
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("context_prompt")]
-        [global::System.Obsolete("This property marked as deprecated.")]
-        public string? ContextPrompt { get; set; }
-
-        /// <summary>
         /// **[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with<br/>
         /// Default Value: false
         /// </summary>
@@ -27,37 +20,6 @@ namespace Gladia
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_vocabulary_config")]
         public global::Gladia.CustomVocabularyConfigDTO? CustomVocabularyConfig { get; set; }
-
-        /// <summary>
-        /// **[Deprecated]** Use `language_config` instead. Detect the language from the given audio<br/>
-        /// Default Value: true
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("detect_language")]
-        [global::System.Obsolete("This property marked as deprecated.")]
-        public bool? DetectLanguage { get; set; }
-
-        /// <summary>
-        /// **[Deprecated]** Use `language_config` instead.Detect multiple languages in the given audio<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("enable_code_switching")]
-        [global::System.Obsolete("This property marked as deprecated.")]
-        public bool? EnableCodeSwitching { get; set; }
-
-        /// <summary>
-        /// **[Deprecated]** Use `language_config` instead. Specify the configuration for code switching
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("code_switching_config")]
-        public global::Gladia.CodeSwitchingConfigDTO? CodeSwitchingConfig { get; set; }
-
-        /// <summary>
-        /// **[Deprecated]** Use `language_config` instead. Set the spoken language for the given audio (ISO 639 standard)<br/>
-        /// Example: en
-        /// </summary>
-        /// <example>en</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("language")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.TranscriptionLanguageCodeEnumJsonConverter))]
-        public global::Gladia.TranscriptionLanguageCodeEnum? Language { get; set; }
 
         /// <summary>
         /// **[Deprecated]** Use `callback`/`callback_config` instead. Callback URL we will do a `POST` request to with the result of the transcription<br/>
@@ -134,32 +96,11 @@ namespace Gladia
         public global::Gladia.SummarizationConfigDTO? SummarizationConfig { get; set; }
 
         /// <summary>
-        /// **[Alpha]** Enable moderation for this audio<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("moderation")]
-        public bool? Moderation { get; set; }
-
-        /// <summary>
         /// **[Alpha]** Enable named entity recognition for this audio<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("named_entity_recognition")]
         public bool? NamedEntityRecognition { get; set; }
-
-        /// <summary>
-        /// **[Alpha]** Enable chapterization for this audio<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("chapterization")]
-        public bool? Chapterization { get; set; }
-
-        /// <summary>
-        /// **[Alpha]** Enable names consistency for this audio<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("name_consistency")]
-        public bool? NameConsistency { get; set; }
 
         /// <summary>
         /// **[Alpha]** Enable custom spelling for this audio<br/>
@@ -173,19 +114,6 @@ namespace Gladia
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_spelling_config")]
         public global::Gladia.CustomSpellingConfigDTO? CustomSpellingConfig { get; set; }
-
-        /// <summary>
-        /// **[Alpha]** Enable structured data extraction for this audio<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("structured_data_extraction")]
-        public bool? StructuredDataExtraction { get; set; }
-
-        /// <summary>
-        /// **[Alpha]** Structured data extraction configuration, if `structured_data_extraction` is enabled
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("structured_data_extraction_config")]
-        public global::Gladia.StructuredDataExtractionConfigDTO? StructuredDataExtractionConfig { get; set; }
 
         /// <summary>
         /// Enable sentiment analysis for this audio<br/>
@@ -234,13 +162,6 @@ namespace Gladia
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sentences")]
         public bool? Sentences { get; set; }
-
-        /// <summary>
-        /// **[Alpha]** Allows to change the output display_mode for this audio. The output will be reordered, creating new utterances when speakers overlapped<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("display_mode")]
-        public bool? DisplayMode { get; set; }
 
         /// <summary>
         /// **[Alpha]** Use enhanced punctuation for this audio<br/>
@@ -315,20 +236,8 @@ namespace Gladia
         /// <param name="summarizationConfig">
         /// **[Beta]** Summarization configuration, if `summarization` is enabled
         /// </param>
-        /// <param name="moderation">
-        /// **[Alpha]** Enable moderation for this audio<br/>
-        /// Default Value: false
-        /// </param>
         /// <param name="namedEntityRecognition">
         /// **[Alpha]** Enable named entity recognition for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="chapterization">
-        /// **[Alpha]** Enable chapterization for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="nameConsistency">
-        /// **[Alpha]** Enable names consistency for this audio<br/>
         /// Default Value: false
         /// </param>
         /// <param name="customSpelling">
@@ -337,13 +246,6 @@ namespace Gladia
         /// </param>
         /// <param name="customSpellingConfig">
         /// **[Alpha]** Custom spelling configuration, if `custom_spelling` is enabled
-        /// </param>
-        /// <param name="structuredDataExtraction">
-        /// **[Alpha]** Enable structured data extraction for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="structuredDataExtractionConfig">
-        /// **[Alpha]** Structured data extraction configuration, if `structured_data_extraction` is enabled
         /// </param>
         /// <param name="sentimentAnalysis">
         /// Enable sentiment analysis for this audio<br/>
@@ -369,10 +271,6 @@ namespace Gladia
         /// </param>
         /// <param name="sentences">
         /// Enable sentences for this audio<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="displayMode">
-        /// **[Alpha]** Allows to change the output display_mode for this audio. The output will be reordered, creating new utterances when speakers overlapped<br/>
         /// Default Value: false
         /// </param>
         /// <param name="punctuationEnhanced">
@@ -403,14 +301,9 @@ namespace Gladia
             global::Gladia.TranslationConfigDTO? translationConfig,
             bool? summarization,
             global::Gladia.SummarizationConfigDTO? summarizationConfig,
-            bool? moderation,
             bool? namedEntityRecognition,
-            bool? chapterization,
-            bool? nameConsistency,
             bool? customSpelling,
             global::Gladia.CustomSpellingConfigDTO? customSpellingConfig,
-            bool? structuredDataExtraction,
-            global::Gladia.StructuredDataExtractionConfigDTO? structuredDataExtractionConfig,
             bool? sentimentAnalysis,
             bool? audioToLlm,
             global::Gladia.AudioToLlmListConfigDTO? audioToLlmConfig,
@@ -418,7 +311,6 @@ namespace Gladia
             global::Gladia.PiiRedactionConfigDTO? piiRedactionConfig,
             object? customMetadata,
             bool? sentences,
-            bool? displayMode,
             bool? punctuationEnhanced,
             global::Gladia.LanguageConfig? languageConfig)
         {
@@ -435,14 +327,9 @@ namespace Gladia
             this.TranslationConfig = translationConfig;
             this.Summarization = summarization;
             this.SummarizationConfig = summarizationConfig;
-            this.Moderation = moderation;
             this.NamedEntityRecognition = namedEntityRecognition;
-            this.Chapterization = chapterization;
-            this.NameConsistency = nameConsistency;
             this.CustomSpelling = customSpelling;
             this.CustomSpellingConfig = customSpellingConfig;
-            this.StructuredDataExtraction = structuredDataExtraction;
-            this.StructuredDataExtractionConfig = structuredDataExtractionConfig;
             this.SentimentAnalysis = sentimentAnalysis;
             this.AudioToLlm = audioToLlm;
             this.AudioToLlmConfig = audioToLlmConfig;
@@ -450,7 +337,6 @@ namespace Gladia
             this.PiiRedactionConfig = piiRedactionConfig;
             this.CustomMetadata = customMetadata;
             this.Sentences = sentences;
-            this.DisplayMode = displayMode;
             this.PunctuationEnhanced = punctuationEnhanced;
             this.LanguageConfig = languageConfig;
         }

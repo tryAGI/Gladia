@@ -2084,10 +2084,6 @@
         "in": "header",
         "name": "x-gladia-key",
         "description": "Your personal Gladia API key"
-      },
-      "ApiKeyAuth": {
-        "type": "http",
-        "scheme": "bearer"
       }
     },
     "schemas": {
@@ -7466,10 +7462,5 @@
         }
       }
     }
-  },
-  "security": [
-    {
-      "ApiKeyAuth": []
-    }
-  ]
+  }
 }

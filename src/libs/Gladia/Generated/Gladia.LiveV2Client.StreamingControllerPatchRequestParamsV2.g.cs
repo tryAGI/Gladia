@@ -8,12 +8,12 @@ namespace Gladia
         partial void PrepareStreamingControllerPatchRequestParamsV2Arguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
-            object request);
+            global::Gladia.PatchRequestParamsDTO request);
         partial void PrepareStreamingControllerPatchRequestParamsV2Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string id,
-            object request);
+            global::Gladia.PatchRequestParamsDTO request);
         partial void ProcessStreamingControllerPatchRequestParamsV2Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -30,7 +30,7 @@ namespace Gladia
         public async global::System.Threading.Tasks.Task StreamingControllerPatchRequestParamsV2Async(
             string id,
 
-            object request,
+            global::Gladia.PatchRequestParamsDTO request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -69,7 +69,7 @@ namespace Gladia
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -336,7 +336,7 @@ namespace Gladia
             string id,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new object
+            var __request = new global::Gladia.PatchRequestParamsDTO
             {
             };
 

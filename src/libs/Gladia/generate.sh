@@ -3,10 +3,9 @@ set -euo pipefail
 
 # OpenAPI spec: https://api.gladia.io/openapi.json
 
-readonly openapi_url="https://api.gladia.io/openapi.json"
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl --fail --silent --show-error --location "$openapi_url" -o openapi.json
+curl --fail --silent --show-error --location https://api.gladia.io/openapi.json -o openapi.json
 
 # Fix 1: Normalize dynamic timestamp examples to a fixed value to prevent noise diffs.
 jq '

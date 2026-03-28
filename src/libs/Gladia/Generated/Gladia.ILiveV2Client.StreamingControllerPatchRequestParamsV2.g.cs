@@ -16,7 +16,7 @@ namespace Gladia
         global::System.Threading.Tasks.Task StreamingControllerPatchRequestParamsV2Async(
             string id,
 
-            object request,
+            global::Gladia.PatchRequestParamsDTO request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// For debugging purposes, send post session metadata in the request params of the job

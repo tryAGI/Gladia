@@ -34,11 +34,11 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookLiveStartRecordingPayload" /> class.
         /// </summary>
+        /// <param name="payload"></param>
         /// <param name="event">
         /// Default Value: live.start_recording<br/>
         /// Example: live.start_recording
         /// </param>
-        /// <param name="payload"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -46,8 +46,8 @@ namespace Gladia
             global::Gladia.LiveEventPayload payload,
             global::Gladia.WebhookLiveStartRecordingPayloadEvent @event = global::Gladia.WebhookLiveStartRecordingPayloadEvent.LiveStartRecording)
         {
-            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.Event = @event;
+            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
         }
 
         /// <summary>

@@ -84,12 +84,12 @@ namespace Gladia
         /// Error message if the action was not successfully acknowledged<br/>
         /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
+        /// <param name="data">
+        /// The message data. "null" if the action was not successfully acknowledged
+        /// </param>
         /// <param name="type">
         /// Default Value: stop_recording<br/>
         /// Example: stop_recording
-        /// </param>
-        /// <param name="data">
-        /// The message data. "null" if the action was not successfully acknowledged
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

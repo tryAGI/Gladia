@@ -47,12 +47,12 @@ namespace Gladia
         /// Id of the job<br/>
         /// Example: 45463597-20b7-4af7-b3b3-f5fb778203ab
         /// </param>
+        /// <param name="payload">
+        /// The live message payload as sent to the WebSocket
+        /// </param>
         /// <param name="event">
         /// Default Value: live.audio_chunk<br/>
         /// Example: live.audio_chunk
-        /// </param>
-        /// <param name="payload">
-        /// The live message payload as sent to the WebSocket
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -63,8 +63,8 @@ namespace Gladia
             global::Gladia.CallbackLiveAudioChunkAckMessageEvent @event = global::Gladia.CallbackLiveAudioChunkAckMessageEvent.LiveAudioChunk)
         {
             this.Id = id;
-            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.Event = @event;
+            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
         }
 
         /// <summary>

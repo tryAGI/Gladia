@@ -58,9 +58,6 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="TranslationResultDTO" /> class.
         /// </summary>
-        /// <param name="error">
-        /// Contains the error details of the failed addon
-        /// </param>
         /// <param name="fullTranscript">
         /// All transcription on text format without any other information
         /// </param>
@@ -68,14 +65,17 @@ namespace Gladia
         /// All the detected languages in the audio sorted from the most detected to the less detected<br/>
         /// Example: [en]
         /// </param>
+        /// <param name="utterances">
+        /// Transcribed speech utterances present in the audio
+        /// </param>
+        /// <param name="error">
+        /// Contains the error details of the failed addon
+        /// </param>
         /// <param name="sentences">
         /// If `sentences` has been enabled, sentences results for this translation
         /// </param>
         /// <param name="subtitles">
         /// If `subtitles` has been enabled, subtitles results for this translation
-        /// </param>
-        /// <param name="utterances">
-        /// Transcribed speech utterances present in the audio
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -88,12 +88,12 @@ namespace Gladia
             global::System.Collections.Generic.IList<global::Gladia.SentencesDTO>? sentences,
             global::System.Collections.Generic.IList<global::Gladia.SubtitleDTO>? subtitles)
         {
+            this.Error = error;
             this.FullTranscript = fullTranscript ?? throw new global::System.ArgumentNullException(nameof(fullTranscript));
             this.Languages = languages ?? throw new global::System.ArgumentNullException(nameof(languages));
-            this.Utterances = utterances ?? throw new global::System.ArgumentNullException(nameof(utterances));
-            this.Error = error;
             this.Sentences = sentences;
             this.Subtitles = subtitles;
+            this.Utterances = utterances ?? throw new global::System.ArgumentNullException(nameof(utterances));
         }
 
         /// <summary>

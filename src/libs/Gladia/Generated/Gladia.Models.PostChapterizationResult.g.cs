@@ -84,9 +84,6 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="PostChapterizationResult" /> class.
         /// </summary>
-        /// <param name="abstractiveSummary"></param>
-        /// <param name="extractiveSummary"></param>
-        /// <param name="summary"></param>
         /// <param name="headline"></param>
         /// <param name="gist"></param>
         /// <param name="keywords"></param>
@@ -94,6 +91,9 @@ namespace Gladia
         /// <param name="end"></param>
         /// <param name="sentences"></param>
         /// <param name="text"></param>
+        /// <param name="abstractiveSummary"></param>
+        /// <param name="extractiveSummary"></param>
+        /// <param name="summary"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -109,6 +109,9 @@ namespace Gladia
             string? extractiveSummary,
             string? summary)
         {
+            this.AbstractiveSummary = abstractiveSummary;
+            this.ExtractiveSummary = extractiveSummary;
+            this.Summary = summary;
             this.Headline = headline ?? throw new global::System.ArgumentNullException(nameof(headline));
             this.Gist = gist ?? throw new global::System.ArgumentNullException(nameof(gist));
             this.Keywords = keywords ?? throw new global::System.ArgumentNullException(nameof(keywords));
@@ -116,9 +119,6 @@ namespace Gladia
             this.End = end;
             this.Sentences = sentences ?? throw new global::System.ArgumentNullException(nameof(sentences));
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
-            this.AbstractiveSummary = abstractiveSummary;
-            this.ExtractiveSummary = extractiveSummary;
-            this.Summary = summary;
         }
 
         /// <summary>

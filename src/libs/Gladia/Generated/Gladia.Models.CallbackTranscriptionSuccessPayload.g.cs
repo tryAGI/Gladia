@@ -56,17 +56,17 @@ namespace Gladia
         /// Id of the job<br/>
         /// Example: 45463597-20b7-4af7-b3b3-f5fb778203ab
         /// </param>
-        /// <param name="event">
-        /// Type of event<br/>
-        /// Default Value: transcription.success<br/>
-        /// Example: transcription.success
-        /// </param>
         /// <param name="payload">
         /// Result of the transcription
         /// </param>
         /// <param name="customMetadata">
         /// Custom metadata given in the initial request<br/>
         /// Example: {"user":"John Doe"}
+        /// </param>
+        /// <param name="event">
+        /// Type of event<br/>
+        /// Default Value: transcription.success<br/>
+        /// Example: transcription.success
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -78,8 +78,8 @@ namespace Gladia
             global::Gladia.CallbackTranscriptionSuccessPayloadEvent @event = global::Gladia.CallbackTranscriptionSuccessPayloadEvent.TranscriptionSuccess)
         {
             this.Id = id;
-            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.Event = @event;
+            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.CustomMetadata = customMetadata;
         }
 

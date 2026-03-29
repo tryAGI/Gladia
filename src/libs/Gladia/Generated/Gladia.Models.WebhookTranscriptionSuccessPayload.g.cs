@@ -34,11 +34,11 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookTranscriptionSuccessPayload" /> class.
         /// </summary>
+        /// <param name="payload"></param>
         /// <param name="event">
         /// Default Value: transcription.success<br/>
         /// Example: transcription.success
         /// </param>
-        /// <param name="payload"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -46,8 +46,8 @@ namespace Gladia
             global::Gladia.PreRecordedEventPayload payload,
             global::Gladia.WebhookTranscriptionSuccessPayloadEvent @event = global::Gladia.WebhookTranscriptionSuccessPayloadEvent.TranscriptionSuccess)
         {
-            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.Event = @event;
+            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
         }
 
         /// <summary>

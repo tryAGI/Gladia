@@ -196,6 +196,10 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="InitTranscriptionRequest" /> class.
         /// </summary>
+        /// <param name="audioUrl">
+        /// URL to a Gladia file or to an external audio or video file<br/>
+        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// </param>
         /// <param name="customVocabulary">
         /// **[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with<br/>
         /// Default Value: false
@@ -282,10 +286,6 @@ namespace Gladia
         /// <param name="languageConfig">
         /// Specify the language configuration
         /// </param>
-        /// <param name="audioUrl">
-        /// URL to a Gladia file or to an external audio or video file<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -316,7 +316,6 @@ namespace Gladia
             bool? punctuationEnhanced,
             global::Gladia.LanguageConfig? languageConfig)
         {
-            this.AudioUrl = audioUrl ?? throw new global::System.ArgumentNullException(nameof(audioUrl));
             this.CustomVocabulary = customVocabulary;
             this.CustomVocabularyConfig = customVocabularyConfig;
             this.Callback = callback;
@@ -341,6 +340,7 @@ namespace Gladia
             this.Sentences = sentences;
             this.PunctuationEnhanced = punctuationEnhanced;
             this.LanguageConfig = languageConfig;
+            this.AudioUrl = audioUrl ?? throw new global::System.ArgumentNullException(nameof(audioUrl));
         }
 
         /// <summary>

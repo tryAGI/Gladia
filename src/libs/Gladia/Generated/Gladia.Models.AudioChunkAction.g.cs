@@ -34,12 +34,12 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="AudioChunkAction" /> class.
         /// </summary>
+        /// <param name="data">
+        /// Payload of the audio chunk action
+        /// </param>
         /// <param name="type">
         /// Default Value: audio_chunk<br/>
         /// Example: audio_chunk
-        /// </param>
-        /// <param name="data">
-        /// Payload of the audio chunk action
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -48,8 +48,8 @@ namespace Gladia
             global::Gladia.AudioChunkActionData data,
             global::Gladia.AudioChunkActionType type = global::Gladia.AudioChunkActionType.AudioChunk)
         {
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Type = type;
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
         }
 
         /// <summary>

@@ -34,11 +34,11 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookLiveEndSessionPayload" /> class.
         /// </summary>
+        /// <param name="payload"></param>
         /// <param name="event">
         /// Default Value: live.end_session<br/>
         /// Example: live.end_session
         /// </param>
-        /// <param name="payload"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -46,8 +46,8 @@ namespace Gladia
             global::Gladia.LiveEventPayload payload,
             global::Gladia.WebhookLiveEndSessionPayloadEvent @event = global::Gladia.WebhookLiveEndSessionPayloadEvent.LiveEndSession)
         {
-            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.Event = @event;
+            this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
         }
 
         /// <summary>

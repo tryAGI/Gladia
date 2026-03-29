@@ -87,9 +87,6 @@ namespace Gladia
         /// <param name="channel">
         /// Audio channel of where this utterance has been transcribed from
         /// </param>
-        /// <param name="speaker">
-        /// If `diarization` enabled, speaker identification number
-        /// </param>
         /// <param name="words">
         /// List of words of the utterance, split by timestamp
         /// </param>
@@ -99,6 +96,9 @@ namespace Gladia
         /// <param name="language">
         /// Spoken language in this utterance<br/>
         /// Example: en
+        /// </param>
+        /// <param name="speaker">
+        /// If `diarization` enabled, speaker identification number
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -117,10 +117,10 @@ namespace Gladia
             this.End = end;
             this.Confidence = confidence;
             this.Channel = channel;
+            this.Speaker = speaker;
             this.Words = words ?? throw new global::System.ArgumentNullException(nameof(words));
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Language = language;
-            this.Speaker = speaker;
         }
 
         /// <summary>

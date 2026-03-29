@@ -82,6 +82,15 @@ var raw = (PreRecordedResponse)response.RawRepresentation!;
 Console.WriteLine($"Status: {raw.Status}");
 ```
 
+### Streaming Behavior
+
+`GetStreamingTextAsync` delegates to the non-streaming `GetTextAsync` method internally. The batch transcription job (upload + submit + poll) runs to completion first, and then the full result is converted to `SpeechToTextResponseUpdate` events using `ToSpeechToTextResponseUpdates()`.
+
+This means you will not receive incremental transcription updates as audio is processed. The entire transcript is returned at once after the job finishes. For most use cases, calling `GetTextAsync` directly is equivalent and simpler.
+
+!!! note
+    Gladia does offer a live/streaming transcription API, but it is not exposed through the MEAI `ISpeechToTextClient` interface. Use the `GladiaClient` directly for real-time streaming needs.
+
 ### Accessing the Underlying Client
 
 Retrieve the `GladiaClient` from the MEAI interface:

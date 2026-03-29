@@ -58,12 +58,12 @@ namespace Gladia
         /// URL to fetch the current page<br/>
         /// Example: https://api.gladia.io/v2/transcription?status=done&amp;offset=0&amp;limit=20
         /// </param>
+        /// <param name="items">
+        /// List of jobs
+        /// </param>
         /// <param name="next">
         /// URL to fetch the next page<br/>
         /// Example: https://api.gladia.io/v2/transcription?status=done&amp;offset=20&amp;limit=20
-        /// </param>
-        /// <param name="items">
-        /// List of jobs
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -76,8 +76,8 @@ namespace Gladia
         {
             this.First = first ?? throw new global::System.ArgumentNullException(nameof(first));
             this.Current = current ?? throw new global::System.ArgumentNullException(nameof(current));
-            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
             this.Next = next;
+            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
         }
 
         /// <summary>

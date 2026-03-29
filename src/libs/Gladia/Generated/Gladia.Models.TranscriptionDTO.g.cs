@@ -59,14 +59,14 @@ namespace Gladia
         /// All the detected languages in the audio sorted from the most detected to the less detected<br/>
         /// Example: [en]
         /// </param>
+        /// <param name="utterances">
+        /// Transcribed speech utterances present in the audio
+        /// </param>
         /// <param name="sentences">
         /// If `sentences` has been enabled, sentences results
         /// </param>
         /// <param name="subtitles">
         /// If `subtitles` has been enabled, subtitles results
-        /// </param>
-        /// <param name="utterances">
-        /// Transcribed speech utterances present in the audio
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -80,9 +80,9 @@ namespace Gladia
         {
             this.FullTranscript = fullTranscript ?? throw new global::System.ArgumentNullException(nameof(fullTranscript));
             this.Languages = languages ?? throw new global::System.ArgumentNullException(nameof(languages));
-            this.Utterances = utterances ?? throw new global::System.ArgumentNullException(nameof(utterances));
             this.Sentences = sentences;
             this.Subtitles = subtitles;
+            this.Utterances = utterances ?? throw new global::System.ArgumentNullException(nameof(utterances));
         }
 
         /// <summary>

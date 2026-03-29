@@ -139,6 +139,9 @@ namespace Gladia
         /// Creation date<br/>
         /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
+        /// <param name="postSessionMetadata">
+        /// For debugging purposes, send data that could help to identify issues
+        /// </param>
         /// <param name="completedAt">
         /// Completion date when status is "done" or "error"<br/>
         /// Example: 2024-01-01T00:00:00.000Z
@@ -151,13 +154,6 @@ namespace Gladia
         /// HTTP status code of the error if status is "error"<br/>
         /// Example: 500
         /// </param>
-        /// <param name="postSessionMetadata">
-        /// For debugging purposes, send data that could help to identify issues
-        /// </param>
-        /// <param name="kind">
-        /// Default Value: live<br/>
-        /// Example: live
-        /// </param>
         /// <param name="file">
         /// The file data you uploaded. Can be null if status is "error"
         /// </param>
@@ -166,6 +162,10 @@ namespace Gladia
         /// </param>
         /// <param name="result">
         /// Live transcription's result when status is "done"
+        /// </param>
+        /// <param name="kind">
+        /// Default Value: live<br/>
+        /// Example: live
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -190,10 +190,10 @@ namespace Gladia
             this.Version = version;
             this.Status = status;
             this.CreatedAt = createdAt;
-            this.PostSessionMetadata = postSessionMetadata ?? throw new global::System.ArgumentNullException(nameof(postSessionMetadata));
             this.CompletedAt = completedAt;
             this.CustomMetadata = customMetadata;
             this.ErrorCode = errorCode;
+            this.PostSessionMetadata = postSessionMetadata ?? throw new global::System.ArgumentNullException(nameof(postSessionMetadata));
             this.Kind = kind;
             this.File = file;
             this.RequestParams = requestParams;

@@ -60,11 +60,11 @@ namespace Gladia
         /// <param name="execTime">
         /// Time audio intelligence model took to complete the task
         /// </param>
-        /// <param name="error">
-        /// `null` if `success` is `true`. Contains the error details of the failed model
-        /// </param>
         /// <param name="results">
         /// If `structured_data_extraction` has been enabled, results of the AI structured data extraction for the defined classes.
+        /// </param>
+        /// <param name="error">
+        /// `null` if `success` is `true`. Contains the error details of the failed model
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,8 +79,8 @@ namespace Gladia
             this.Success = success;
             this.IsEmpty = isEmpty;
             this.ExecTime = execTime;
-            this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
             this.Error = error;
+            this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
         }
 
         /// <summary>

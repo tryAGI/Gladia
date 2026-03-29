@@ -60,11 +60,11 @@ namespace Gladia
         /// <param name="execTime">
         /// Time audio intelligence model took to complete the task
         /// </param>
-        /// <param name="error">
-        /// `null` if `success` is `true`. Contains the error details of the failed model
-        /// </param>
         /// <param name="entity">
         /// If `named_entity_recognition` has been enabled, the detected entities.
+        /// </param>
+        /// <param name="error">
+        /// `null` if `success` is `true`. Contains the error details of the failed model
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,8 +79,8 @@ namespace Gladia
             this.Success = success;
             this.IsEmpty = isEmpty;
             this.ExecTime = execTime;
-            this.Entity = entity ?? throw new global::System.ArgumentNullException(nameof(entity));
             this.Error = error;
+            this.Entity = entity ?? throw new global::System.ArgumentNullException(nameof(entity));
         }
 
         /// <summary>

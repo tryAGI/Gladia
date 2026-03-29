@@ -60,12 +60,12 @@ namespace Gladia
         /// Date of creation of the message. The date is formatted as an ISO 8601 string<br/>
         /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
+        /// <param name="data">
+        /// The message data
+        /// </param>
         /// <param name="type">
         /// Default Value: post_transcript<br/>
         /// Example: post_transcript
-        /// </param>
-        /// <param name="data">
-        /// The message data
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -78,8 +78,8 @@ namespace Gladia
         {
             this.SessionId = sessionId ?? throw new global::System.ArgumentNullException(nameof(sessionId));
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Type = type;
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
         }
 
         /// <summary>

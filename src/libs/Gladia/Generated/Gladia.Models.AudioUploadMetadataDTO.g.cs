@@ -87,10 +87,6 @@ namespace Gladia
         /// Uploaded audio filename<br/>
         /// Example: short-audio-en-16000.wav
         /// </param>
-        /// <param name="source">
-        /// Uploaded audio source<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
-        /// </param>
         /// <param name="extension">
         /// Uploaded audio detected extension<br/>
         /// Example: wav
@@ -107,6 +103,10 @@ namespace Gladia
         /// Uploaded audio channel numbers<br/>
         /// Example: 1
         /// </param>
+        /// <param name="source">
+        /// Uploaded audio source<br/>
+        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -121,11 +121,11 @@ namespace Gladia
         {
             this.Id = id;
             this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
+            this.Source = source;
             this.Extension = extension;
             this.Size = size;
             this.AudioDuration = audioDuration;
             this.NumberOfChannels = numberOfChannels;
-            this.Source = source;
         }
 
         /// <summary>

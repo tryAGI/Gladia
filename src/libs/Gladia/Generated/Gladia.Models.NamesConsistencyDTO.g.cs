@@ -36,7 +36,7 @@ namespace Gladia
         public global::Gladia.AddonErrorDTO? Error { get; set; }
 
         /// <summary>
-        /// If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription
+        /// Deprecated, If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -61,7 +61,7 @@ namespace Gladia
         /// Time audio intelligence model took to complete the task
         /// </param>
         /// <param name="results">
-        /// If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription
+        /// Deprecated, If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription
         /// </param>
         /// <param name="error">
         /// `null` if `success` is `true`. Contains the error details of the failed model

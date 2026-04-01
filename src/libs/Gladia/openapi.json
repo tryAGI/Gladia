@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-31",
+              "example": "2026-04-01",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-31",
+              "example": "2026-04-01",
               "type": "string"
             }
           },
@@ -1504,7 +1504,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-31",
+              "example": "2026-04-01",
               "type": "string"
             }
           },
@@ -1714,7 +1714,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-03-31",
+              "example": "2026-04-01",
               "type": "string"
             }
           },
@@ -2734,8 +2734,7 @@
           }
         },
         "required": [
-          "prompts",
-          "model"
+          "prompts"
         ]
       },
       "PiiRedactionEntityTypeEnum": {
@@ -2855,11 +2854,7 @@
             ],
             "example": "MARKER"
           }
-        },
-        "required": [
-          "entity_types",
-          "processed_text_type"
-        ]
+        }
       },
       "LanguageConfig": {
         "type": "object",

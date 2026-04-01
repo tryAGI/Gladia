@@ -15,8 +15,7 @@ namespace Gladia
         /// <example>[GDPR, HEALTH_INFORMATION, HIPAA_SAFE_HARBOR, QUEBEC_PRIVACY_ACT, EMAIL_ADDRESS, NAME, PHONE_NUMBER]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_types")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PiiRedactionEntityTypeEnumJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Gladia.PiiRedactionEntityTypeEnum EntityTypes { get; set; }
+        public global::Gladia.PiiRedactionEntityTypeEnum? EntityTypes { get; set; }
 
         /// <summary>
         /// The type of processed text to return (marker or mask)<br/>
@@ -25,8 +24,7 @@ namespace Gladia
         /// <example>MARKER</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("processed_text_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PiiRedactionConfigDTOProcessedTextTypeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Gladia.PiiRedactionConfigDTOProcessedTextType ProcessedTextType { get; set; }
+        public global::Gladia.PiiRedactionConfigDTOProcessedTextType? ProcessedTextType { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -49,8 +47,8 @@ namespace Gladia
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PiiRedactionConfigDTO(
-            global::Gladia.PiiRedactionEntityTypeEnum entityTypes,
-            global::Gladia.PiiRedactionConfigDTOProcessedTextType processedTextType)
+            global::Gladia.PiiRedactionEntityTypeEnum? entityTypes,
+            global::Gladia.PiiRedactionConfigDTOProcessedTextType? processedTextType)
         {
             this.EntityTypes = entityTypes;
             this.ProcessedTextType = processedTextType;

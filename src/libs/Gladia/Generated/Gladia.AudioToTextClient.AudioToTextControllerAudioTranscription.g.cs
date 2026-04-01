@@ -325,6 +325,7 @@ namespace Gladia
             string? webhookUrl = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Gladia.AudioToTextControllerAudioTranscriptionRequest
             {
                 Audio = audio,

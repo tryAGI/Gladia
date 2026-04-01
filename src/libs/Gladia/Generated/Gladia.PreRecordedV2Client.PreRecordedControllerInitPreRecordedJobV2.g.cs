@@ -418,7 +418,6 @@ namespace Gladia
             global::Gladia.LanguageConfig? languageConfig = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Gladia.InitTranscriptionRequest
             {
                 CustomVocabulary = customVocabulary,

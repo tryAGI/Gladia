@@ -385,7 +385,6 @@ namespace Gladia
             global::Gladia.CallbackConfig? callbackConfig = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Gladia.StreamingRequest
             {
                 Encoding = encoding,

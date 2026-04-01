@@ -59,13 +59,13 @@ namespace Gladia.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Gladia.PreRecordedResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Gladia.PreRecordedResponse?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Gladia.PreRecordedResponse).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PreRecorded, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PreRecorded!, typeInfo);
             }
             else if (value.IsLive)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Gladia.StreamingResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Gladia.StreamingResponse?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Gladia.StreamingResponse).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Live, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Live!, typeInfo);
             }
         }
     }

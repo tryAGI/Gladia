@@ -5,6 +5,25 @@ namespace Gladia
 {
     public partial class JobHistoryClient
     {
+
+
+        private static readonly global::Gladia.EndPointSecurityRequirement s_HistoryControllerGetListV1SecurityRequirement0 =
+            new global::Gladia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Gladia.EndPointAuthorizationRequirement[]
+                {                    new global::Gladia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Gladia.EndPointSecurityRequirement[] s_HistoryControllerGetListV1SecurityRequirements =
+            new global::Gladia.EndPointSecurityRequirement[]
+            {                s_HistoryControllerGetListV1SecurityRequirement0,
+            };
         partial void PrepareHistoryControllerGetListV1Arguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? offset,
@@ -88,6 +107,12 @@ namespace Gladia
                 customMetadata: customMetadata,
                 kind: kind);
 
+
+            var __authorizations = global::Gladia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_HistoryControllerGetListV1SecurityRequirements,
+                operationName: "HistoryControllerGetListV1Async");
+
             var __pathBuilder = new global::Gladia.PathBuilder(
                 path: "/v1/history",
                 baseUri: HttpClient.BaseAddress); 
@@ -100,7 +125,7 @@ namespace Gladia
                 .AddOptionalParameter("status", status, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
                 .AddOptionalParameter("custom_metadata", customMetadata?.ToString())
                 .AddOptionalParameter("kind", kind, selector: static x => x.ToValueString(), delimiter: ",", explode: true) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -110,7 +135,7 @@ namespace Gladia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

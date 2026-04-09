@@ -5,6 +5,25 @@ namespace Gladia
 {
     public partial class TranscriptionV1Client
     {
+
+
+        private static readonly global::Gladia.EndPointSecurityRequirement s_VideoToTextControllerVideoTranscriptionSecurityRequirement0 =
+            new global::Gladia.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Gladia.EndPointAuthorizationRequirement[]
+                {                    new global::Gladia.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Gladia.EndPointSecurityRequirement[] s_VideoToTextControllerVideoTranscriptionSecurityRequirements =
+            new global::Gladia.EndPointSecurityRequirement[]
+            {                s_VideoToTextControllerVideoTranscriptionSecurityRequirement0,
+            };
         partial void PrepareVideoToTextControllerVideoTranscriptionArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Gladia.VideoToTextControllerVideoTranscriptionRequest request);
@@ -35,9 +54,15 @@ namespace Gladia
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Gladia.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_VideoToTextControllerVideoTranscriptionSecurityRequirements,
+                operationName: "VideoToTextControllerVideoTranscriptionAsync");
+
             var __pathBuilder = new global::Gladia.PathBuilder(
                 path: "/video/text/video-transcription",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -47,7 +72,7 @@ namespace Gladia
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

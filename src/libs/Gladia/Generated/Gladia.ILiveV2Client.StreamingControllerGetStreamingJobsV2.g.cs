@@ -28,6 +28,7 @@ namespace Gladia
         /// <param name="customMetadata">
         /// Example: {"user":"John Doe"}
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.ListStreamingResponse> StreamingControllerGetStreamingJobsV2Async(
@@ -38,6 +39,7 @@ namespace Gladia
             global::System.DateTime? afterDate = default,
             global::System.Collections.Generic.IList<global::Gladia.StreamingControllerGetStreamingJobsV2Statu>? status = default,
             object? customMetadata = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

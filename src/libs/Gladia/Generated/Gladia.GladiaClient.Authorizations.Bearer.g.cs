@@ -25,6 +25,7 @@ namespace Gladia
             Authorizations.Add(new global::Gladia.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

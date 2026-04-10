@@ -10,11 +10,13 @@ namespace Gladia
         /// Initiate a new transcription job
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.InitPreRecordedTranscriptionResponse> TranscriptionControllerInitPreRecordedJobV2Async(
 
             global::Gladia.InitTranscriptionRequest request,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Initiate a new transcription job
@@ -109,6 +111,7 @@ namespace Gladia
         /// URL to a Gladia file or to an external audio or video file<br/>
         /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.InitPreRecordedTranscriptionResponse> TranscriptionControllerInitPreRecordedJobV2Async(
@@ -137,6 +140,7 @@ namespace Gladia
             bool? sentences = default,
             bool? punctuationEnhanced = default,
             global::Gladia.LanguageConfig? languageConfig = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

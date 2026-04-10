@@ -31,6 +31,7 @@ namespace Gladia
         /// <param name="kind">
         /// Example: [pre-recorded]
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.ListHistoryResponse> HistoryControllerGetListV1Async(
@@ -42,6 +43,7 @@ namespace Gladia
             global::System.Collections.Generic.IList<global::Gladia.HistoryControllerGetListV1Statu>? status = default,
             object? customMetadata = default,
             global::System.Collections.Generic.IList<global::Gladia.HistoryControllerGetListV1KindItem>? kind = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

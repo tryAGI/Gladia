@@ -8,11 +8,13 @@ namespace Gladia
         /// 
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>
         global::System.Threading.Tasks.Task VideoToTextControllerVideoTranscriptionAsync(
 
             global::Gladia.VideoToTextControllerVideoTranscriptionRequest request,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
@@ -47,6 +49,7 @@ namespace Gladia
         /// Default Value: false
         /// </param>
         /// <param name="webhookUrl"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task VideoToTextControllerVideoTranscriptionAsync(
@@ -66,6 +69,7 @@ namespace Gladia
             bool? toggleNoiseReduction = default,
             bool? toggleAccurateWordsTimestamps = default,
             string? webhookUrl = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

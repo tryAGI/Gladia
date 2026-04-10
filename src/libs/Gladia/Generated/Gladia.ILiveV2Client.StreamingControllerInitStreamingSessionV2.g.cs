@@ -9,12 +9,14 @@ namespace Gladia
         /// </summary>
         /// <param name="region"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.InitStreamingResponse> StreamingControllerInitStreamingSessionV2Async(
 
             global::Gladia.StreamingRequest request,
             global::Gladia.StreamingSupportedRegions? region = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Initiate a new live job
@@ -78,6 +80,7 @@ namespace Gladia
         /// <param name="callbackConfig">
         /// Specify the callback configuration
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.InitStreamingResponse> StreamingControllerInitStreamingSessionV2Async(
@@ -97,6 +100,7 @@ namespace Gladia
             global::Gladia.MessagesConfig? messagesConfig = default,
             bool? callback = default,
             global::Gladia.CallbackConfig? callbackConfig = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

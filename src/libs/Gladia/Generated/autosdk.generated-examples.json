@@ -1,0 +1,48 @@
+{
+  "Examples": [
+    {
+      "Order": 1,
+      "Title": "Download the audio file used for this live job",
+      "Slug": "streamingcontroller-getaudio-v2",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Download the audio file used for this live job\n# @name StreamingController_getAudio_v2\nGET {{host}}/v2/live/{{id}}/file\nAuthorization: Bearer {{token}}\nAccept: application/json, application/octet-stream\n\n## Responses\n# 200\n# Description: The audio file used for this live job\n# Content-Type: application/octet-stream\n# 401\n# Description: You don\u0027t have the permissions to access this live job or its audio file\n# Content-Type: application/json\n# 404\n# Description: The live job or its audio file doesn\u0027t exist or has been deleted\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "StreamingController_getAudio_v2",
+      "Setup": null
+    },
+    {
+      "Order": 2,
+      "Title": "Download the audio file used for this pre recorded job",
+      "Slug": "prerecordedcontroller-getaudio-v2",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Download the audio file used for this pre recorded job\n# @name PreRecordedController_getAudio_v2\nGET {{host}}/v2/pre-recorded/{{id}}/file\nAuthorization: Bearer {{token}}\nAccept: application/json, application/octet-stream\n\n## Responses\n# 200\n# Description: The audio file used for this pre recorded job\n# Content-Type: application/octet-stream\n# 401\n# Description: You don\u0027t have the permissions to access this pre recorded job or its audio file\n# Content-Type: application/json\n# 404\n# Description: The pre recorded job or its audio file doesn\u0027t exist or has been deleted\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "PreRecordedController_getAudio_v2",
+      "Setup": null
+    },
+    {
+      "Order": 3,
+      "Title": "Download the audio file used for this transcription job",
+      "Slug": "transcriptioncontroller-getaudio-v2",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Download the audio file used for this transcription job\n# @name TranscriptionController_getAudio_v2\nGET {{host}}/v2/transcription/{{id}}/file\nAuthorization: Bearer {{token}}\nAccept: application/json, application/octet-stream\n\n## Responses\n# 200\n# Description: The audio file used for this transcription job\n# Content-Type: application/octet-stream\n# 401\n# Description: You don\u0027t have the permissions to access this transcription job or its audio file\n# Content-Type: application/json\n# 404\n# Description: The transcription job or its audio file doesn\u0027t exist or has been deleted\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "TranscriptionController_getAudio_v2",
+      "Setup": null
+    },
+    {
+      "Order": 4,
+      "Title": "Get the transcription job\u0027s metadata",
+      "Slug": "transcriptioncontroller-gettranscript-v2",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Get the transcription job\u0027s metadata\n# @name TranscriptionController_getTranscript_v2\nGET {{host}}/v2/transcription/{{id}}\nAuthorization: Bearer {{token}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: The transcription job\u0027s metadata\n# Content-Type: application/json\n# 401\n# Description: You don\u0027t have the permissions to access the transcription job\n# Content-Type: application/json\n# 404\n# Description: The transcription job doesn\u0027t exist or has been deleted\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "TranscriptionController_getTranscript_v2",
+      "Setup": null
+    }
+  ]
+}

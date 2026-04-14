@@ -38,9 +38,9 @@ namespace Gladia
         /// <summary>
         /// If `named_entity_recognition` has been enabled, the detected entities.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("entity")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("results")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Entity { get; set; }
+        public required global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult> Results { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -60,7 +60,7 @@ namespace Gladia
         /// <param name="execTime">
         /// Time audio intelligence model took to complete the task
         /// </param>
-        /// <param name="entity">
+        /// <param name="results">
         /// If `named_entity_recognition` has been enabled, the detected entities.
         /// </param>
         /// <param name="error">
@@ -73,14 +73,14 @@ namespace Gladia
             bool success,
             bool isEmpty,
             double execTime,
-            string entity,
+            global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult> results,
             global::Gladia.AddonErrorDTO? error)
         {
             this.Success = success;
             this.IsEmpty = isEmpty;
             this.ExecTime = execTime;
             this.Error = error;
-            this.Entity = entity ?? throw new global::System.ArgumentNullException(nameof(entity));
+            this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
         }
 
         /// <summary>

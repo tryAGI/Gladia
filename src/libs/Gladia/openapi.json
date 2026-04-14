@@ -3813,6 +3813,29 @@
           "results"
         ]
       },
+      "NamedEntityRecognitionResult": {
+        "type": "object",
+        "properties": {
+          "entity_type": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "start": {
+            "type": "number"
+          },
+          "end": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "entity_type",
+          "text",
+          "start",
+          "end"
+        ]
+      },
       "NamedEntityRecognitionDTO": {
         "type": "object",
         "properties": {
@@ -3837,9 +3860,13 @@
               }
             ]
           },
-          "entity": {
-            "type": "string",
-            "description": "If `named_entity_recognition` has been enabled, the detected entities."
+          "results": {
+            "description": "If `named_entity_recognition` has been enabled, the detected entities.",
+            "nullable": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedEntityRecognitionResult"
+            }
           }
         },
         "required": [
@@ -3847,7 +3874,7 @@
           "is_empty",
           "exec_time",
           "error",
-          "entity"
+          "results"
         ]
       },
       "NamesConsistencyDTO": {
@@ -5761,29 +5788,6 @@
           "id",
           "event",
           "payload"
-        ]
-      },
-      "NamedEntityRecognitionResult": {
-        "type": "object",
-        "properties": {
-          "entity_type": {
-            "type": "string"
-          },
-          "text": {
-            "type": "string"
-          },
-          "start": {
-            "type": "number"
-          },
-          "end": {
-            "type": "number"
-          }
-        },
-        "required": [
-          "entity_type",
-          "text",
-          "start",
-          "end"
         ]
       },
       "NamedEntityRecognitionData": {

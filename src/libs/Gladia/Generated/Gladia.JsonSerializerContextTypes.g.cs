@@ -280,311 +280,311 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.NamedEntityRecognitionDTO? Type63 { get; set; }
+        public global::Gladia.NamedEntityRecognitionResult? Type63 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.NamesConsistencyDTO? Type64 { get; set; }
+        public global::Gladia.NamedEntityRecognitionDTO? Type64 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.SpeakerReidentificationDTO? Type65 { get; set; }
+        public global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult>? Type65 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StructuredDataExtractionDTO? Type66 { get; set; }
+        public global::Gladia.NamesConsistencyDTO? Type66 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.SentimentAnalysisDTO? Type67 { get; set; }
+        public global::Gladia.SpeakerReidentificationDTO? Type67 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioToLlmResultDTO? Type68 { get; set; }
+        public global::Gladia.StructuredDataExtractionDTO? Type68 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioToLlmDTO? Type69 { get; set; }
+        public global::Gladia.SentimentAnalysisDTO? Type69 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioToLlmListDTO? Type70 { get; set; }
+        public global::Gladia.AudioToLlmResultDTO? Type70 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Gladia.AudioToLlmDTO>? Type71 { get; set; }
+        public global::Gladia.AudioToLlmDTO? Type71 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.DisplayModeDTO? Type72 { get; set; }
+        public global::Gladia.AudioToLlmListDTO? Type72 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ChapterizationDTO? Type73 { get; set; }
+        public global::System.Collections.Generic.IList<global::Gladia.AudioToLlmDTO>? Type73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.DiarizationDTO? Type74 { get; set; }
+        public global::Gladia.DisplayModeDTO? Type74 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.TranscriptionResultDTO? Type75 { get; set; }
+        public global::Gladia.ChapterizationDTO? Type75 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.PreRecordedResponse? Type76 { get; set; }
+        public global::Gladia.DiarizationDTO? Type76 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.PreRecordedResponseStatus? Type77 { get; set; }
+        public global::Gladia.TranscriptionResultDTO? Type77 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.DateTime? Type78 { get; set; }
+        public global::Gladia.PreRecordedResponse? Type78 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.PreRecordedResponseKind? Type79 { get; set; }
+        public global::Gladia.PreRecordedResponseStatus? Type79 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.NotFoundErrorResponse? Type80 { get; set; }
+        public global::System.DateTime? Type80 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ListPreRecordedResponse? Type81 { get; set; }
+        public global::Gladia.PreRecordedResponseKind? Type81 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Gladia.PreRecordedResponse>? Type82 { get; set; }
+        public global::Gladia.NotFoundErrorResponse? Type82 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ForbiddenErrorResponse? Type83 { get; set; }
+        public global::Gladia.ListPreRecordedResponse? Type83 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackTranscriptionSuccessPayload? Type84 { get; set; }
+        public global::System.Collections.Generic.IList<global::Gladia.PreRecordedResponse>? Type84 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackTranscriptionSuccessPayloadEvent? Type85 { get; set; }
+        public global::Gladia.ForbiddenErrorResponse? Type85 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ErrorDTO? Type86 { get; set; }
+        public global::Gladia.CallbackTranscriptionSuccessPayload? Type86 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackTranscriptionErrorPayload? Type87 { get; set; }
+        public global::Gladia.CallbackTranscriptionSuccessPayloadEvent? Type87 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackTranscriptionErrorPayloadEvent? Type88 { get; set; }
+        public global::Gladia.ErrorDTO? Type88 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StreamingSupportedEncodingEnum? Type89 { get; set; }
+        public global::Gladia.CallbackTranscriptionErrorPayload? Type89 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StreamingSupportedModels? Type90 { get; set; }
+        public global::Gladia.CallbackTranscriptionErrorPayloadEvent? Type90 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.PreProcessingConfig? Type91 { get; set; }
+        public global::Gladia.StreamingSupportedEncodingEnum? Type91 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.RealtimeProcessingConfig? Type92 { get; set; }
+        public global::Gladia.StreamingSupportedModels? Type92 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.PostProcessingConfig? Type93 { get; set; }
+        public global::Gladia.PreProcessingConfig? Type93 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.MessagesConfig? Type94 { get; set; }
+        public global::Gladia.RealtimeProcessingConfig? Type94 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackConfig? Type95 { get; set; }
+        public global::Gladia.PostProcessingConfig? Type95 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StreamingRequestParamsResponse? Type96 { get; set; }
+        public global::Gladia.MessagesConfig? Type96 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StreamingTranscriptionResultWithMessagesDTO? Type97 { get; set; }
+        public global::Gladia.CallbackConfig? Type97 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StreamingResponse? Type98 { get; set; }
+        public global::Gladia.StreamingRequestParamsResponse? Type98 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StreamingResponseStatus? Type99 { get; set; }
+        public global::Gladia.StreamingTranscriptionResultWithMessagesDTO? Type99 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StreamingResponseKind? Type100 { get; set; }
+        public global::Gladia.StreamingResponse? Type100 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ListTranscriptionResponse? Type101 { get; set; }
+        public global::Gladia.StreamingResponseStatus? Type101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Gladia.OneOf<global::Gladia.PreRecordedResponse, global::Gladia.StreamingResponse>>? Type102 { get; set; }
+        public global::Gladia.StreamingResponseKind? Type102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.OneOf<global::Gladia.PreRecordedResponse, global::Gladia.StreamingResponse>? Type103 { get; set; }
+        public global::Gladia.ListTranscriptionResponse? Type103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ListTranscriptionResponseItemsDiscriminator? Type104 { get; set; }
+        public global::System.Collections.Generic.IList<global::Gladia.OneOf<global::Gladia.PreRecordedResponse, global::Gladia.StreamingResponse>>? Type104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ListTranscriptionResponseItemsDiscriminatorKind? Type105 { get; set; }
+        public global::Gladia.OneOf<global::Gladia.PreRecordedResponse, global::Gladia.StreamingResponse>? Type105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ListHistoryResponse? Type106 { get; set; }
+        public global::Gladia.ListTranscriptionResponseItemsDiscriminator? Type106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ListHistoryResponseItemsDiscriminator? Type107 { get; set; }
+        public global::Gladia.ListTranscriptionResponseItemsDiscriminatorKind? Type107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.ListHistoryResponseItemsDiscriminatorKind? Type108 { get; set; }
+        public global::Gladia.ListHistoryResponse? Type108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioChunkActionData? Type109 { get; set; }
+        public global::Gladia.ListHistoryResponseItemsDiscriminator? Type109 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioChunkAction? Type110 { get; set; }
+        public global::Gladia.ListHistoryResponseItemsDiscriminatorKind? Type110 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioChunkActionType? Type111 { get; set; }
+        public global::Gladia.AudioChunkActionData? Type111 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StopRecordingAction? Type112 { get; set; }
+        public global::Gladia.AudioChunkAction? Type112 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.StopRecordingActionType? Type113 { get; set; }
+        public global::Gladia.AudioChunkActionType? Type113 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.Error? Type114 { get; set; }
+        public global::Gladia.StopRecordingAction? Type114 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioChunkAckData? Type115 { get; set; }
+        public global::Gladia.StopRecordingActionType? Type115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<long>? Type116 { get; set; }
+        public global::Gladia.Error? Type116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public long? Type117 { get; set; }
+        public global::Gladia.AudioChunkAckData? Type117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<double>? Type118 { get; set; }
+        public global::System.Collections.Generic.IList<long>? Type118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioChunkAckMessage? Type119 { get; set; }
+        public long? Type119 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioChunkAckMessageType? Type120 { get; set; }
+        public global::System.Collections.Generic.IList<double>? Type120 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveAudioChunkAckMessage? Type121 { get; set; }
+        public global::Gladia.AudioChunkAckMessage? Type121 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveAudioChunkAckMessageEvent? Type122 { get; set; }
+        public global::Gladia.AudioChunkAckMessageType? Type122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.EndRecordingMessageData? Type123 { get; set; }
+        public global::Gladia.CallbackLiveAudioChunkAckMessage? Type123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.EndRecordingMessage? Type124 { get; set; }
+        public global::Gladia.CallbackLiveAudioChunkAckMessageEvent? Type124 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.EndRecordingMessageType? Type125 { get; set; }
+        public global::Gladia.EndRecordingMessageData? Type125 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveEndRecordingMessage? Type126 { get; set; }
+        public global::Gladia.EndRecordingMessage? Type126 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveEndRecordingMessageEvent? Type127 { get; set; }
+        public global::Gladia.EndRecordingMessageType? Type127 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.EndSessionMessage? Type128 { get; set; }
+        public global::Gladia.CallbackLiveEndRecordingMessage? Type128 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.EndSessionMessageType? Type129 { get; set; }
+        public global::Gladia.CallbackLiveEndRecordingMessageEvent? Type129 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveEndSessionMessage? Type130 { get; set; }
+        public global::Gladia.EndSessionMessage? Type130 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveEndSessionMessageEvent? Type131 { get; set; }
+        public global::Gladia.EndSessionMessageType? Type131 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.TranslationData? Type132 { get; set; }
+        public global::Gladia.CallbackLiveEndSessionMessage? Type132 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.TranslationMessage? Type133 { get; set; }
+        public global::Gladia.CallbackLiveEndSessionMessageEvent? Type133 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.TranslationMessageType? Type134 { get; set; }
+        public global::Gladia.TranslationData? Type134 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveTranslationMessage? Type135 { get; set; }
+        public global::Gladia.TranslationMessage? Type135 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.CallbackLiveTranslationMessageEvent? Type136 { get; set; }
+        public global::Gladia.TranslationMessageType? Type136 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.NamedEntityRecognitionResult? Type137 { get; set; }
+        public global::Gladia.CallbackLiveTranslationMessage? Type137 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.NamedEntityRecognitionData? Type138 { get; set; }
+        public global::Gladia.CallbackLiveTranslationMessageEvent? Type138 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult>? Type139 { get; set; }
+        public global::Gladia.NamedEntityRecognitionData? Type139 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -1073,27 +1073,27 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Gladia.AudioToLlmDTO>? ListType12 { get; set; }
+        public global::System.Collections.Generic.List<global::Gladia.NamedEntityRecognitionResult>? ListType12 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Gladia.PreRecordedResponse>? ListType13 { get; set; }
+        public global::System.Collections.Generic.List<global::Gladia.AudioToLlmDTO>? ListType13 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Gladia.OneOf<global::Gladia.PreRecordedResponse, global::Gladia.StreamingResponse>>? ListType14 { get; set; }
+        public global::System.Collections.Generic.List<global::Gladia.PreRecordedResponse>? ListType14 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<long>? ListType15 { get; set; }
+        public global::System.Collections.Generic.List<global::Gladia.OneOf<global::Gladia.PreRecordedResponse, global::Gladia.StreamingResponse>>? ListType15 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<double>? ListType16 { get; set; }
+        public global::System.Collections.Generic.List<long>? ListType16 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Gladia.NamedEntityRecognitionResult>? ListType17 { get; set; }
+        public global::System.Collections.Generic.List<double>? ListType17 { get; set; }
         /// <summary>
         /// 
         /// </summary>

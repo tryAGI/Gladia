@@ -28,39 +28,39 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.UploadBody? Type0 { get; set; }
+        public global::Gladia.PreRecordedEventPayload? Type0 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioUploadMetadataDTO? Type1 { get; set; }
+        public global::System.Guid? Type1 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Guid? Type2 { get; set; }
+        public global::Gladia.LiveEventPayload? Type2 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string? Type3 { get; set; }
+        public global::Gladia.UploadBody? Type3 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int? Type4 { get; set; }
+        public global::Gladia.AudioUploadMetadataDTO? Type4 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public double? Type5 { get; set; }
+        public string? Type5 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.AudioUploadResponse? Type6 { get; set; }
+        public int? Type6 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.PreRecordedEventPayload? Type7 { get; set; }
+        public double? Type7 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Gladia.LiveEventPayload? Type8 { get; set; }
+        public global::Gladia.AudioUploadResponse? Type8 { get; set; }
         /// <summary>
         /// 
         /// </summary>

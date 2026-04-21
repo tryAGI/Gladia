@@ -2086,6 +2086,34 @@
       }
     },
     "schemas": {
+      "PreRecordedEventPayload": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the job",
+            "format": "uuid",
+            "example": "45463597-20b7-4af7-b3b3-f5fb778203ab"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "LiveEventPayload": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the job",
+            "format": "uuid",
+            "example": "45463597-20b7-4af7-b3b3-f5fb778203ab"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
       "UploadBody": {
         "type": "object",
         "properties": {}
@@ -2162,34 +2190,6 @@
         "required": [
           "audio_url",
           "audio_metadata"
-        ]
-      },
-      "PreRecordedEventPayload": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "Id of the job",
-            "format": "uuid",
-            "example": "45463597-20b7-4af7-b3b3-f5fb778203ab"
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
-      "LiveEventPayload": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "Id of the job",
-            "format": "uuid",
-            "example": "45463597-20b7-4af7-b3b3-f5fb778203ab"
-          }
-        },
-        "required": [
-          "id"
         ]
       },
       "TranscriptionLanguageCodeEnum": {

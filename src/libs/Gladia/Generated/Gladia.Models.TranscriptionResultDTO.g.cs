@@ -52,12 +52,6 @@ namespace Gladia
         public global::Gladia.NamesConsistencyDTO? NameConsistency { get; set; }
 
         /// <summary>
-        /// If `speaker_reidentification` has been enabled, results of the AI speaker reidentification.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("speaker_reidentification")]
-        public global::Gladia.SpeakerReidentificationDTO? SpeakerReidentification { get; set; }
-
-        /// <summary>
         /// If `structured_data_extraction` has been enabled, structured data extraction results
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("structured_data_extraction")]
@@ -129,9 +123,6 @@ namespace Gladia
         /// <param name="nameConsistency">
         /// If `name_consistency` has been enabled, Gladia will improve consistency of the names accross the transcription
         /// </param>
-        /// <param name="speakerReidentification">
-        /// If `speaker_reidentification` has been enabled, results of the AI speaker reidentification.
-        /// </param>
         /// <param name="structuredDataExtraction">
         /// If `structured_data_extraction` has been enabled, structured data extraction results
         /// </param>
@@ -161,7 +152,6 @@ namespace Gladia
             global::Gladia.ModerationDTO? moderation,
             global::Gladia.NamedEntityRecognitionDTO? namedEntityRecognition,
             global::Gladia.NamesConsistencyDTO? nameConsistency,
-            global::Gladia.SpeakerReidentificationDTO? speakerReidentification,
             global::Gladia.StructuredDataExtractionDTO? structuredDataExtraction,
             global::Gladia.SentimentAnalysisDTO? sentimentAnalysis,
             global::Gladia.AudioToLlmListDTO? audioToLlm,
@@ -176,7 +166,6 @@ namespace Gladia
             this.Moderation = moderation;
             this.NamedEntityRecognition = namedEntityRecognition;
             this.NameConsistency = nameConsistency;
-            this.SpeakerReidentification = speakerReidentification;
             this.StructuredDataExtraction = structuredDataExtraction;
             this.SentimentAnalysis = sentimentAnalysis;
             this.AudioToLlm = audioToLlm;

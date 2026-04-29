@@ -126,7 +126,7 @@ namespace Gladia
                 PrepareTranscriptionControllerGetTranscriptV2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id);
+                    id: id!);
 
                 return __httpRequest;
             }

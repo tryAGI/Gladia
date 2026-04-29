@@ -116,6 +116,34 @@ namespace Gladia
                             {
 
                                 var __contentVideo = new global::System.Net.Http.ByteArrayContent(request.Video ?? global::System.Array.Empty<byte>());
+                                __contentVideo.Headers.ContentType = new global::System.Net.Http.Headers.MediaTypeHeaderValue(
+                                    request.Videoname is null
+                                        ? "application/octet-stream"
+                                        : (global::System.IO.Path.GetExtension(request.Videoname) ?? string.Empty).ToLowerInvariant() switch
+                                        {
+                                            ".aac" => "audio/aac",
+                                            ".flac" => "audio/flac",
+                                            ".gif" => "image/gif",
+                                            ".jpeg" => "image/jpeg",
+                                            ".jpg" => "image/jpeg",
+                                            ".json" => "application/json",
+                                            ".m4a" => "audio/mp4",
+                                            ".mp3" => "audio/mpeg",
+                                            ".mp4" => "video/mp4",
+                                            ".mpeg" => "audio/mpeg",
+                                            ".mpga" => "audio/mpeg",
+                                            ".oga" => "audio/ogg",
+                                            ".ogg" => "audio/ogg",
+                                            ".opus" => "audio/ogg",
+                                            ".pdf" => "application/pdf",
+                                            ".png" => "image/png",
+                                            ".txt" => "text/plain",
+                                            ".wav" => "audio/wav",
+                                            ".weba" => "audio/webm",
+                                            ".webm" => "video/webm",
+                                            ".webp" => "image/webp",
+                                            _ => "application/octet-stream",
+                                        });
                                 __httpRequestContent.Add(
                                     content: __contentVideo,
                                     name: "\"video\"",
@@ -129,98 +157,98 @@ namespace Gladia
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.VideoUrl}"),
+                                    content: new global::System.Net.Http.StringContent(request.VideoUrl ?? string.Empty),
                                     name: "\"video_url\"");
                             } 
                             if (request.LanguageBehaviour != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.LanguageBehaviour?.ToValueString()}"),
+                                    content: new global::System.Net.Http.StringContent((request.LanguageBehaviour).HasValue ? (request.LanguageBehaviour).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"language_behaviour\"");
                             } 
                             if (request.Language != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Language?.ToValueString()}"),
+                                    content: new global::System.Net.Http.StringContent((request.Language).HasValue ? (request.Language).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"language\"");
                             } 
                             if (request.TranscriptionHint != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.TranscriptionHint}"),
+                                    content: new global::System.Net.Http.StringContent(request.TranscriptionHint ?? string.Empty),
                                     name: "\"transcription_hint\"");
                             } 
                             if (request.ToggleDiarization != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.ToggleDiarization}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleDiarization, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_diarization\"");
                             } 
                             if (request.DiarizationNumSpeakers != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.DiarizationNumSpeakers}"),
+                                    content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.DiarizationNumSpeakers, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"diarization_num_speakers\"");
                             } 
                             if (request.DiarizationMinSpeakers != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.DiarizationMinSpeakers}"),
+                                    content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.DiarizationMinSpeakers, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"diarization_min_speakers\"");
                             } 
                             if (request.DiarizationMaxSpeakers != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.DiarizationMaxSpeakers}"),
+                                    content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.DiarizationMaxSpeakers, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"diarization_max_speakers\"");
                             } 
                             if (request.ToggleDirectTranslate != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.ToggleDirectTranslate}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleDirectTranslate, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_direct_translate\"");
                             } 
                             if (request.TargetTranslationLanguage != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.TargetTranslationLanguage?.ToValueString()}"),
+                                    content: new global::System.Net.Http.StringContent((request.TargetTranslationLanguage).HasValue ? (request.TargetTranslationLanguage).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"target_translation_language\"");
                             } 
                             if (request.OutputFormat != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.OutputFormat?.ToValueString()}"),
+                                    content: new global::System.Net.Http.StringContent((request.OutputFormat).HasValue ? (request.OutputFormat).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"output_format\"");
                             } 
                             if (request.ToggleNoiseReduction != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.ToggleNoiseReduction}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleNoiseReduction, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_noise_reduction\"");
                             } 
                             if (request.ToggleAccurateWordsTimestamps != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.ToggleAccurateWordsTimestamps}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleAccurateWordsTimestamps, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_accurate_words_timestamps\"");
                             } 
                             if (request.WebhookUrl != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.WebhookUrl}"),
+                                    content: new global::System.Net.Http.StringContent(request.WebhookUrl ?? string.Empty),
                                     name: "\"webhook_url\"");
                             }
                             __httpRequest.Content = __httpRequestContent;

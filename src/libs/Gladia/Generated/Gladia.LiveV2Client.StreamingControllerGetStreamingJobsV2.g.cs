@@ -91,6 +91,58 @@ namespace Gladia
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await StreamingControllerGetStreamingJobsV2AsResponseAsync(
+                offset: offset,
+                limit: limit,
+                date: date,
+                beforeDate: beforeDate,
+                afterDate: afterDate,
+                status: status,
+                customMetadata: customMetadata,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Get live jobs based on query parameters
+        /// </summary>
+        /// <param name="offset">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="limit">
+        /// Default Value: 20
+        /// </param>
+        /// <param name="date">
+        /// Example: 2026-05-05
+        /// </param>
+        /// <param name="beforeDate">
+        /// Example: 2024-01-01T00:00:00.000Z
+        /// </param>
+        /// <param name="afterDate">
+        /// Example: 2024-01-01T00:00:00.000Z
+        /// </param>
+        /// <param name="status">
+        /// Example: [done]
+        /// </param>
+        /// <param name="customMetadata">
+        /// Example: {"user":"John Doe"}
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Gladia.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse<global::Gladia.ListStreamingResponse>> StreamingControllerGetStreamingJobsV2AsResponseAsync(
+            int? offset = default,
+            int? limit = default,
+            global::System.DateTime? date = default,
+            global::System.DateTime? beforeDate = default,
+            global::System.DateTime? afterDate = default,
+            global::System.Collections.Generic.IList<global::Gladia.StreamingControllerGetStreamingJobsV2Statu>? status = default,
+            object? customMetadata = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareStreamingControllerGetStreamingJobsV2Arguments(
@@ -125,9 +177,10 @@ namespace Gladia
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Gladia.PathBuilder(
                                 path: "/v2/live",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("offset", offset?.ToString())
                                 .AddOptionalParameter("limit", limit?.ToString())
@@ -135,7 +188,7 @@ namespace Gladia
                                 .AddOptionalParameter("before_date", beforeDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("after_date", afterDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("status", status, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
-                                .AddOptionalParameter("custom_metadata", customMetadata?.ToString()) 
+                                .AddOptionalParameter("custom_metadata", customMetadata?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Gladia.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -213,6 +266,8 @@ namespace Gladia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -223,6 +278,11 @@ namespace Gladia
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Gladia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -240,6 +300,8 @@ namespace Gladia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -249,8 +311,7 @@ namespace Gladia
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Gladia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -259,6 +320,11 @@ namespace Gladia
                         __attempt < __maxAttempts &&
                         global::Gladia.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Gladia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Gladia.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -275,14 +341,15 @@ namespace Gladia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Gladia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -322,6 +389,8 @@ namespace Gladia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -342,6 +411,8 @@ namespace Gladia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // You don't have the permissions to access live jobs
@@ -404,9 +475,13 @@ namespace Gladia
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Gladia.ListStreamingResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Gladia.ListStreamingResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Gladia.AutoSDKHttpResponse<global::Gladia.ListStreamingResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Gladia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -434,9 +509,13 @@ namespace Gladia
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Gladia.ListStreamingResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Gladia.ListStreamingResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Gladia.AutoSDKHttpResponse<global::Gladia.ListStreamingResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Gladia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

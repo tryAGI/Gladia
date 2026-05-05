@@ -22,6 +22,20 @@ namespace Gladia
         /// Initiate a new live job
         /// </summary>
         /// <param name="region"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Gladia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse<global::Gladia.InitStreamingResponse>> StreamingControllerInitStreamingSessionV2AsResponseAsync(
+
+            global::Gladia.StreamingRequest request,
+            global::Gladia.StreamingSupportedRegions? region = default,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Initiate a new live job
+        /// </summary>
+        /// <param name="region"></param>
         /// <param name="encoding">
         /// The encoding format of the audio stream. Supported formats: <br/>
         /// - PCM: 8, 16, 24, and 32 bits <br/>

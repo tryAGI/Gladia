@@ -21,6 +21,18 @@ namespace Gladia
         /// <summary>
         /// Initiate a new transcription job
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Gladia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse<global::Gladia.InitPreRecordedTranscriptionResponse>> TranscriptionControllerInitPreRecordedJobV2AsResponseAsync(
+
+            global::Gladia.InitTranscriptionRequest request,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Initiate a new transcription job
+        /// </summary>
         /// <param name="customVocabulary">
         /// **[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with<br/>
         /// Default Value: false

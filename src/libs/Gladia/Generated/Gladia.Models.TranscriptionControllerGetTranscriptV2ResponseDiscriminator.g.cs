@@ -40,5 +40,6 @@ namespace Gladia
         public TranscriptionControllerGetTranscriptV2ResponseDiscriminator()
         {
         }
+
     }
 }

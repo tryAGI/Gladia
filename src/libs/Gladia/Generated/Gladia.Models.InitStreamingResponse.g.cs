@@ -75,5 +75,6 @@ namespace Gladia
         public InitStreamingResponse()
         {
         }
+
     }
 }

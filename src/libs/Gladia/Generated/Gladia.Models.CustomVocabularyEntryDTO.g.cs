@@ -85,5 +85,6 @@ namespace Gladia
         public CustomVocabularyEntryDTO()
         {
         }
+
     }
 }

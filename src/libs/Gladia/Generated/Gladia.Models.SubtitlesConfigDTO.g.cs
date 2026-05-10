@@ -104,5 +104,6 @@ namespace Gladia
         public SubtitlesConfigDTO()
         {
         }
+
     }
 }

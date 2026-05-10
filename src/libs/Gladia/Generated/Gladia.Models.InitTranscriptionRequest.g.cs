@@ -349,5 +349,6 @@ namespace Gladia
         public InitTranscriptionRequest()
         {
         }
+
     }
 }

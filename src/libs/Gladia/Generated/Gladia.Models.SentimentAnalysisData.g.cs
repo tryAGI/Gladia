@@ -69,5 +69,6 @@ namespace Gladia
         public SentimentAnalysisData()
         {
         }
+
     }
 }

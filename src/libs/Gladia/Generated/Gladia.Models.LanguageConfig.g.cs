@@ -56,5 +56,6 @@ namespace Gladia
         public LanguageConfig()
         {
         }
+
     }
 }

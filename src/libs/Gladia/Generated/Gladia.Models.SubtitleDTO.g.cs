@@ -58,5 +58,6 @@ namespace Gladia
         public SubtitleDTO()
         {
         }
+
     }
 }

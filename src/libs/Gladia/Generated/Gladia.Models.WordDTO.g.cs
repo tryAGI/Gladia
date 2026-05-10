@@ -78,5 +78,6 @@ namespace Gladia
         public WordDTO()
         {
         }
+
     }
 }

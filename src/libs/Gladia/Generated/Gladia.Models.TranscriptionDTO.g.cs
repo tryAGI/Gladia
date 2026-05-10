@@ -91,5 +91,6 @@ namespace Gladia
         public TranscriptionDTO()
         {
         }
+
     }
 }

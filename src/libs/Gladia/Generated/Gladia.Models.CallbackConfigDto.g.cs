@@ -62,5 +62,6 @@ namespace Gladia
         public CallbackConfigDto()
         {
         }
+
     }
 }

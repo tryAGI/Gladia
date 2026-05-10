@@ -105,5 +105,6 @@ namespace Gladia
         public ForbiddenErrorResponse()
         {
         }
+
     }
 }

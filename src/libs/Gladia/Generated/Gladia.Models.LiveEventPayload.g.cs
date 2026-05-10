@@ -45,5 +45,6 @@ namespace Gladia
         public LiveEventPayload()
         {
         }
+
     }
 }

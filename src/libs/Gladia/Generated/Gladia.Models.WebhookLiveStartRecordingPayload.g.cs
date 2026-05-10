@@ -56,5 +56,18 @@ namespace Gladia
         public WebhookLiveStartRecordingPayload()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="WebhookLiveStartRecordingPayload"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static WebhookLiveStartRecordingPayload FromPayload(global::Gladia.LiveEventPayload payload)
+        {
+            return new WebhookLiveStartRecordingPayload
+            {
+                Payload = payload,
+            };
+        }
+
     }
 }

@@ -127,5 +127,6 @@ namespace Gladia
         public PostChapterizationResult()
         {
         }
+
     }
 }

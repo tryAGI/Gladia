@@ -161,5 +161,6 @@ namespace Gladia
         public CallbackConfig()
         {
         }
+
     }
 }

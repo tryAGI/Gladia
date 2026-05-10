@@ -70,5 +70,6 @@ namespace Gladia
         public ChapterizationSentence()
         {
         }
+
     }
 }

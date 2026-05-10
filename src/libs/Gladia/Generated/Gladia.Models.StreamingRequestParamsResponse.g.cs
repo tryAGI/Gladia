@@ -210,5 +210,6 @@ namespace Gladia
         public StreamingRequestParamsResponse()
         {
         }
+
     }
 }

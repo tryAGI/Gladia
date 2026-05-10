@@ -102,5 +102,6 @@ namespace Gladia
         public TranslationResultDTO()
         {
         }
+
     }
 }

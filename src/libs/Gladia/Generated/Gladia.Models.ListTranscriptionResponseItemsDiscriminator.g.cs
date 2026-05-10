@@ -40,5 +40,6 @@ namespace Gladia
         public ListTranscriptionResponseItemsDiscriminator()
         {
         }
+
     }
 }

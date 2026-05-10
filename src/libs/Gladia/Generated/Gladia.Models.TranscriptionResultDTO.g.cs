@@ -180,5 +180,6 @@ namespace Gladia
         public TranscriptionResultDTO()
         {
         }
+
     }
 }

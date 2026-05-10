@@ -95,5 +95,6 @@ namespace Gladia
         public TranslationData()
         {
         }
+
     }
 }

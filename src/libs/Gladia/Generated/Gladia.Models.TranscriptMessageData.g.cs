@@ -72,5 +72,6 @@ namespace Gladia
         public TranscriptMessageData()
         {
         }
+
     }
 }

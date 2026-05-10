@@ -90,5 +90,6 @@ namespace Gladia
         public SentimentAnalysisResult()
         {
         }
+
     }
 }

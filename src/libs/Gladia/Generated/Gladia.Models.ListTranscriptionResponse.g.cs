@@ -86,5 +86,6 @@ namespace Gladia
         public ListTranscriptionResponse()
         {
         }
+
     }
 }

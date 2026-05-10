@@ -122,5 +122,6 @@ namespace Gladia
         public TranslationConfigDTO()
         {
         }
+
     }
 }

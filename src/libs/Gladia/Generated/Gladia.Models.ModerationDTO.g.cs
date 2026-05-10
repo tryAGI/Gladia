@@ -88,5 +88,6 @@ namespace Gladia
         public ModerationDTO()
         {
         }
+
     }
 }

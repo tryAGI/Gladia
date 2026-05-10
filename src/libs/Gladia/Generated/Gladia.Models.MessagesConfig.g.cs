@@ -147,5 +147,6 @@ namespace Gladia
         public MessagesConfig()
         {
         }
+
     }
 }

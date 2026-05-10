@@ -56,5 +56,18 @@ namespace Gladia
         public WebhookLiveStartSessionPayload()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="WebhookLiveStartSessionPayload"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static WebhookLiveStartSessionPayload FromPayload(global::Gladia.LiveEventPayload payload)
+        {
+            return new WebhookLiveStartSessionPayload
+            {
+                Payload = payload,
+            };
+        }
+
     }
 }

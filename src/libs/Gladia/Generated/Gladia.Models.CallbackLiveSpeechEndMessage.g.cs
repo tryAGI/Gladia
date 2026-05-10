@@ -73,5 +73,6 @@ namespace Gladia
         public CallbackLiveSpeechEndMessage()
         {
         }
+
     }
 }

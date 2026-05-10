@@ -107,7 +107,10 @@ namespace Gladia.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null)
+            {
                 try
                 {
 

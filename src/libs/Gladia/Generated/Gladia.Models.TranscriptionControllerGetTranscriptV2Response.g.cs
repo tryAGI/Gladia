@@ -47,6 +47,13 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
+        public global::Gladia.PreRecordedResponse PickPreRecorded() => IsPreRecorded
+            ? PreRecorded!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PreRecorded' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Gladia.StreamingResponse? Live { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Gladia
             value = Live;
             return IsLive;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Gladia.StreamingResponse PickLive() => IsLive
+            ? Live!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Live' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -94,6 +108,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
+        public static TranscriptionControllerGetTranscriptV2Response FromPreRecorded(global::Gladia.PreRecordedResponse? value) => new TranscriptionControllerGetTranscriptV2Response(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator TranscriptionControllerGetTranscriptV2Response(global::Gladia.StreamingResponse value) => new TranscriptionControllerGetTranscriptV2Response((global::Gladia.StreamingResponse?)value);
 
         /// <summary>
@@ -108,6 +127,11 @@ namespace Gladia
         {
             Live = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static TranscriptionControllerGetTranscriptV2Response FromLive(global::Gladia.StreamingResponse? value) => new TranscriptionControllerGetTranscriptV2Response(value);
 
         /// <summary>
         /// 

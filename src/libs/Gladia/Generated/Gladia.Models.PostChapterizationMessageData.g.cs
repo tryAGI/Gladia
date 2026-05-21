@@ -42,5 +42,6 @@ namespace Gladia
         public PostChapterizationMessageData()
         {
         }
+
     }
 }

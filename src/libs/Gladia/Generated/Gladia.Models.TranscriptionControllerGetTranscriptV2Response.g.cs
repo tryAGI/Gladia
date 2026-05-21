@@ -34,6 +34,26 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickPreRecorded(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Gladia.PreRecordedResponse? value)
+        {
+            value = PreRecorded;
+            return IsPreRecorded;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Gladia.PreRecordedResponse PickPreRecorded() => IsPreRecorded
+            ? PreRecorded!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PreRecorded' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Gladia.StreamingResponse? Live { get; init; }
 #else
@@ -47,6 +67,26 @@ namespace Gladia
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Live))]
 #endif
         public bool IsLive => Live != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickLive(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Gladia.StreamingResponse? value)
+        {
+            value = Live;
+            return IsLive;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Gladia.StreamingResponse PickLive() => IsLive
+            ? Live!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Live' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -68,6 +108,11 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
+        public static TranscriptionControllerGetTranscriptV2Response FromPreRecorded(global::Gladia.PreRecordedResponse? value) => new TranscriptionControllerGetTranscriptV2Response(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator TranscriptionControllerGetTranscriptV2Response(global::Gladia.StreamingResponse value) => new TranscriptionControllerGetTranscriptV2Response((global::Gladia.StreamingResponse?)value);
 
         /// <summary>
@@ -82,6 +127,11 @@ namespace Gladia
         {
             Live = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static TranscriptionControllerGetTranscriptV2Response FromLive(global::Gladia.StreamingResponse? value) => new TranscriptionControllerGetTranscriptV2Response(value);
 
         /// <summary>
         /// 
@@ -126,8 +176,8 @@ namespace Gladia
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Gladia.PreRecordedResponse?, TResult>? preRecorded = null,
-            global::System.Func<global::Gladia.StreamingResponse?, TResult>? live = null,
+            global::System.Func<global::Gladia.PreRecordedResponse, TResult>? preRecorded = null,
+            global::System.Func<global::Gladia.StreamingResponse, TResult>? live = null,
             bool validate = true)
         {
             if (validate)
@@ -151,8 +201,32 @@ namespace Gladia
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Gladia.PreRecordedResponse?>? preRecorded = null,
-            global::System.Action<global::Gladia.StreamingResponse?>? live = null,
+            global::System.Action<global::Gladia.PreRecordedResponse>? preRecorded = null,
+
+            global::System.Action<global::Gladia.StreamingResponse>? live = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPreRecorded)
+            {
+                preRecorded?.Invoke(PreRecorded!);
+            }
+            else if (IsLive)
+            {
+                live?.Invoke(Live!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Gladia.PreRecordedResponse>? preRecorded = null,
+            global::System.Action<global::Gladia.StreamingResponse>? live = null,
             bool validate = true)
         {
             if (validate)

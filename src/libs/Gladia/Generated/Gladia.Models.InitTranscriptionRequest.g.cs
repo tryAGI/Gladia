@@ -85,14 +85,14 @@ namespace Gladia
         public global::Gladia.TranslationConfigDTO? TranslationConfig { get; set; }
 
         /// <summary>
-        /// **[Beta]** Enable summarization for this audio<br/>
+        /// Enable summarization for this audio<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("summarization")]
         public bool? Summarization { get; set; }
 
         /// <summary>
-        /// **[Beta]** Summarization configuration, if `summarization` is enabled
+        /// Summarization configuration, if `summarization` is enabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("summarization_config")]
         public global::Gladia.SummarizationConfigDTO? SummarizationConfig { get; set; }
@@ -125,14 +125,14 @@ namespace Gladia
         public bool? SentimentAnalysis { get; set; }
 
         /// <summary>
-        /// **[Alpha]** Enable audio to llm processing for this audio<br/>
+        /// Enable audio to LLM processing for this audio<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("audio_to_llm")]
         public bool? AudioToLlm { get; set; }
 
         /// <summary>
-        /// **[Alpha]** Audio to llm configuration, if `audio_to_llm` is enabled
+        /// Audio to LLM configuration, if `audio_to_llm` is enabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("audio_to_llm_config")]
         public global::Gladia.AudioToLlmListConfigDTO? AudioToLlmConfig { get; set; }
@@ -236,11 +236,11 @@ namespace Gladia
         /// **[Beta]** Translation configuration, if `translation` is enabled
         /// </param>
         /// <param name="summarization">
-        /// **[Beta]** Enable summarization for this audio<br/>
+        /// Enable summarization for this audio<br/>
         /// Default Value: false
         /// </param>
         /// <param name="summarizationConfig">
-        /// **[Beta]** Summarization configuration, if `summarization` is enabled
+        /// Summarization configuration, if `summarization` is enabled
         /// </param>
         /// <param name="namedEntityRecognition">
         /// **[Alpha]** Enable named entity recognition for this audio<br/>
@@ -258,11 +258,11 @@ namespace Gladia
         /// Default Value: false
         /// </param>
         /// <param name="audioToLlm">
-        /// **[Alpha]** Enable audio to llm processing for this audio<br/>
+        /// Enable audio to LLM processing for this audio<br/>
         /// Default Value: false
         /// </param>
         /// <param name="audioToLlmConfig">
-        /// **[Alpha]** Audio to llm configuration, if `audio_to_llm` is enabled
+        /// Audio to LLM configuration, if `audio_to_llm` is enabled
         /// </param>
         /// <param name="piiRedaction">
         /// Enable PII redaction for this audio<br/>
@@ -349,5 +349,6 @@ namespace Gladia
         public InitTranscriptionRequest()
         {
         }
+
     }
 }

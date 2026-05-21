@@ -46,5 +46,6 @@ namespace Gladia
         public StopRecordingAction()
         {
         }
+
     }
 }

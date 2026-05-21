@@ -89,5 +89,6 @@ namespace Gladia
         public CallbackTranscriptionSuccessPayload()
         {
         }
+
     }
 }

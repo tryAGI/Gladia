@@ -21,6 +21,18 @@ namespace Gladia
         /// <summary>
         /// Initiate a new transcription job
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Gladia.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse<global::Gladia.InitPreRecordedTranscriptionResponse>> TranscriptionControllerInitPreRecordedJobV2AsResponseAsync(
+
+            global::Gladia.InitTranscriptionRequest request,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Initiate a new transcription job
+        /// </summary>
         /// <param name="customVocabulary">
         /// **[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with<br/>
         /// Default Value: false
@@ -57,11 +69,11 @@ namespace Gladia
         /// **[Beta]** Translation configuration, if `translation` is enabled
         /// </param>
         /// <param name="summarization">
-        /// **[Beta]** Enable summarization for this audio<br/>
+        /// Enable summarization for this audio<br/>
         /// Default Value: false
         /// </param>
         /// <param name="summarizationConfig">
-        /// **[Beta]** Summarization configuration, if `summarization` is enabled
+        /// Summarization configuration, if `summarization` is enabled
         /// </param>
         /// <param name="namedEntityRecognition">
         /// **[Alpha]** Enable named entity recognition for this audio<br/>
@@ -79,11 +91,11 @@ namespace Gladia
         /// Default Value: false
         /// </param>
         /// <param name="audioToLlm">
-        /// **[Alpha]** Enable audio to llm processing for this audio<br/>
+        /// Enable audio to LLM processing for this audio<br/>
         /// Default Value: false
         /// </param>
         /// <param name="audioToLlmConfig">
-        /// **[Alpha]** Audio to llm configuration, if `audio_to_llm` is enabled
+        /// Audio to LLM configuration, if `audio_to_llm` is enabled
         /// </param>
         /// <param name="piiRedaction">
         /// Enable PII redaction for this audio<br/>

@@ -119,5 +119,6 @@ namespace Gladia
         public StreamingTranscriptionResultWithMessagesDTO()
         {
         }
+
     }
 }

@@ -49,6 +49,26 @@ namespace Gladia
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            await AudioToTextControllerAudioTranscriptionAsResponseAsync(
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Gladia.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse> AudioToTextControllerAudioTranscriptionAsResponseAsync(
+
+            global::Gladia.AudioToTextControllerAudioTranscriptionRequest request,
+            global::Gladia.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -75,10 +95,11 @@ namespace Gladia
             var __maxAttempts = global::Gladia.AutoSDKRequestOptionsSupport.GetMaxAttempts(
                 clientOptions: Options,
                 requestOptions: requestOptions,
-                supportsRetry: true);
+                supportsRetry: false);
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Gladia.PathBuilder(
                                 path: "/audio/text/audio-transcription",
                                 baseUri: HttpClient.BaseAddress);
@@ -111,6 +132,7 @@ namespace Gladia
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
+
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
                             if (request.Audio != default)
                             {
@@ -152,106 +174,123 @@ namespace Gladia
                                 {
                                     __contentAudio.Headers.ContentDisposition.FileNameStar = null;
                                 }
-                            } 
+
+                            }
                             if (request.AudioUrl != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent(request.AudioUrl ?? string.Empty),
                                     name: "\"audio_url\"");
-                            } 
+
+                            }
                             if (request.LanguageBehaviour != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((request.LanguageBehaviour).HasValue ? (request.LanguageBehaviour).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"language_behaviour\"");
-                            } 
+
+                            }
                             if (request.Language != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((request.Language).HasValue ? (request.Language).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"language\"");
-                            } 
+
+                            }
                             if (request.TranscriptionHint != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent(request.TranscriptionHint ?? string.Empty),
                                     name: "\"transcription_hint\"");
-                            } 
+
+                            }
                             if (request.ToggleDiarization != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleDiarization, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_diarization\"");
-                            } 
+
+                            }
                             if (request.DiarizationNumSpeakers != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.DiarizationNumSpeakers, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"diarization_num_speakers\"");
-                            } 
+
+                            }
                             if (request.DiarizationMinSpeakers != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.DiarizationMinSpeakers, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"diarization_min_speakers\"");
-                            } 
+
+                            }
                             if (request.DiarizationMaxSpeakers != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.DiarizationMaxSpeakers, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"diarization_max_speakers\"");
-                            } 
+
+                            }
                             if (request.ToggleDirectTranslate != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleDirectTranslate, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_direct_translate\"");
-                            } 
+
+                            }
                             if (request.TargetTranslationLanguage != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((request.TargetTranslationLanguage).HasValue ? (request.TargetTranslationLanguage).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"target_translation_language\"");
-                            } 
+
+                            }
                             if (request.OutputFormat != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((request.OutputFormat).HasValue ? (request.OutputFormat).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"output_format\"");
-                            } 
+
+                            }
                             if (request.ToggleNoiseReduction != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleNoiseReduction, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_noise_reduction\"");
-                            } 
+
+                            }
                             if (request.ToggleAccurateWordsTimestamps != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.ToggleAccurateWordsTimestamps, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"toggle_accurate_words_timestamps\"");
-                            } 
+
+                            }
                             if (request.WebhookUrl != default)
                             {
 
                                 __httpRequestContent.Add(
                                     content: new global::System.Net.Http.StringContent(request.WebhookUrl ?? string.Empty),
                                     name: "\"webhook_url\"");
+
                             }
+
                             __httpRequest.Content = __httpRequestContent;
+
                 global::Gladia.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -293,6 +332,8 @@ namespace Gladia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -303,6 +344,11 @@ namespace Gladia
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Gladia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -320,6 +366,8 @@ namespace Gladia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -329,8 +377,7 @@ namespace Gladia
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Gladia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -339,6 +386,11 @@ namespace Gladia
                         __attempt < __maxAttempts &&
                         global::Gladia.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Gladia.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Gladia.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -355,14 +407,15 @@ namespace Gladia
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Gladia.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -402,6 +455,8 @@ namespace Gladia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -422,6 +477,8 @@ namespace Gladia
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -442,6 +499,10 @@ namespace Gladia
                                 {
                                     __response.EnsureSuccessStatusCode();
 
+                return new global::Gladia.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Gladia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -463,6 +524,10 @@ namespace Gladia
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
+                                    return new global::Gladia.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Gladia.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

@@ -192,5 +192,6 @@ namespace Gladia
         public AudioToTextControllerAudioTranscriptionRequest()
         {
         }
+
     }
 }

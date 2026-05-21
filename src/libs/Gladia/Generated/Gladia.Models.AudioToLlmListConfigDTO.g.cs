@@ -19,7 +19,7 @@ namespace Gladia
 
         /// <summary>
         /// The model to use for the prompt execution. You can find the list of supported models [here](https://openrouter.ai/models).<br/>
-        /// Default Value: openai/gpt-3.5-turbo
+        /// Default Value: openai/gpt-5.4-nano
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         public string? Model { get; set; }
@@ -39,7 +39,7 @@ namespace Gladia
         /// </param>
         /// <param name="model">
         /// The model to use for the prompt execution. You can find the list of supported models [here](https://openrouter.ai/models).<br/>
-        /// Default Value: openai/gpt-3.5-turbo
+        /// Default Value: openai/gpt-5.4-nano
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,5 +58,6 @@ namespace Gladia
         public AudioToLlmListConfigDTO()
         {
         }
+
     }
 }

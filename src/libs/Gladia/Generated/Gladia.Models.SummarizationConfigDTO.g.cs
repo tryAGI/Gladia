@@ -44,5 +44,6 @@ namespace Gladia
         public SummarizationConfigDTO()
         {
         }
+
     }
 }

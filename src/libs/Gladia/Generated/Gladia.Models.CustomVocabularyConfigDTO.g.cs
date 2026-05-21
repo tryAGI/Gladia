@@ -59,5 +59,6 @@ namespace Gladia
         public CustomVocabularyConfigDTO()
         {
         }
+
     }
 }

@@ -129,5 +129,6 @@ namespace Gladia
         public UtteranceDTO()
         {
         }
+
     }
 }

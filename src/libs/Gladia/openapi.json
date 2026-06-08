@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-07",
+              "example": "2026-06-08",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-07",
+              "example": "2026-06-08",
               "type": "string"
             }
           },
@@ -1503,7 +1503,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-07",
+              "example": "2026-06-08",
               "type": "string"
             }
           },
@@ -1713,7 +1713,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-07",
+              "example": "2026-06-08",
               "type": "string"
             }
           },
@@ -2059,6 +2059,21 @@
         "summary": "Download the audio file used for this live job",
         "tags": [
           "Live V2"
+        ]
+      }
+    },
+    "/v1/models": {
+      "get": {
+        "operationId": "ModelsController_list_v1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of available models"
+          }
+        },
+        "summary": "List Gladia's available transcription models as per OpenRouter integration spec",
+        "tags": [
+          "OpenRouter"
         ]
       }
     }

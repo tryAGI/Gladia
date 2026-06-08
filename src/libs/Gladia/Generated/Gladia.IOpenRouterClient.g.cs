@@ -7,7 +7,7 @@ namespace Gladia
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public partial interface IGladiaClient : global::System.IDisposable
+    public partial interface IOpenRouterClient : global::System.IDisposable
     {
         /// <summary>
         /// The HttpClient instance.
@@ -43,46 +43,6 @@ namespace Gladia
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AudioToTextClient AudioToText { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public FileManagementClient FileManagement { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public JobHistoryClient JobHistory { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public LiveV2Client LiveV2 { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public OpenRouterClient OpenRouter { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public PreRecordedV2Client PreRecordedV2 { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TranscriptionV1Client TranscriptionV1 { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public TranscriptionV2Client TranscriptionV2 { get; }
 
     }
 }

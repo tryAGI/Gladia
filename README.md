@@ -19,6 +19,13 @@ using Gladia;
 using var client = new GladiaClient(apiKey);
 ```
 
+### CLI
+
+```bash
+dotnet tool install --global Gladia.CLI --prerelease
+gladia api --help
+```
+
 <!-- EXAMPLES:START -->
 ### List Transcription Jobs
 List pre-recorded transcription jobs.

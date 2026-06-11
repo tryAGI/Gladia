@@ -1,0 +1,200 @@
+#nullable enable
+#pragma warning disable CS0618
+
+using System.CommandLine;
+
+namespace Gladia.CLI.Commands;
+
+internal static partial class AudioToTextAudioToTextControllerAudioTranscriptionCommandApiCommand
+{
+    private static Option<byte[]?> Audio { get; } = new(
+        name: @"--audio")
+    {
+        Description = @"",
+    };
+
+    private static Option<string?> Audioname { get; } = new(
+        name: @"--audioname")
+    {
+        Description = @"",
+    };
+
+    private static Option<string?> AudioUrl { get; } = new(
+        name: @"--audio-url")
+    {
+        Description = @"",
+    };
+
+    private static Option<global::Gladia.AudioToTextControllerAudioTranscriptionRequestLanguageBehaviour?> LanguageBehaviour { get; } = new(
+        name: @"--language-behaviour")
+    {
+        Description = @"",
+    };
+
+    private static Option<global::Gladia.AudioToTextControllerAudioTranscriptionRequestLanguage?> Language { get; } = new(
+        name: @"--language")
+    {
+        Description = @"",
+    };
+
+    private static Option<string?> TranscriptionHint { get; } = new(
+        name: @"--transcription-hint")
+    {
+        Description = @"",
+    };
+
+    private static Option<bool?> ToggleDiarization { get; } = CliRuntime.CreateNullableBoolOption(
+        name: @"--toggle-diarization",
+        description: @"");
+
+    private static Option<int?> DiarizationNumSpeakers { get; } = new(
+        name: @"--diarization-num-speakers")
+    {
+        Description = @"",
+    };
+
+    private static Option<int?> DiarizationMinSpeakers { get; } = new(
+        name: @"--diarization-min-speakers")
+    {
+        Description = @"",
+    };
+
+    private static Option<int?> DiarizationMaxSpeakers { get; } = new(
+        name: @"--diarization-max-speakers")
+    {
+        Description = @"",
+    };
+
+    private static Option<bool?> ToggleDirectTranslate { get; } = CliRuntime.CreateNullableBoolOption(
+        name: @"--toggle-direct-translate",
+        description: @"");
+
+    private static Option<global::Gladia.AudioToTextControllerAudioTranscriptionRequestTargetTranslationLanguage?> TargetTranslationLanguage { get; } = new(
+        name: @"--target-translation-language")
+    {
+        Description = @"",
+    };
+
+    private static Option<global::Gladia.AudioToTextControllerAudioTranscriptionRequestOutputFormat?> OutputFormat { get; } = new(
+        name: @"--output-format")
+    {
+        Description = @"",
+    };
+
+    private static Option<bool?> ToggleNoiseReduction { get; } = CliRuntime.CreateNullableBoolOption(
+        name: @"--toggle-noise-reduction",
+        description: @"");
+
+    private static Option<bool?> ToggleAccurateWordsTimestamps { get; } = CliRuntime.CreateNullableBoolOption(
+        name: @"--toggle-accurate-words-timestamps",
+        description: @"");
+
+    private static Option<string?> WebhookUrl { get; } = new(
+        name: @"--webhook-url")
+    {
+        Description = @"",
+    };
+      private static Option<string?> Input { get; } = new(@"--input")
+      {
+          Description = "Load request JSON from a file path, '-' for stdin, or an inline JSON object/array string.",
+      };
+
+      private static Option<string?> RequestJson { get; } = new(@"--request-json")
+      {
+          Description = "Request body as JSON.",
+          Hidden = true,
+      };
+
+      private static Option<string?> RequestFile { get; } = new(@"--request-file")
+      {
+          Description = "Path to a JSON request file, or '-' for stdin.",
+          Hidden = true,
+      };
+
+    public static Command Create()
+    {
+        var command = new Command(@"controller-audio-transcription", @"");
+                        command.Options.Add(Audio);
+                        command.Options.Add(Audioname);
+                        command.Options.Add(AudioUrl);
+                        command.Options.Add(LanguageBehaviour);
+                        command.Options.Add(Language);
+                        command.Options.Add(TranscriptionHint);
+                        command.Options.Add(ToggleDiarization);
+                        command.Options.Add(DiarizationNumSpeakers);
+                        command.Options.Add(DiarizationMinSpeakers);
+                        command.Options.Add(DiarizationMaxSpeakers);
+                        command.Options.Add(ToggleDirectTranslate);
+                        command.Options.Add(TargetTranslationLanguage);
+                        command.Options.Add(OutputFormat);
+                        command.Options.Add(ToggleNoiseReduction);
+                        command.Options.Add(ToggleAccurateWordsTimestamps);
+                        command.Options.Add(WebhookUrl);
+          command.Options.Add(Input);
+          command.Options.Add(RequestJson);
+          command.Options.Add(RequestFile);
+          command.Validators.Add(result =>
+          {
+              var hasInput = result.GetResult(Input) is not null;
+              var hasRequestJson = result.GetResult(RequestJson) is not null;
+              var hasRequestFile = result.GetResult(RequestFile) is not null;
+              var specifiedCount = (hasInput ? 1 : 0) + (hasRequestJson ? 1 : 0) + (hasRequestFile ? 1 : 0);
+              if (specifiedCount > 1)
+              {
+                  result.AddError(@"Specify at most one of --input, --request-json, or --request-file.");
+              }
+          });
+
+        command.SetAction(async (ParseResult parseResult, CancellationToken cancellationToken) =>
+            await CliRuntime.RunAsync(async () =>
+            {
+                        var __requestBase = await CliRuntime.ReadRequestOrDefaultAsync<global::Gladia.AudioToTextControllerAudioTranscriptionRequest>(
+                            parseResult,
+                            Input,
+                            RequestJson,
+                            RequestFile,
+                            global::Gladia.SourceGenerationContext.Default,
+                            cancellationToken).ConfigureAwait(false);
+                        var audio = CliRuntime.WasSpecified(parseResult, Audio) ? parseResult.GetValue(Audio) : __requestBase is not null ? __requestBase.Audio : default;
+                        var audioname = CliRuntime.WasSpecified(parseResult, Audioname) ? parseResult.GetValue(Audioname) : __requestBase is not null ? __requestBase.Audioname : default;
+                        var audioUrl = CliRuntime.WasSpecified(parseResult, AudioUrl) ? parseResult.GetValue(AudioUrl) : __requestBase is not null ? __requestBase.AudioUrl : default;
+                        var languageBehaviour = CliRuntime.WasSpecified(parseResult, LanguageBehaviour) ? parseResult.GetValue(LanguageBehaviour) : __requestBase is not null ? __requestBase.LanguageBehaviour : default;
+                        var language = CliRuntime.WasSpecified(parseResult, Language) ? parseResult.GetValue(Language) : __requestBase is not null ? __requestBase.Language : default;
+                        var transcriptionHint = CliRuntime.WasSpecified(parseResult, TranscriptionHint) ? parseResult.GetValue(TranscriptionHint) : __requestBase is not null ? __requestBase.TranscriptionHint : default;
+                        var toggleDiarization = CliRuntime.WasSpecified(parseResult, ToggleDiarization) ? parseResult.GetValue(ToggleDiarization) : __requestBase is not null ? __requestBase.ToggleDiarization : default;
+                        var diarizationNumSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationNumSpeakers) ? parseResult.GetValue(DiarizationNumSpeakers) : __requestBase is not null ? __requestBase.DiarizationNumSpeakers : default;
+                        var diarizationMinSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationMinSpeakers) ? parseResult.GetValue(DiarizationMinSpeakers) : __requestBase is not null ? __requestBase.DiarizationMinSpeakers : default;
+                        var diarizationMaxSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationMaxSpeakers) ? parseResult.GetValue(DiarizationMaxSpeakers) : __requestBase is not null ? __requestBase.DiarizationMaxSpeakers : default;
+                        var toggleDirectTranslate = CliRuntime.WasSpecified(parseResult, ToggleDirectTranslate) ? parseResult.GetValue(ToggleDirectTranslate) : __requestBase is not null ? __requestBase.ToggleDirectTranslate : default;
+                        var targetTranslationLanguage = CliRuntime.WasSpecified(parseResult, TargetTranslationLanguage) ? parseResult.GetValue(TargetTranslationLanguage) : __requestBase is not null ? __requestBase.TargetTranslationLanguage : default;
+                        var outputFormat = CliRuntime.WasSpecified(parseResult, OutputFormat) ? parseResult.GetValue(OutputFormat) : __requestBase is not null ? __requestBase.OutputFormat : default;
+                        var toggleNoiseReduction = CliRuntime.WasSpecified(parseResult, ToggleNoiseReduction) ? parseResult.GetValue(ToggleNoiseReduction) : __requestBase is not null ? __requestBase.ToggleNoiseReduction : default;
+                        var toggleAccurateWordsTimestamps = CliRuntime.WasSpecified(parseResult, ToggleAccurateWordsTimestamps) ? parseResult.GetValue(ToggleAccurateWordsTimestamps) : __requestBase is not null ? __requestBase.ToggleAccurateWordsTimestamps : default;
+                        var webhookUrl = CliRuntime.WasSpecified(parseResult, WebhookUrl) ? parseResult.GetValue(WebhookUrl) : __requestBase is not null ? __requestBase.WebhookUrl : default;
+                using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
+
+
+                                await client.AudioToText.AudioToTextControllerAudioTranscriptionAsync(
+                                    audio: audio,
+                                    audioname: audioname,
+                                    audioUrl: audioUrl,
+                                    languageBehaviour: languageBehaviour,
+                                    language: language,
+                                    transcriptionHint: transcriptionHint,
+                                    toggleDiarization: toggleDiarization,
+                                    diarizationNumSpeakers: diarizationNumSpeakers,
+                                    diarizationMinSpeakers: diarizationMinSpeakers,
+                                    diarizationMaxSpeakers: diarizationMaxSpeakers,
+                                    toggleDirectTranslate: toggleDirectTranslate,
+                                    targetTranslationLanguage: targetTranslationLanguage,
+                                    outputFormat: outputFormat,
+                                    toggleNoiseReduction: toggleNoiseReduction,
+                                    toggleAccurateWordsTimestamps: toggleAccurateWordsTimestamps,
+                                    webhookUrl: webhookUrl,
+                                    cancellationToken: cancellationToken).ConfigureAwait(false);
+
+                                await CliRuntime.WriteSuccessAsync(parseResult, cancellationToken).ConfigureAwait(false);
+            }, cancellationToken).ConfigureAwait(false));
+        return command;
+    }
+}

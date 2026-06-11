@@ -20,3 +20,20 @@ autosdk generate openapi.json \
   --output Generated \
   --exclude-deprecated-operations \
   --security-scheme Http:Header:Bearer
+
+rm -rf ../../cli/Gladia.CLI
+
+autosdk cli-project openapi.json \
+  --output ../../cli/Gladia.CLI \
+  --sdk-project ../../libs/Gladia/Gladia.csproj \
+  --targetFramework net10.0 \
+  --namespace Gladia \
+  --clientClassName GladiaClient \
+  --package-id Gladia.CLI \
+  --tool-command-name gladia \
+  --user-secrets-id Gladia.CLI \
+  --api-key-env-var GLADIA_API_KEY \
+  --base-url-env-var GLADIA_BASE_URL \
+  --cli-credential-file \
+  --exclude-deprecated-operations \
+  --security-scheme Http:Header:Bearer

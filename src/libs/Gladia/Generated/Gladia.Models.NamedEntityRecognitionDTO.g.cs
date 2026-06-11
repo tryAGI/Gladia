@@ -39,8 +39,7 @@ namespace Gladia
         /// If `named_entity_recognition` has been enabled, the detected entities.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult> Results { get; set; }
+        public global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult>? Results { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -60,11 +59,11 @@ namespace Gladia
         /// <param name="execTime">
         /// Time audio intelligence model took to complete the task
         /// </param>
-        /// <param name="results">
-        /// If `named_entity_recognition` has been enabled, the detected entities.
-        /// </param>
         /// <param name="error">
         /// `null` if `success` is `true`. Contains the error details of the failed model
+        /// </param>
+        /// <param name="results">
+        /// If `named_entity_recognition` has been enabled, the detected entities.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -73,14 +72,14 @@ namespace Gladia
             bool success,
             bool isEmpty,
             double execTime,
-            global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult> results,
-            global::Gladia.AddonErrorDTO? error)
+            global::Gladia.AddonErrorDTO? error,
+            global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult>? results)
         {
             this.Success = success;
             this.IsEmpty = isEmpty;
             this.ExecTime = execTime;
             this.Error = error;
-            this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
+            this.Results = results;
         }
 
         /// <summary>

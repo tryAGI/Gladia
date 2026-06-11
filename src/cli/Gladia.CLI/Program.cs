@@ -15,6 +15,7 @@ rootCommand.Subcommands.Add(AudioToTextApiGroupCommand.Create());
 rootCommand.Subcommands.Add(FileManagementApiGroupCommand.Create());
 rootCommand.Subcommands.Add(JobHistoryApiGroupCommand.Create());
 rootCommand.Subcommands.Add(LiveV2ApiGroupCommand.Create());
+rootCommand.Subcommands.Add(OpenRouterApiGroupCommand.Create());
 rootCommand.Subcommands.Add(PreRecordedV2ApiGroupCommand.Create());
 rootCommand.Subcommands.Add(TranscriptionV1ApiGroupCommand.Create());
 rootCommand.Subcommands.Add(TranscriptionV2ApiGroupCommand.Create());

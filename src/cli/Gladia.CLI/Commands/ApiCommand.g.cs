@@ -14,6 +14,7 @@ internal static class ApiCommand
                          command.Subcommands.Add(FileManagementApiGroupCommand.Create());
                          command.Subcommands.Add(JobHistoryApiGroupCommand.Create());
                          command.Subcommands.Add(LiveV2ApiGroupCommand.Create());
+                         command.Subcommands.Add(OpenRouterApiGroupCommand.Create());
                          command.Subcommands.Add(PreRecordedV2ApiGroupCommand.Create());
                          command.Subcommands.Add(TranscriptionV1ApiGroupCommand.Create());
                          command.Subcommands.Add(TranscriptionV2ApiGroupCommand.Create());

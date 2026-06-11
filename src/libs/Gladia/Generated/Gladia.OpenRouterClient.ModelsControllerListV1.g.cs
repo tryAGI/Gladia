@@ -3,11 +3,11 @@
 
 namespace Gladia
 {
-    public partial class PreRecordedV2Client
+    public partial class OpenRouterClient
     {
 
 
-        private static readonly global::Gladia.EndPointSecurityRequirement s_PreRecordedControllerGetPreRecordedJobsV2SecurityRequirement0 =
+        private static readonly global::Gladia.EndPointSecurityRequirement s_ModelsControllerListV1SecurityRequirement0 =
             new global::Gladia.EndPointSecurityRequirement
             {
                 Authorizations = new global::Gladia.EndPointAuthorizationRequirement[]
@@ -21,145 +21,54 @@ namespace Gladia
                     },
                 },
             };
-        private static readonly global::Gladia.EndPointSecurityRequirement[] s_PreRecordedControllerGetPreRecordedJobsV2SecurityRequirements =
+        private static readonly global::Gladia.EndPointSecurityRequirement[] s_ModelsControllerListV1SecurityRequirements =
             new global::Gladia.EndPointSecurityRequirement[]
-            {                s_PreRecordedControllerGetPreRecordedJobsV2SecurityRequirement0,
+            {                s_ModelsControllerListV1SecurityRequirement0,
             };
-        partial void PreparePreRecordedControllerGetPreRecordedJobsV2Arguments(
+        partial void PrepareModelsControllerListV1Arguments(
+            global::System.Net.Http.HttpClient httpClient);
+        partial void PrepareModelsControllerListV1Request(
             global::System.Net.Http.HttpClient httpClient,
-            ref int? offset,
-            ref int? limit,
-            ref global::System.DateTime? date,
-            ref global::System.DateTime? beforeDate,
-            ref global::System.DateTime? afterDate,
-            global::System.Collections.Generic.IList<global::Gladia.PreRecordedControllerGetPreRecordedJobsV2Statu>? status,
-            object? customMetadata);
-        partial void PreparePreRecordedControllerGetPreRecordedJobsV2Request(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int? offset,
-            int? limit,
-            global::System.DateTime? date,
-            global::System.DateTime? beforeDate,
-            global::System.DateTime? afterDate,
-            global::System.Collections.Generic.IList<global::Gladia.PreRecordedControllerGetPreRecordedJobsV2Statu>? status,
-            object? customMetadata);
-        partial void ProcessPreRecordedControllerGetPreRecordedJobsV2Response(
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+        partial void ProcessModelsControllerListV1Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessPreRecordedControllerGetPreRecordedJobsV2ResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Get pre recorded jobs based on query parameters
+        /// List Gladia's available transcription models as per OpenRouter integration spec
         /// </summary>
-        /// <param name="offset">
-        /// Default Value: 0
-        /// </param>
-        /// <param name="limit">
-        /// Default Value: 20
-        /// </param>
-        /// <param name="date">
-        /// Example: 2026-06-10
-        /// </param>
-        /// <param name="beforeDate">
-        /// Example: 2024-01-01T00:00:00.000Z
-        /// </param>
-        /// <param name="afterDate">
-        /// Example: 2024-01-01T00:00:00.000Z
-        /// </param>
-        /// <param name="status">
-        /// Example: [done]
-        /// </param>
-        /// <param name="customMetadata">
-        /// Example: {"user":"John Doe"}
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Gladia.ListPreRecordedResponse> PreRecordedControllerGetPreRecordedJobsV2Async(
-            int? offset = default,
-            int? limit = default,
-            global::System.DateTime? date = default,
-            global::System.DateTime? beforeDate = default,
-            global::System.DateTime? afterDate = default,
-            global::System.Collections.Generic.IList<global::Gladia.PreRecordedControllerGetPreRecordedJobsV2Statu>? status = default,
-            object? customMetadata = default,
+        public async global::System.Threading.Tasks.Task ModelsControllerListV1Async(
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await PreRecordedControllerGetPreRecordedJobsV2AsResponseAsync(
-                offset: offset,
-                limit: limit,
-                date: date,
-                beforeDate: beforeDate,
-                afterDate: afterDate,
-                status: status,
-                customMetadata: customMetadata,
+            await ModelsControllerListV1AsResponseAsync(
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
-
-            return __response.Body;
         }
         /// <summary>
-        /// Get pre recorded jobs based on query parameters
+        /// List Gladia's available transcription models as per OpenRouter integration spec
         /// </summary>
-        /// <param name="offset">
-        /// Default Value: 0
-        /// </param>
-        /// <param name="limit">
-        /// Default Value: 20
-        /// </param>
-        /// <param name="date">
-        /// Example: 2026-06-10
-        /// </param>
-        /// <param name="beforeDate">
-        /// Example: 2024-01-01T00:00:00.000Z
-        /// </param>
-        /// <param name="afterDate">
-        /// Example: 2024-01-01T00:00:00.000Z
-        /// </param>
-        /// <param name="status">
-        /// Example: [done]
-        /// </param>
-        /// <param name="customMetadata">
-        /// Example: {"user":"John Doe"}
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Gladia.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse<global::Gladia.ListPreRecordedResponse>> PreRecordedControllerGetPreRecordedJobsV2AsResponseAsync(
-            int? offset = default,
-            int? limit = default,
-            global::System.DateTime? date = default,
-            global::System.DateTime? beforeDate = default,
-            global::System.DateTime? afterDate = default,
-            global::System.Collections.Generic.IList<global::Gladia.PreRecordedControllerGetPreRecordedJobsV2Statu>? status = default,
-            object? customMetadata = default,
+        public async global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse> ModelsControllerListV1AsResponseAsync(
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PreparePreRecordedControllerGetPreRecordedJobsV2Arguments(
-                httpClient: HttpClient,
-                offset: ref offset,
-                limit: ref limit,
-                date: ref date,
-                beforeDate: ref beforeDate,
-                afterDate: ref afterDate,
-                status: status,
-                customMetadata: customMetadata);
+            PrepareModelsControllerListV1Arguments(
+                httpClient: HttpClient);
 
 
             var __authorizations = global::Gladia.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_PreRecordedControllerGetPreRecordedJobsV2SecurityRequirements,
-                operationName: "PreRecordedControllerGetPreRecordedJobsV2Async");
+                securityRequirements: s_ModelsControllerListV1SecurityRequirements,
+                operationName: "ModelsControllerListV1Async");
 
             using var __timeoutCancellationTokenSource = global::Gladia.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -179,17 +88,8 @@ namespace Gladia
             {
 
                             var __pathBuilder = new global::Gladia.PathBuilder(
-                                path: "/v2/pre-recorded",
+                                path: "/v1/models",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("offset", offset?.ToString())
-                                .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("date", date?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("before_date", beforeDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("after_date", afterDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("status", status, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
-                                .AddOptionalParameter("custom_metadata", customMetadata?.ToString())
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Gladia.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -227,16 +127,9 @@ namespace Gladia
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PreparePreRecordedControllerGetPreRecordedJobsV2Request(
+                PrepareModelsControllerListV1Request(
                     httpClient: HttpClient,
-                    httpRequestMessage: __httpRequest,
-                    offset: offset,
-                    limit: limit,
-                    date: date,
-                    beforeDate: beforeDate,
-                    afterDate: afterDate,
-                    status: status,
-                    customMetadata: customMetadata);
+                    httpRequestMessage: __httpRequest);
 
                 return __httpRequest;
             }
@@ -253,9 +146,9 @@ namespace Gladia
                     await global::Gladia.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Gladia.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "PreRecordedControllerGetPreRecordedJobsV2",
-                                methodName: "PreRecordedControllerGetPreRecordedJobsV2Async",
-                                pathTemplate: "\"/v2/pre-recorded\"",
+                                operationId: "ModelsControllerListV1",
+                                methodName: "ModelsControllerListV1Async",
+                                pathTemplate: "\"/v1/models\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -287,9 +180,9 @@ namespace Gladia
                         await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Gladia.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "PreRecordedControllerGetPreRecordedJobsV2",
-                                methodName: "PreRecordedControllerGetPreRecordedJobsV2Async",
-                                pathTemplate: "\"/v2/pre-recorded\"",
+                                operationId: "ModelsControllerListV1",
+                                methodName: "ModelsControllerListV1Async",
+                                pathTemplate: "\"/v1/models\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -328,9 +221,9 @@ namespace Gladia
                         await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Gladia.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "PreRecordedControllerGetPreRecordedJobsV2",
-                                methodName: "PreRecordedControllerGetPreRecordedJobsV2Async",
-                                pathTemplate: "\"/v2/pre-recorded\"",
+                                operationId: "ModelsControllerListV1",
+                                methodName: "ModelsControllerListV1Async",
+                                pathTemplate: "\"/v1/models\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -368,7 +261,7 @@ namespace Gladia
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessPreRecordedControllerGetPreRecordedJobsV2Response(
+                ProcessModelsControllerListV1Response(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -376,9 +269,9 @@ namespace Gladia
                     await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Gladia.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "PreRecordedControllerGetPreRecordedJobsV2",
-                                methodName: "PreRecordedControllerGetPreRecordedJobsV2Async",
-                                pathTemplate: "\"/v2/pre-recorded\"",
+                                operationId: "ModelsControllerListV1",
+                                methodName: "ModelsControllerListV1Async",
+                                pathTemplate: "\"/v1/models\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -398,9 +291,9 @@ namespace Gladia
                     await global::Gladia.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Gladia.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "PreRecordedControllerGetPreRecordedJobsV2",
-                                methodName: "PreRecordedControllerGetPreRecordedJobsV2Async",
-                                pathTemplate: "\"/v2/pre-recorded\"",
+                                operationId: "ModelsControllerListV1",
+                                methodName: "ModelsControllerListV1Async",
+                                pathTemplate: "\"/v1/models\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -415,43 +308,6 @@ namespace Gladia
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // You don't have the permissions to access pre recorded jobs
-                            if ((int)__response.StatusCode == 401)
-                            {
-                                string? __content_401 = null;
-                                global::System.Exception? __exception_401 = null;
-                                global::Gladia.UnauthorizedErrorResponse? __value_401 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Gladia.UnauthorizedErrorResponse.FromJson(__content_401, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_401 = global::Gladia.UnauthorizedErrorResponse.FromJson(__content_401, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_401 = __ex;
-                                }
-
-
-                                throw global::Gladia.ApiException<global::Gladia.UnauthorizedErrorResponse>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_401,
-                                    responseBody: __content_401,
-                                    responseObject: __value_401,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -465,22 +321,15 @@ namespace Gladia
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessPreRecordedControllerGetPreRecordedJobsV2ResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Gladia.ListPreRecordedResponse.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Gladia.AutoSDKHttpResponse<global::Gladia.ListPreRecordedResponse>(
+                return new global::Gladia.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::Gladia.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -500,19 +349,10 @@ namespace Gladia
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
-
-                                    var __value = await global::Gladia.ListPreRecordedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Gladia.AutoSDKHttpResponse<global::Gladia.ListPreRecordedResponse>(
+                                    return new global::Gladia.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::Gladia.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

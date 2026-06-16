@@ -85,8 +85,8 @@ internal static partial class FileManagementFileControllerUploadV2CommandApiComm
                             RequestFile,
                             global::Gladia.SourceGenerationContext.Default,
                             cancellationToken).ConfigureAwait(false);
-                        var audio = CliRuntime.WasSpecified(parseResult, Audio) ? parseResult.GetValue(Audio) : __requestBase is not null ? __requestBase.Audio : default;
-                        var audioname = CliRuntime.WasSpecified(parseResult, Audioname) ? parseResult.GetValue(Audioname) : __requestBase is not null ? __requestBase.Audioname : default;
+                        var audio = CliRuntime.WasSpecified(parseResult, Audio) ? parseResult.GetValue(Audio) : (__requestBase is { } __AudioBaseValue ? __AudioBaseValue.Audio : default);
+                        var audioname = CliRuntime.WasSpecified(parseResult, Audioname) ? parseResult.GetValue(Audioname) : (__requestBase is { } __AudionameBaseValue ? __AudionameBaseValue.Audioname : default);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 

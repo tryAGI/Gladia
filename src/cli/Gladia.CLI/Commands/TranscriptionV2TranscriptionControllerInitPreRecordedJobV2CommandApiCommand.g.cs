@@ -133,55 +133,55 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                             RequestFile,
                             global::Gladia.SourceGenerationContext.Default,
                             cancellationToken).ConfigureAwait(false);
-                        var customSpellingConfig = CliRuntime.WasSpecified(parseResult, CustomSpellingConfig) ? parseResult.GetValue(CustomSpellingConfig) : __requestBase is not null ? __requestBase.CustomSpellingConfig : default;
-                        var customMetadata = CliRuntime.WasSpecified(parseResult, CustomMetadata) ? parseResult.GetValue(CustomMetadata) : __requestBase is not null ? __requestBase.CustomMetadata : default;                        var customVocabulary = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.CustomVocabulary) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.CustomVocabulary) : __requestBase is not null ? __requestBase.CustomVocabulary : default;
-                        var callback = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Callback) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Callback) : __requestBase is not null ? __requestBase.Callback : default;
-                        var subtitles = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Subtitles) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Subtitles) : __requestBase is not null ? __requestBase.Subtitles : default;
-                        var diarization = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Diarization) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Diarization) : __requestBase is not null ? __requestBase.Diarization : default;
-                        var translation = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Translation) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Translation) : __requestBase is not null ? __requestBase.Translation : default;
-                        var summarization = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Summarization) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Summarization) : __requestBase is not null ? __requestBase.Summarization : default;
-                        var namedEntityRecognition = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.NamedEntityRecognition) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.NamedEntityRecognition) : __requestBase is not null ? __requestBase.NamedEntityRecognition : default;
-                        var customSpelling = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.CustomSpelling) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.CustomSpelling) : __requestBase is not null ? __requestBase.CustomSpelling : default;
-                        var sentimentAnalysis = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.SentimentAnalysis) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.SentimentAnalysis) : __requestBase is not null ? __requestBase.SentimentAnalysis : default;
-                        var audioToLlm = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.AudioToLlm) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.AudioToLlm) : __requestBase is not null ? __requestBase.AudioToLlm : default;
-                        var piiRedaction = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.PiiRedaction) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.PiiRedaction) : __requestBase is not null ? __requestBase.PiiRedaction : default;
-                        var sentences = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Sentences) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Sentences) : __requestBase is not null ? __requestBase.Sentences : default;
-                        var punctuationEnhanced = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.PunctuationEnhanced) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.PunctuationEnhanced) : __requestBase is not null ? __requestBase.PunctuationEnhanced : default;
+                        var customSpellingConfig = CliRuntime.WasSpecified(parseResult, CustomSpellingConfig) ? parseResult.GetValue(CustomSpellingConfig) : (__requestBase is { } __CustomSpellingConfigBaseValue ? __CustomSpellingConfigBaseValue.CustomSpellingConfig : default);
+                        var customMetadata = CliRuntime.WasSpecified(parseResult, CustomMetadata) ? parseResult.GetValue(CustomMetadata) : (__requestBase is { } __CustomMetadataBaseValue ? __CustomMetadataBaseValue.CustomMetadata : default);                        var customVocabulary = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.CustomVocabulary) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.CustomVocabulary) : (__requestBase is { } __CustomVocabularyBaseValue ? __CustomVocabularyBaseValue.CustomVocabulary : default);
+                        var callback = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Callback) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Callback) : (__requestBase is { } __CallbackBaseValue ? __CallbackBaseValue.Callback : default);
+                        var subtitles = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Subtitles) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Subtitles) : (__requestBase is { } __SubtitlesBaseValue ? __SubtitlesBaseValue.Subtitles : default);
+                        var diarization = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Diarization) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Diarization) : (__requestBase is { } __DiarizationBaseValue ? __DiarizationBaseValue.Diarization : default);
+                        var translation = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Translation) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Translation) : (__requestBase is { } __TranslationBaseValue ? __TranslationBaseValue.Translation : default);
+                        var summarization = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Summarization) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Summarization) : (__requestBase is { } __SummarizationBaseValue ? __SummarizationBaseValue.Summarization : default);
+                        var namedEntityRecognition = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.NamedEntityRecognition) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.NamedEntityRecognition) : (__requestBase is { } __NamedEntityRecognitionBaseValue ? __NamedEntityRecognitionBaseValue.NamedEntityRecognition : default);
+                        var customSpelling = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.CustomSpelling) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.CustomSpelling) : (__requestBase is { } __CustomSpellingBaseValue ? __CustomSpellingBaseValue.CustomSpelling : default);
+                        var sentimentAnalysis = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.SentimentAnalysis) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.SentimentAnalysis) : (__requestBase is { } __SentimentAnalysisBaseValue ? __SentimentAnalysisBaseValue.SentimentAnalysis : default);
+                        var audioToLlm = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.AudioToLlm) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.AudioToLlm) : (__requestBase is { } __AudioToLlmBaseValue ? __AudioToLlmBaseValue.AudioToLlm : default);
+                        var piiRedaction = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.PiiRedaction) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.PiiRedaction) : (__requestBase is { } __PiiRedactionBaseValue ? __PiiRedactionBaseValue.PiiRedaction : default);
+                        var sentences = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Sentences) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Sentences) : (__requestBase is { } __SentencesBaseValue ? __SentencesBaseValue.Sentences : default);
+                        var punctuationEnhanced = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.PunctuationEnhanced) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.PunctuationEnhanced) : (__requestBase is { } __PunctuationEnhancedBaseValue ? __PunctuationEnhancedBaseValue.PunctuationEnhanced : default);
                         var audioUrl = parseResult.GetRequiredValue(InitTranscriptionRequestOptionSetOptions.AudioUrl);
 
-                        var __customVocabularyConfigBase = __requestBase?.CustomVocabularyConfig;                        var customVocabularyConfigDefaultIntensity = CliRuntime.WasSpecified(parseResult, CustomVocabularyConfigOptions.DefaultIntensity) ? parseResult.GetValue(CustomVocabularyConfigOptions.DefaultIntensity) : __customVocabularyConfigBase is not null ? __customVocabularyConfigBase.DefaultIntensity : default;
-                        var __customVocabularyConfigSpecified = CliRuntime.WasSpecified(parseResult, CustomVocabularyConfigOptions.DefaultIntensity);
+                        var __CustomVocabularyConfigBase = __requestBase is { } __CustomVocabularyConfigBaseValue ? __CustomVocabularyConfigBaseValue.CustomVocabularyConfig : default;                        var customVocabularyConfigDefaultIntensity = CliRuntime.WasSpecified(parseResult, CustomVocabularyConfigOptions.DefaultIntensity) ? parseResult.GetValue(CustomVocabularyConfigOptions.DefaultIntensity) : (__CustomVocabularyConfigBase is { } __CustomVocabularyConfigdefaultIntensityBaseValue ? __CustomVocabularyConfigdefaultIntensityBaseValue.DefaultIntensity : default);
+                        var __CustomVocabularyConfigSpecified = CliRuntime.WasSpecified(parseResult, CustomVocabularyConfigOptions.DefaultIntensity);
                         var customVocabularyConfig =
-                            __customVocabularyConfigSpecified || __customVocabularyConfigBase is not null
+                            __CustomVocabularyConfigSpecified || __CustomVocabularyConfigBase is not null
                                 ? new global::Gladia.CustomVocabularyConfigDTO
                                 {
 	                                DefaultIntensity = customVocabularyConfigDefaultIntensity,
-	                                Vocabulary = __customVocabularyConfigBase is not null ? __customVocabularyConfigBase.Vocabulary : throw new CliException(@"CustomVocabularyConfig.vocabulary is required when using custom-vocabulary-config options. Provide it with --request-json or --request-file."),
+	                                Vocabulary = __CustomVocabularyConfigBase is not null ? __CustomVocabularyConfigBase.Vocabulary : throw new CliException(@"CustomVocabularyConfig.vocabulary is required when using custom-vocabulary-config options. Provide it with --request-json or --request-file."),
                                 }
-                                : __customVocabularyConfigBase;
+                                : __CustomVocabularyConfigBase;
 
-                        var __callbackConfigBase = __requestBase?.CallbackConfig;                        var callbackConfigUrl = parseResult.GetValue(CallbackConfigOptions.Url);
-                        var callbackConfigMethod = CliRuntime.WasSpecified(parseResult, CallbackConfigOptions.Method) ? parseResult.GetValue(CallbackConfigOptions.Method) : __callbackConfigBase is not null ? __callbackConfigBase.Method : default;
-                        var __callbackConfigSpecified = CliRuntime.WasSpecified(parseResult, CallbackConfigOptions.Url) || CliRuntime.WasSpecified(parseResult, CallbackConfigOptions.Method);
+                        var __CallbackConfigBase = __requestBase is { } __CallbackConfigBaseValue ? __CallbackConfigBaseValue.CallbackConfig : default;                        var callbackConfigUrl = parseResult.GetValue(CallbackConfigOptions.Url);
+                        var callbackConfigMethod = CliRuntime.WasSpecified(parseResult, CallbackConfigOptions.Method) ? parseResult.GetValue(CallbackConfigOptions.Method) : (__CallbackConfigBase is { } __CallbackConfigmethodBaseValue ? __CallbackConfigmethodBaseValue.Method : default);
+                        var __CallbackConfigSpecified = CliRuntime.WasSpecified(parseResult, CallbackConfigOptions.Url) || CliRuntime.WasSpecified(parseResult, CallbackConfigOptions.Method);
                         var callbackConfig =
-                            __callbackConfigSpecified || __callbackConfigBase is not null
+                            __CallbackConfigSpecified || __CallbackConfigBase is not null
                                 ? new global::Gladia.CallbackConfigDto
                                 {
 	                                Url = callbackConfigUrl!,
                                 Method = callbackConfigMethod,
 
                                 }
-                                : __callbackConfigBase;
+                                : __CallbackConfigBase;
 
-                        var __subtitlesConfigBase = __requestBase?.SubtitlesConfig;                        var subtitlesConfigFormats = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Formats) ? parseResult.GetValue(SubtitlesConfigOptions.Formats) : __subtitlesConfigBase is not null ? __subtitlesConfigBase.Formats : default;
-                        var subtitlesConfigMinimumDuration = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MinimumDuration) ? parseResult.GetValue(SubtitlesConfigOptions.MinimumDuration) : __subtitlesConfigBase is not null ? __subtitlesConfigBase.MinimumDuration : default;
-                        var subtitlesConfigMaximumDuration = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumDuration) ? parseResult.GetValue(SubtitlesConfigOptions.MaximumDuration) : __subtitlesConfigBase is not null ? __subtitlesConfigBase.MaximumDuration : default;
-                        var subtitlesConfigMaximumCharactersPerRow = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumCharactersPerRow) ? parseResult.GetValue(SubtitlesConfigOptions.MaximumCharactersPerRow) : __subtitlesConfigBase is not null ? __subtitlesConfigBase.MaximumCharactersPerRow : default;
-                        var subtitlesConfigMaximumRowsPerCaption = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumRowsPerCaption) ? parseResult.GetValue(SubtitlesConfigOptions.MaximumRowsPerCaption) : __subtitlesConfigBase is not null ? __subtitlesConfigBase.MaximumRowsPerCaption : default;
-                        var subtitlesConfigStyle = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Style) ? parseResult.GetValue(SubtitlesConfigOptions.Style) : __subtitlesConfigBase is not null ? __subtitlesConfigBase.Style : default;
-                        var __subtitlesConfigSpecified = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Formats) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MinimumDuration) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumDuration) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumCharactersPerRow) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumRowsPerCaption) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Style);
+                        var __SubtitlesConfigBase = __requestBase is { } __SubtitlesConfigBaseValue ? __SubtitlesConfigBaseValue.SubtitlesConfig : default;                        var subtitlesConfigFormats = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Formats) ? parseResult.GetValue(SubtitlesConfigOptions.Formats) : (__SubtitlesConfigBase is { } __SubtitlesConfigformatsBaseValue ? __SubtitlesConfigformatsBaseValue.Formats : default);
+                        var subtitlesConfigMinimumDuration = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MinimumDuration) ? parseResult.GetValue(SubtitlesConfigOptions.MinimumDuration) : (__SubtitlesConfigBase is { } __SubtitlesConfigminimumDurationBaseValue ? __SubtitlesConfigminimumDurationBaseValue.MinimumDuration : default);
+                        var subtitlesConfigMaximumDuration = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumDuration) ? parseResult.GetValue(SubtitlesConfigOptions.MaximumDuration) : (__SubtitlesConfigBase is { } __SubtitlesConfigmaximumDurationBaseValue ? __SubtitlesConfigmaximumDurationBaseValue.MaximumDuration : default);
+                        var subtitlesConfigMaximumCharactersPerRow = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumCharactersPerRow) ? parseResult.GetValue(SubtitlesConfigOptions.MaximumCharactersPerRow) : (__SubtitlesConfigBase is { } __SubtitlesConfigmaximumCharactersPerRowBaseValue ? __SubtitlesConfigmaximumCharactersPerRowBaseValue.MaximumCharactersPerRow : default);
+                        var subtitlesConfigMaximumRowsPerCaption = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumRowsPerCaption) ? parseResult.GetValue(SubtitlesConfigOptions.MaximumRowsPerCaption) : (__SubtitlesConfigBase is { } __SubtitlesConfigmaximumRowsPerCaptionBaseValue ? __SubtitlesConfigmaximumRowsPerCaptionBaseValue.MaximumRowsPerCaption : default);
+                        var subtitlesConfigStyle = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Style) ? parseResult.GetValue(SubtitlesConfigOptions.Style) : (__SubtitlesConfigBase is { } __SubtitlesConfigstyleBaseValue ? __SubtitlesConfigstyleBaseValue.Style : default);
+                        var __SubtitlesConfigSpecified = CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Formats) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MinimumDuration) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumDuration) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumCharactersPerRow) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.MaximumRowsPerCaption) || CliRuntime.WasSpecified(parseResult, SubtitlesConfigOptions.Style);
                         var subtitlesConfig =
-                            __subtitlesConfigSpecified || __subtitlesConfigBase is not null
+                            __SubtitlesConfigSpecified || __SubtitlesConfigBase is not null
                                 ? new global::Gladia.SubtitlesConfigDTO
                                 {
 	                                Formats = subtitlesConfigFormats,
@@ -192,14 +192,14 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                                 Style = subtitlesConfigStyle,
 
                                 }
-                                : __subtitlesConfigBase;
+                                : __SubtitlesConfigBase;
 
-                        var __diarizationConfigBase = __requestBase?.DiarizationConfig;                        var diarizationConfigNumberOfSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.NumberOfSpeakers) ? parseResult.GetValue(DiarizationConfigOptions.NumberOfSpeakers) : __diarizationConfigBase is not null ? __diarizationConfigBase.NumberOfSpeakers : default;
-                        var diarizationConfigMinSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MinSpeakers) ? parseResult.GetValue(DiarizationConfigOptions.MinSpeakers) : __diarizationConfigBase is not null ? __diarizationConfigBase.MinSpeakers : default;
-                        var diarizationConfigMaxSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MaxSpeakers) ? parseResult.GetValue(DiarizationConfigOptions.MaxSpeakers) : __diarizationConfigBase is not null ? __diarizationConfigBase.MaxSpeakers : default;
-                        var __diarizationConfigSpecified = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.NumberOfSpeakers) || CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MinSpeakers) || CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MaxSpeakers);
+                        var __DiarizationConfigBase = __requestBase is { } __DiarizationConfigBaseValue ? __DiarizationConfigBaseValue.DiarizationConfig : default;                        var diarizationConfigNumberOfSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.NumberOfSpeakers) ? parseResult.GetValue(DiarizationConfigOptions.NumberOfSpeakers) : (__DiarizationConfigBase is { } __DiarizationConfignumberOfSpeakersBaseValue ? __DiarizationConfignumberOfSpeakersBaseValue.NumberOfSpeakers : default);
+                        var diarizationConfigMinSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MinSpeakers) ? parseResult.GetValue(DiarizationConfigOptions.MinSpeakers) : (__DiarizationConfigBase is { } __DiarizationConfigminSpeakersBaseValue ? __DiarizationConfigminSpeakersBaseValue.MinSpeakers : default);
+                        var diarizationConfigMaxSpeakers = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MaxSpeakers) ? parseResult.GetValue(DiarizationConfigOptions.MaxSpeakers) : (__DiarizationConfigBase is { } __DiarizationConfigmaxSpeakersBaseValue ? __DiarizationConfigmaxSpeakersBaseValue.MaxSpeakers : default);
+                        var __DiarizationConfigSpecified = CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.NumberOfSpeakers) || CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MinSpeakers) || CliRuntime.WasSpecified(parseResult, DiarizationConfigOptions.MaxSpeakers);
                         var diarizationConfig =
-                            __diarizationConfigSpecified || __diarizationConfigBase is not null
+                            __DiarizationConfigSpecified || __DiarizationConfigBase is not null
                                 ? new global::Gladia.DiarizationConfigDTO
                                 {
 	                                NumberOfSpeakers = diarizationConfigNumberOfSpeakers,
@@ -207,18 +207,18 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                                 MaxSpeakers = diarizationConfigMaxSpeakers,
 
                                 }
-                                : __diarizationConfigBase;
+                                : __DiarizationConfigBase;
 
-                        var __translationConfigBase = __requestBase?.TranslationConfig;                        var translationConfigTargetLanguages = parseResult.GetValue(TranslationConfigOptions.TargetLanguages);
-                        var translationConfigModel = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Model) ? parseResult.GetValue(TranslationConfigOptions.Model) : __translationConfigBase is not null ? __translationConfigBase.Model : default;
-                        var translationConfigMatchOriginalUtterances = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.MatchOriginalUtterances) ? parseResult.GetValue(TranslationConfigOptions.MatchOriginalUtterances) : __translationConfigBase is not null ? __translationConfigBase.MatchOriginalUtterances : default;
-                        var translationConfigLipsync = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Lipsync) ? parseResult.GetValue(TranslationConfigOptions.Lipsync) : __translationConfigBase is not null ? __translationConfigBase.Lipsync : default;
-                        var translationConfigContextAdaptation = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.ContextAdaptation) ? parseResult.GetValue(TranslationConfigOptions.ContextAdaptation) : __translationConfigBase is not null ? __translationConfigBase.ContextAdaptation : default;
-                        var translationConfigContext = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Context) ? parseResult.GetValue(TranslationConfigOptions.Context) : __translationConfigBase is not null ? __translationConfigBase.Context : default;
-                        var translationConfigInformal = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Informal) ? parseResult.GetValue(TranslationConfigOptions.Informal) : __translationConfigBase is not null ? __translationConfigBase.Informal : default;
-                        var __translationConfigSpecified = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.TargetLanguages) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Model) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.MatchOriginalUtterances) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Lipsync) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.ContextAdaptation) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Context) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Informal);
+                        var __TranslationConfigBase = __requestBase is { } __TranslationConfigBaseValue ? __TranslationConfigBaseValue.TranslationConfig : default;                        var translationConfigTargetLanguages = parseResult.GetValue(TranslationConfigOptions.TargetLanguages);
+                        var translationConfigModel = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Model) ? parseResult.GetValue(TranslationConfigOptions.Model) : (__TranslationConfigBase is { } __TranslationConfigmodelBaseValue ? __TranslationConfigmodelBaseValue.Model : default);
+                        var translationConfigMatchOriginalUtterances = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.MatchOriginalUtterances) ? parseResult.GetValue(TranslationConfigOptions.MatchOriginalUtterances) : (__TranslationConfigBase is { } __TranslationConfigmatchOriginalUtterancesBaseValue ? __TranslationConfigmatchOriginalUtterancesBaseValue.MatchOriginalUtterances : default);
+                        var translationConfigLipsync = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Lipsync) ? parseResult.GetValue(TranslationConfigOptions.Lipsync) : (__TranslationConfigBase is { } __TranslationConfiglipsyncBaseValue ? __TranslationConfiglipsyncBaseValue.Lipsync : default);
+                        var translationConfigContextAdaptation = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.ContextAdaptation) ? parseResult.GetValue(TranslationConfigOptions.ContextAdaptation) : (__TranslationConfigBase is { } __TranslationConfigcontextAdaptationBaseValue ? __TranslationConfigcontextAdaptationBaseValue.ContextAdaptation : default);
+                        var translationConfigContext = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Context) ? parseResult.GetValue(TranslationConfigOptions.Context) : (__TranslationConfigBase is { } __TranslationConfigcontextBaseValue ? __TranslationConfigcontextBaseValue.Context : default);
+                        var translationConfigInformal = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Informal) ? parseResult.GetValue(TranslationConfigOptions.Informal) : (__TranslationConfigBase is { } __TranslationConfiginformalBaseValue ? __TranslationConfiginformalBaseValue.Informal : default);
+                        var __TranslationConfigSpecified = CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.TargetLanguages) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Model) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.MatchOriginalUtterances) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Lipsync) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.ContextAdaptation) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Context) || CliRuntime.WasSpecified(parseResult, TranslationConfigOptions.Informal);
                         var translationConfig =
-                            __translationConfigSpecified || __translationConfigBase is not null
+                            __TranslationConfigSpecified || __TranslationConfigBase is not null
                                 ? new global::Gladia.TranslationConfigDTO
                                 {
 	                                TargetLanguages = translationConfigTargetLanguages!,
@@ -230,55 +230,55 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                                 Informal = translationConfigInformal,
 
                                 }
-                                : __translationConfigBase;
+                                : __TranslationConfigBase;
 
-                        var __summarizationConfigBase = __requestBase?.SummarizationConfig;                        var summarizationConfigType = CliRuntime.WasSpecified(parseResult, SummarizationConfigOptions.Type) ? parseResult.GetValue(SummarizationConfigOptions.Type) : __summarizationConfigBase is not null ? __summarizationConfigBase.Type : default;
-                        var __summarizationConfigSpecified = CliRuntime.WasSpecified(parseResult, SummarizationConfigOptions.Type);
+                        var __SummarizationConfigBase = __requestBase is { } __SummarizationConfigBaseValue ? __SummarizationConfigBaseValue.SummarizationConfig : default;                        var summarizationConfigType = CliRuntime.WasSpecified(parseResult, SummarizationConfigOptions.Type) ? parseResult.GetValue(SummarizationConfigOptions.Type) : (__SummarizationConfigBase is { } __SummarizationConfigtypeBaseValue ? __SummarizationConfigtypeBaseValue.Type : default);
+                        var __SummarizationConfigSpecified = CliRuntime.WasSpecified(parseResult, SummarizationConfigOptions.Type);
                         var summarizationConfig =
-                            __summarizationConfigSpecified || __summarizationConfigBase is not null
+                            __SummarizationConfigSpecified || __SummarizationConfigBase is not null
                                 ? new global::Gladia.SummarizationConfigDTO
                                 {
 	                                Type = summarizationConfigType,
 
                                 }
-                                : __summarizationConfigBase;
+                                : __SummarizationConfigBase;
 
-                        var __audioToLlmConfigBase = __requestBase?.AudioToLlmConfig;                        var audioToLlmConfigModel = CliRuntime.WasSpecified(parseResult, AudioToLlmConfigOptions.Model) ? parseResult.GetValue(AudioToLlmConfigOptions.Model) : __audioToLlmConfigBase is not null ? __audioToLlmConfigBase.Model : default;
-                        var __audioToLlmConfigSpecified = CliRuntime.WasSpecified(parseResult, AudioToLlmConfigOptions.Model);
+                        var __AudioToLlmConfigBase = __requestBase is { } __AudioToLlmConfigBaseValue ? __AudioToLlmConfigBaseValue.AudioToLlmConfig : default;                        var audioToLlmConfigModel = CliRuntime.WasSpecified(parseResult, AudioToLlmConfigOptions.Model) ? parseResult.GetValue(AudioToLlmConfigOptions.Model) : (__AudioToLlmConfigBase is { } __AudioToLlmConfigmodelBaseValue ? __AudioToLlmConfigmodelBaseValue.Model : default);
+                        var __AudioToLlmConfigSpecified = CliRuntime.WasSpecified(parseResult, AudioToLlmConfigOptions.Model);
                         var audioToLlmConfig =
-                            __audioToLlmConfigSpecified || __audioToLlmConfigBase is not null
+                            __AudioToLlmConfigSpecified || __AudioToLlmConfigBase is not null
                                 ? new global::Gladia.AudioToLlmListConfigDTO
                                 {
 	                                Model = audioToLlmConfigModel,
-	                                Prompts = __audioToLlmConfigBase is not null ? __audioToLlmConfigBase.Prompts : throw new CliException(@"AudioToLlmConfig.prompts is required when using audio-to-llm-config options. Provide it with --request-json or --request-file."),
+	                                Prompts = __AudioToLlmConfigBase is not null ? __AudioToLlmConfigBase.Prompts : throw new CliException(@"AudioToLlmConfig.prompts is required when using audio-to-llm-config options. Provide it with --request-json or --request-file."),
                                 }
-                                : __audioToLlmConfigBase;
+                                : __AudioToLlmConfigBase;
 
-                        var __piiRedactionConfigBase = __requestBase?.PiiRedactionConfig;                        var piiRedactionConfigEntityTypes = CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.EntityTypes) ? parseResult.GetValue(PiiRedactionConfigOptions.EntityTypes) : __piiRedactionConfigBase is not null ? __piiRedactionConfigBase.EntityTypes : default;
-                        var piiRedactionConfigProcessedTextType = CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.ProcessedTextType) ? parseResult.GetValue(PiiRedactionConfigOptions.ProcessedTextType) : __piiRedactionConfigBase is not null ? __piiRedactionConfigBase.ProcessedTextType : default;
-                        var __piiRedactionConfigSpecified = CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.EntityTypes) || CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.ProcessedTextType);
+                        var __PiiRedactionConfigBase = __requestBase is { } __PiiRedactionConfigBaseValue ? __PiiRedactionConfigBaseValue.PiiRedactionConfig : default;                        var piiRedactionConfigEntityTypes = CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.EntityTypes) ? parseResult.GetValue(PiiRedactionConfigOptions.EntityTypes) : (__PiiRedactionConfigBase is { } __PiiRedactionConfigentityTypesBaseValue ? __PiiRedactionConfigentityTypesBaseValue.EntityTypes : default);
+                        var piiRedactionConfigProcessedTextType = CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.ProcessedTextType) ? parseResult.GetValue(PiiRedactionConfigOptions.ProcessedTextType) : (__PiiRedactionConfigBase is { } __PiiRedactionConfigprocessedTextTypeBaseValue ? __PiiRedactionConfigprocessedTextTypeBaseValue.ProcessedTextType : default);
+                        var __PiiRedactionConfigSpecified = CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.EntityTypes) || CliRuntime.WasSpecified(parseResult, PiiRedactionConfigOptions.ProcessedTextType);
                         var piiRedactionConfig =
-                            __piiRedactionConfigSpecified || __piiRedactionConfigBase is not null
+                            __PiiRedactionConfigSpecified || __PiiRedactionConfigBase is not null
                                 ? new global::Gladia.PiiRedactionConfigDTO
                                 {
 	                                EntityTypes = piiRedactionConfigEntityTypes,
                                 ProcessedTextType = piiRedactionConfigProcessedTextType,
 
                                 }
-                                : __piiRedactionConfigBase;
+                                : __PiiRedactionConfigBase;
 
-                        var __languageConfigBase = __requestBase?.LanguageConfig;                        var languageConfigLanguages = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) ? parseResult.GetValue(LanguageConfigOptions.Languages) : __languageConfigBase is not null ? __languageConfigBase.Languages : default;
-                        var languageConfigCodeSwitching = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching) ? parseResult.GetValue(LanguageConfigOptions.CodeSwitching) : __languageConfigBase is not null ? __languageConfigBase.CodeSwitching : default;
-                        var __languageConfigSpecified = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) || CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching);
+                        var __LanguageConfigBase = __requestBase is { } __LanguageConfigBaseValue ? __LanguageConfigBaseValue.LanguageConfig : default;                        var languageConfigLanguages = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) ? parseResult.GetValue(LanguageConfigOptions.Languages) : (__LanguageConfigBase is { } __LanguageConfiglanguagesBaseValue ? __LanguageConfiglanguagesBaseValue.Languages : default);
+                        var languageConfigCodeSwitching = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching) ? parseResult.GetValue(LanguageConfigOptions.CodeSwitching) : (__LanguageConfigBase is { } __LanguageConfigcodeSwitchingBaseValue ? __LanguageConfigcodeSwitchingBaseValue.CodeSwitching : default);
+                        var __LanguageConfigSpecified = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) || CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching);
                         var languageConfig =
-                            __languageConfigSpecified || __languageConfigBase is not null
+                            __LanguageConfigSpecified || __LanguageConfigBase is not null
                                 ? new global::Gladia.LanguageConfig
                                 {
 	                                Languages = languageConfigLanguages,
                                 CodeSwitching = languageConfigCodeSwitching,
 
                                 }
-                                : __languageConfigBase;
+                                : __LanguageConfigBase;
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 

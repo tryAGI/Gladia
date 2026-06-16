@@ -197,18 +197,18 @@ Note: No need to add WAV headers to raw audio as the API supports both formats."
                         var callback = CliRuntime.WasSpecified(parseResult, Callback) ? parseResult.GetValue(Callback) : (__requestBase is { } __CallbackBaseValue ? __CallbackBaseValue.Callback : default);
                         var callbackConfig = CliRuntime.WasSpecified(parseResult, CallbackConfig) ? parseResult.GetValue(CallbackConfig) : (__requestBase is { } __CallbackConfigBaseValue ? __CallbackConfigBaseValue.CallbackConfig : default);
 
-                        var __languageConfigBase = __requestBase is { } __LanguageConfigBaseValue ? __LanguageConfigBaseValue.LanguageConfig : default;                        var languageConfigLanguages = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) ? parseResult.GetValue(LanguageConfigOptions.Languages) : (__languageConfigBase is { } __LanguageConfiglanguagesBaseValue ? __LanguageConfiglanguagesBaseValue.Languages : default);
-                        var languageConfigCodeSwitching = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching) ? parseResult.GetValue(LanguageConfigOptions.CodeSwitching) : (__languageConfigBase is { } __LanguageConfigcodeSwitchingBaseValue ? __LanguageConfigcodeSwitchingBaseValue.CodeSwitching : default);
-                        var __languageConfigSpecified = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) || CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching);
+                        var __LanguageConfigBase = __requestBase is { } __LanguageConfigBaseValue ? __LanguageConfigBaseValue.LanguageConfig : default;                        var languageConfigLanguages = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) ? parseResult.GetValue(LanguageConfigOptions.Languages) : (__LanguageConfigBase is { } __LanguageConfiglanguagesBaseValue ? __LanguageConfiglanguagesBaseValue.Languages : default);
+                        var languageConfigCodeSwitching = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching) ? parseResult.GetValue(LanguageConfigOptions.CodeSwitching) : (__LanguageConfigBase is { } __LanguageConfigcodeSwitchingBaseValue ? __LanguageConfigcodeSwitchingBaseValue.CodeSwitching : default);
+                        var __LanguageConfigSpecified = CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.Languages) || CliRuntime.WasSpecified(parseResult, LanguageConfigOptions.CodeSwitching);
                         var languageConfig =
-                            __languageConfigSpecified || __languageConfigBase is not null
+                            __LanguageConfigSpecified || __LanguageConfigBase is not null
                                 ? new global::Gladia.LanguageConfig
                                 {
 	                                Languages = languageConfigLanguages,
                                 CodeSwitching = languageConfigCodeSwitching,
 
                                 }
-                                : __languageConfigBase;
+                                : __LanguageConfigBase;
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 

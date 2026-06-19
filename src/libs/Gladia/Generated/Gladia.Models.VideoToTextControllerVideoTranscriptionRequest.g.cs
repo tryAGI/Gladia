@@ -21,7 +21,7 @@ namespace Gladia
         public string? Videoname { get; set; }
 
         /// <summary>
-        /// Default Value: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Default Value: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("video_url")]
         public string? VideoUrl { get; set; }
@@ -120,7 +120,7 @@ namespace Gladia
         /// <param name="video"></param>
         /// <param name="videoname"></param>
         /// <param name="videoUrl">
-        /// Default Value: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Default Value: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
         /// <param name="languageBehaviour">
         /// Default Value: automatic single language

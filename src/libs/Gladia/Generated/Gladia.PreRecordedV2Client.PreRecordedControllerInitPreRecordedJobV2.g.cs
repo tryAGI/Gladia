@@ -635,7 +635,7 @@ namespace Gladia
         /// </param>
         /// <param name="audioUrl">
         /// URL to a Gladia file or to an external audio or video file<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

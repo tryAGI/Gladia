@@ -34,7 +34,7 @@ namespace Gladia
         /// <param name="video"></param>
         /// <param name="videoname"></param>
         /// <param name="videoUrl">
-        /// Default Value: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Default Value: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
         /// <param name="languageBehaviour">
         /// Default Value: automatic single language

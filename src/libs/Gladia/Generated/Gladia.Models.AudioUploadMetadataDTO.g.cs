@@ -28,9 +28,9 @@ namespace Gladia
 
         /// <summary>
         /// Uploaded audio source<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </summary>
-        /// <example>http://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
+        /// <example>https://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         public string? Source { get; set; }
 
@@ -105,7 +105,7 @@ namespace Gladia
         /// </param>
         /// <param name="source">
         /// Uploaded audio source<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

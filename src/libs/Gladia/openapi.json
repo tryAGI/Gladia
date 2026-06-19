@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-18",
+              "example": "2026-06-19",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-18",
+              "example": "2026-06-19",
               "type": "string"
             }
           },
@@ -665,12 +665,12 @@
                     "file": {
                       "id": "f0dcZE10-23d8-47f0-a25d-74a6eed88721",
                       "filename": "split_infinity.wav",
-                      "source": "http://files.gladia.io/example/audio-transcription/split_infinity.wav",
+                      "source": "https://files.gladia.io/example/audio-transcription/split_infinity.wav",
                       "audio_duration": 20,
                       "number_of_channels": 1
                     },
                     "request_params": {
-                      "audio_url": "http://files.gladia.io/example/audio-transcription/split_infinity.wav",
+                      "audio_url": "https://files.gladia.io/example/audio-transcription/split_infinity.wav",
                       "subtitles": false,
                       "diarization": false,
                       "translation": false,
@@ -888,7 +888,7 @@
                   },
                   "audio_url": {
                     "type": "string",
-                    "default": "http://files.gladia.io/example/audio-transcription/split_infinity.wav"
+                    "default": "https://files.gladia.io/example/audio-transcription/split_infinity.wav"
                   },
                   "language_behaviour": {
                     "type": "string",
@@ -1188,7 +1188,7 @@
                   },
                   "video_url": {
                     "type": "string",
-                    "default": "http://files.gladia.io/example/audio-transcription/split_infinity.wav"
+                    "default": "https://files.gladia.io/example/audio-transcription/split_infinity.wav"
                   },
                   "language_behaviour": {
                     "type": "string",
@@ -1503,7 +1503,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-18",
+              "example": "2026-06-19",
               "type": "string"
             }
           },
@@ -1713,7 +1713,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-18",
+              "example": "2026-06-19",
               "type": "string"
             }
           },
@@ -2151,7 +2151,7 @@
             "type": "string",
             "description": "Uploaded audio source",
             "format": "uri",
-            "example": "http://files.gladia.io/example/audio-transcription/split_infinity.wav"
+            "example": "https://files.gladia.io/example/audio-transcription/split_infinity.wav"
           },
           "extension": {
             "type": "string",
@@ -2405,7 +2405,7 @@
           "url": {
             "type": "string",
             "description": "The URL to be called with the result of the transcription",
-            "example": "http://callback.example",
+            "example": "https://callback.example",
             "format": "uri"
           },
           "method": {
@@ -2907,7 +2907,7 @@
           "callback_url": {
             "type": "string",
             "description": "**[Deprecated]** Use `callback`/`callback_config` instead. Callback URL we will do a `POST` request to with the result of the transcription",
-            "example": "http://callback.example",
+            "example": "https://callback.example",
             "format": "uri",
             "deprecated": true
           },
@@ -3054,7 +3054,7 @@
           "audio_url": {
             "type": "string",
             "description": "URL to a Gladia file or to an external audio or video file",
-            "example": "http://files.gladia.io/example/audio-transcription/split_infinity.wav",
+            "example": "https://files.gladia.io/example/audio-transcription/split_infinity.wav",
             "format": "uri"
           }
         },
@@ -3263,7 +3263,7 @@
           "callback_url": {
             "type": "string",
             "description": "**[Deprecated]** Use `callback`/`callback_config` instead. Callback URL we will do a `POST` request to with the result of the transcription",
-            "example": "http://callback.example",
+            "example": "https://callback.example",
             "format": "uri",
             "deprecated": true
           },

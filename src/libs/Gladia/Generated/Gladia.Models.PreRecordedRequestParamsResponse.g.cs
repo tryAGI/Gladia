@@ -25,9 +25,9 @@ namespace Gladia
 
         /// <summary>
         /// **[Deprecated]** Use `callback`/`callback_config` instead. Callback URL we will do a `POST` request to with the result of the transcription<br/>
-        /// Example: http://callback.example
+        /// Example: https://callback.example
         /// </summary>
-        /// <example>http://callback.example</example>
+        /// <example>https://callback.example</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("callback_url")]
         [global::System.Obsolete("This property marked as deprecated.")]
         public string? CallbackUrl { get; set; }

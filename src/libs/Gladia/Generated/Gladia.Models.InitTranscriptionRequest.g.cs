@@ -25,9 +25,9 @@ namespace Gladia
 
         /// <summary>
         /// **[Deprecated]** Use `callback`/`callback_config` instead. Callback URL we will do a `POST` request to with the result of the transcription<br/>
-        /// Example: http://callback.example
+        /// Example: https://callback.example
         /// </summary>
-        /// <example>http://callback.example</example>
+        /// <example>https://callback.example</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("callback_url")]
         [global::System.Obsolete("This property marked as deprecated.")]
         public string? CallbackUrl { get; set; }
@@ -180,9 +180,9 @@ namespace Gladia
 
         /// <summary>
         /// URL to a Gladia file or to an external audio or video file<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </summary>
-        /// <example>http://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
+        /// <example>https://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("audio_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AudioUrl { get; set; }
@@ -198,7 +198,7 @@ namespace Gladia
         /// </summary>
         /// <param name="audioUrl">
         /// URL to a Gladia file or to an external audio or video file<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
         /// <param name="customVocabulary">
         /// **[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with<br/>

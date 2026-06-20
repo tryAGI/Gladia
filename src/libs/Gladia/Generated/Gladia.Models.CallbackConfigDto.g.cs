@@ -10,9 +10,9 @@ namespace Gladia
     {
         /// <summary>
         /// The URL to be called with the result of the transcription<br/>
-        /// Example: http://callback.example
+        /// Example: https://callback.example
         /// </summary>
-        /// <example>http://callback.example</example>
+        /// <example>https://callback.example</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -38,7 +38,7 @@ namespace Gladia
         /// </summary>
         /// <param name="url">
         /// The URL to be called with the result of the transcription<br/>
-        /// Example: http://callback.example
+        /// Example: https://callback.example
         /// </param>
         /// <param name="method">
         /// The HTTP method to be used. Allowed values are `POST` or `PUT` (default: `POST`)<br/>

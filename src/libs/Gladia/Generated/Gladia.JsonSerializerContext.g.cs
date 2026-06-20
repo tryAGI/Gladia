@@ -257,6 +257,10 @@ namespace Gladia
 
             typeof(global::Gladia.JsonConverters.WebhookLiveEndSessionPayloadEventNullableJsonConverter),
 
+            typeof(global::Gladia.JsonConverters.PreRecordedTranscriptionModelJsonConverter),
+
+            typeof(global::Gladia.JsonConverters.PreRecordedTranscriptionModelNullableJsonConverter),
+
             typeof(global::Gladia.JsonConverters.AudioToTextControllerAudioTranscriptionRequestLanguageBehaviourJsonConverter),
 
             typeof(global::Gladia.JsonConverters.AudioToTextControllerAudioTranscriptionRequestLanguageBehaviourNullableJsonConverter),
@@ -369,6 +373,7 @@ namespace Gladia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Gladia.TranscriptionLanguageCodeEnum>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.InitTranscriptionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PreRecordedTranscriptionModel), TypeInfoPropertyName = "PreRecordedTranscriptionModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.InitPreRecordedTranscriptionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.BadRequestErrorResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.UnauthorizedErrorResponse))]

@@ -13,11 +13,11 @@ namespace Gladia
                 Authorizations = new global::Gladia.EndPointAuthorizationRequirement[]
                 {                    new global::Gladia.EndPointAuthorizationRequirement
                     {
-                        Type = "Http",
-                        SchemeId = "HttpBearer",
+                        Type = "ApiKey",
+                        SchemeId = "ApikeyXGladiaKey",
                         Location = "Header",
-                        Name = "Bearer",
-                        FriendlyName = "Bearer",
+                        Name = "x-gladia-key",
+                        FriendlyName = "ApiKeyInHeader",
                     },
                 },
             };
@@ -65,7 +65,7 @@ namespace Gladia
         /// Default Value: 20
         /// </param>
         /// <param name="date">
-        /// Example: 2026-06-16
+        /// Example: 2026-06-20
         /// </param>
         /// <param name="beforeDate">
         /// Example: 2024-01-01T00:00:00.000Z
@@ -122,7 +122,7 @@ namespace Gladia
         /// Default Value: 20
         /// </param>
         /// <param name="date">
-        /// Example: 2026-06-16
+        /// Example: 2026-06-20
         /// </param>
         /// <param name="beforeDate">
         /// Example: 2024-01-01T00:00:00.000Z

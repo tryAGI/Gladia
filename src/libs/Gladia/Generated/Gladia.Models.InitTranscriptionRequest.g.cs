@@ -25,9 +25,9 @@ namespace Gladia
 
         /// <summary>
         /// **[Deprecated]** Use `callback`/`callback_config` instead. Callback URL we will do a `POST` request to with the result of the transcription<br/>
-        /// Example: http://callback.example
+        /// Example: https://callback.example
         /// </summary>
-        /// <example>http://callback.example</example>
+        /// <example>https://callback.example</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("callback_url")]
         [global::System.Obsolete("This property marked as deprecated.")]
         public string? CallbackUrl { get; set; }
@@ -180,12 +180,20 @@ namespace Gladia
 
         /// <summary>
         /// URL to a Gladia file or to an external audio or video file<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </summary>
-        /// <example>http://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
+        /// <example>https://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("audio_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AudioUrl { get; set; }
+
+        /// <summary>
+        /// The model used to process the audio. "solaria-1" is used by default. "solaria-3" is async pre-recorded only and requires exactly one language in language_config.languages.<br/>
+        /// Default Value: solaria-1
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PreRecordedTranscriptionModelJsonConverter))]
+        public global::Gladia.PreRecordedTranscriptionModel? Model { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -198,7 +206,7 @@ namespace Gladia
         /// </summary>
         /// <param name="audioUrl">
         /// URL to a Gladia file or to an external audio or video file<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
         /// <param name="customVocabulary">
         /// **[Beta]** Can be either boolean to enable custom_vocabulary for this audio or an array with specific vocabulary list to feed the transcription model with<br/>
@@ -286,6 +294,10 @@ namespace Gladia
         /// <param name="languageConfig">
         /// Specify the language configuration
         /// </param>
+        /// <param name="model">
+        /// The model used to process the audio. "solaria-1" is used by default. "solaria-3" is async pre-recorded only and requires exactly one language in language_config.languages.<br/>
+        /// Default Value: solaria-1
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -314,7 +326,8 @@ namespace Gladia
             object? customMetadata,
             bool? sentences,
             bool? punctuationEnhanced,
-            global::Gladia.LanguageConfig? languageConfig)
+            global::Gladia.LanguageConfig? languageConfig,
+            global::Gladia.PreRecordedTranscriptionModel? model)
         {
             this.CustomVocabulary = customVocabulary;
             this.CustomVocabularyConfig = customVocabularyConfig;
@@ -341,6 +354,7 @@ namespace Gladia
             this.PunctuationEnhanced = punctuationEnhanced;
             this.LanguageConfig = languageConfig;
             this.AudioUrl = audioUrl ?? throw new global::System.ArgumentNullException(nameof(audioUrl));
+            this.Model = model;
         }
 
         /// <summary>

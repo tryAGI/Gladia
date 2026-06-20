@@ -80,8 +80,7 @@ namespace Gladia
         /// For debugging purposes, send data that could help to identify issues
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("post_session_metadata")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required object PostSessionMetadata { get; set; }
+        public object? PostSessionMetadata { get; set; }
 
         /// <summary>
         /// Default Value: live<br/>
@@ -139,9 +138,6 @@ namespace Gladia
         /// Creation date<br/>
         /// Example: 2024-01-01T00:00:00.000Z
         /// </param>
-        /// <param name="postSessionMetadata">
-        /// For debugging purposes, send data that could help to identify issues
-        /// </param>
         /// <param name="completedAt">
         /// Completion date when status is "done" or "error"<br/>
         /// Example: 2024-01-01T00:00:00.000Z
@@ -153,6 +149,9 @@ namespace Gladia
         /// <param name="errorCode">
         /// HTTP status code of the error if status is "error"<br/>
         /// Example: 500
+        /// </param>
+        /// <param name="postSessionMetadata">
+        /// For debugging purposes, send data that could help to identify issues
         /// </param>
         /// <param name="file">
         /// The file data you uploaded. Can be null if status is "error"
@@ -176,10 +175,10 @@ namespace Gladia
             int version,
             global::Gladia.StreamingResponseStatus status,
             global::System.DateTime createdAt,
-            object postSessionMetadata,
             global::System.DateTime? completedAt,
             object? customMetadata,
             int? errorCode,
+            object? postSessionMetadata,
             global::Gladia.FileResponse? file,
             global::Gladia.StreamingRequestParamsResponse? requestParams,
             global::Gladia.StreamingTranscriptionResultWithMessagesDTO? result,
@@ -193,7 +192,7 @@ namespace Gladia
             this.CompletedAt = completedAt;
             this.CustomMetadata = customMetadata;
             this.ErrorCode = errorCode;
-            this.PostSessionMetadata = postSessionMetadata ?? throw new global::System.ArgumentNullException(nameof(postSessionMetadata));
+            this.PostSessionMetadata = postSessionMetadata;
             this.Kind = kind;
             this.File = file;
             this.RequestParams = requestParams;

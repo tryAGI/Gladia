@@ -44,6 +44,7 @@ public sealed partial class GladiaClient : ISpeechToTextClient
 
             var upload = await FileManagement.FileControllerUploadV2Async(
                 audio: bytes,
+                audioname: "audio.wav",
                 cancellationToken: cancellationToken).ConfigureAwait(false);
 
             if (request is null)

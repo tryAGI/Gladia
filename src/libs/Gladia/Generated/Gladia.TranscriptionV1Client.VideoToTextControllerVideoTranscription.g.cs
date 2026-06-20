@@ -13,11 +13,11 @@ namespace Gladia
                 Authorizations = new global::Gladia.EndPointAuthorizationRequirement[]
                 {                    new global::Gladia.EndPointAuthorizationRequirement
                     {
-                        Type = "Http",
-                        SchemeId = "HttpBearer",
+                        Type = "ApiKey",
+                        SchemeId = "ApikeyXGladiaKey",
                         Location = "Header",
-                        Name = "Bearer",
-                        FriendlyName = "Bearer",
+                        Name = "x-gladia-key",
+                        FriendlyName = "ApiKeyInHeader",
                     },
                 },
             };
@@ -567,7 +567,7 @@ namespace Gladia
         /// <param name="video"></param>
         /// <param name="videoname"></param>
         /// <param name="videoUrl">
-        /// Default Value: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Default Value: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
         /// <param name="languageBehaviour">
         /// Default Value: automatic single language

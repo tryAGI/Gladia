@@ -82,6 +82,29 @@ var raw = (PreRecordedResponse)response.RawRepresentation!;
 Console.WriteLine($"Status: {raw.Status}");
 ```
 
+### Solaria-3
+
+Solaria-3 is available for async pre-recorded transcription. Use `RawRepresentationFactory` when accessing it through `ISpeechToTextClient`:
+
+```csharp
+ISpeechToTextClient sttClient = client;
+
+using var audioStream = File.OpenRead("english-audio.mp3");
+var response = await sttClient.GetTextAsync(audioStream, new SpeechToTextOptions
+{
+    RawRepresentationFactory = _ => new InitTranscriptionRequest
+    {
+        AudioUrl = string.Empty, // The MEAI adapter uploads the stream and replaces this value.
+        Model = PreRecordedTranscriptionModel.Solaria3,
+        LanguageConfig = new LanguageConfig
+        {
+            Languages = [TranscriptionLanguageCodeEnum.En],
+            CodeSwitching = false,
+        },
+    },
+});
+```
+
 ### Streaming Behavior
 
 `GetStreamingTextAsync` delegates to the non-streaming `GetTextAsync` method internally. The batch transcription job (upload + submit + poll) runs to completion first, and then the full result is converted to `SpeechToTextResponseUpdate` events using `ToSpeechToTextResponseUpdates()`.

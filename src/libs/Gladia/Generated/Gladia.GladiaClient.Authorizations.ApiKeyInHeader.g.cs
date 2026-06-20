@@ -7,7 +7,7 @@ namespace Gladia
     {
 
         /// <inheritdoc/>
-        public void AuthorizeUsingBearer(
+        public void AuthorizeUsingApiKeyInHeader(
             string apiKey)
         {
             apiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
@@ -15,8 +15,9 @@ namespace Gladia
             for (var i = Authorizations.Count - 1; i >= 0; i--)
             {
                 var __authorization = Authorizations[i];
-                if (__authorization.Type == "Http" &&
-                    __authorization.Name == "Bearer")
+                if (__authorization.Type == "ApiKey" &&
+                    __authorization.Location == "Header" &&
+                    __authorization.Name == "x-gladia-key")
                 {
                     Authorizations.RemoveAt(i);
                 }
@@ -24,10 +25,10 @@ namespace Gladia
 
             Authorizations.Add(new global::Gladia.EndPointAuthorization
             {
-                Type = "Http",
-                SchemeId = "HttpBearer",
+                Type = "ApiKey",
+                SchemeId = "ApikeyXGladiaKey",
                 Location = "Header",
-                Name = "Bearer",
+                Name = "x-gladia-key",
                 Value = apiKey,
             });
         }

@@ -28,9 +28,9 @@ namespace Gladia
 
         /// <summary>
         /// Uploaded audio source<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </summary>
-        /// <example>http://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
+        /// <example>https://files.gladia.io/example/audio-transcription/split_infinity.wav</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         public string? Source { get; set; }
 
@@ -41,7 +41,7 @@ namespace Gladia
         /// <example>wav</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("extension")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Guid Extension { get; set; }
+        public required string Extension { get; set; }
 
         /// <summary>
         /// Uploaded audio size<br/>
@@ -105,7 +105,7 @@ namespace Gladia
         /// </param>
         /// <param name="source">
         /// Uploaded audio source<br/>
-        /// Example: http://files.gladia.io/example/audio-transcription/split_infinity.wav
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -113,7 +113,7 @@ namespace Gladia
         public AudioUploadMetadataDTO(
             global::System.Guid id,
             string filename,
-            global::System.Guid extension,
+            string extension,
             int size,
             double audioDuration,
             int numberOfChannels,
@@ -122,7 +122,7 @@ namespace Gladia
             this.Id = id;
             this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
             this.Source = source;
-            this.Extension = extension;
+            this.Extension = extension ?? throw new global::System.ArgumentNullException(nameof(extension));
             this.Size = size;
             this.AudioDuration = audioDuration;
             this.NumberOfChannels = numberOfChannels;

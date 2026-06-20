@@ -16,7 +16,7 @@ namespace Gladia
         {
             Authorizing(HttpClient, ref apiKey);
 
-            AuthorizeUsingBearer(apiKey);
+            AuthorizeUsingApiKeyInHeader(apiKey);
 
             Authorized(HttpClient);
         }

@@ -25,9 +25,9 @@ namespace Gladia
 
         /// <summary>
         /// **[Deprecated]** Use `callback`/`callback_config` instead. Callback URL we will do a `POST` request to with the result of the transcription<br/>
-        /// Example: http://callback.example
+        /// Example: https://callback.example
         /// </summary>
-        /// <example>http://callback.example</example>
+        /// <example>https://callback.example</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("callback_url")]
         [global::System.Obsolete("This property marked as deprecated.")]
         public string? CallbackUrl { get; set; }
@@ -177,6 +177,13 @@ namespace Gladia
         public string? AudioUrl { get; set; }
 
         /// <summary>
+        /// The model used to process the audio.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PreRecordedTranscriptionModelJsonConverter))]
+        public global::Gladia.PreRecordedTranscriptionModel? Model { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -268,6 +275,9 @@ namespace Gladia
         /// Specify the language configuration
         /// </param>
         /// <param name="audioUrl"></param>
+        /// <param name="model">
+        /// The model used to process the audio.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -295,7 +305,8 @@ namespace Gladia
             bool? sentences,
             bool? punctuationEnhanced,
             global::Gladia.LanguageConfig? languageConfig,
-            string? audioUrl)
+            string? audioUrl,
+            global::Gladia.PreRecordedTranscriptionModel? model)
         {
             this.CustomVocabulary = customVocabulary;
             this.CustomVocabularyConfig = customVocabularyConfig;
@@ -321,6 +332,7 @@ namespace Gladia
             this.PunctuationEnhanced = punctuationEnhanced;
             this.LanguageConfig = languageConfig;
             this.AudioUrl = audioUrl;
+            this.Model = model;
         }
 
         /// <summary>

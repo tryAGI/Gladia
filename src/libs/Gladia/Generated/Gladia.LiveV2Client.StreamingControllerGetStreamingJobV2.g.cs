@@ -13,11 +13,11 @@ namespace Gladia
                 Authorizations = new global::Gladia.EndPointAuthorizationRequirement[]
                 {                    new global::Gladia.EndPointAuthorizationRequirement
                     {
-                        Type = "Http",
-                        SchemeId = "HttpBearer",
+                        Type = "ApiKey",
+                        SchemeId = "ApikeyXGladiaKey",
                         Location = "Header",
-                        Name = "Bearer",
-                        FriendlyName = "Bearer",
+                        Name = "x-gladia-key",
+                        FriendlyName = "ApiKeyInHeader",
                     },
                 },
             };

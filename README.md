@@ -71,6 +71,26 @@ ISpeechToTextClient speechClient = api;
 var metadata = speechClient.GetService<SpeechToTextClientMetadata>();
 ```
 
+### Pre-Recorded Solaria-3 Model
+Configure a pre-recorded transcription request to use Solaria-3.
+
+```csharp
+var request = new InitTranscriptionRequest
+{
+    AudioUrl = "https://files.gladia.io/example/audio-transcription/split_infinity.wav",
+    Model = PreRecordedTranscriptionModel.Solaria3,
+    LanguageConfig = new LanguageConfig
+    {
+        Languages = [TranscriptionLanguageCodeEnum.En],
+        CodeSwitching = false,
+    },
+};
+
+// Solaria-3 is available for async pre-recorded transcription only.
+// Use one supported language and keep code switching disabled.
+var job = await client.PreRecordedV2.PreRecordedControllerInitPreRecordedJobV2Async(request);
+```
+
 ### Speech To Text Client Get Service Self
 
 

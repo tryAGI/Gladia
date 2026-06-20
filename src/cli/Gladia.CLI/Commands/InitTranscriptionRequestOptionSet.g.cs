@@ -19,7 +19,8 @@ internal sealed record InitTranscriptionRequestOptionSet(
                      Option<bool?> PiiRedaction,
                      Option<bool?> Sentences,
                      Option<bool?> PunctuationEnhanced,
-                     Option<string> AudioUrl)
+                     Option<string> AudioUrl,
+                     Option<global::Gladia.PreRecordedTranscriptionModel?> Model)
 {
     public static InitTranscriptionRequestOptionSet Create(string? prefix = null)
     {
@@ -48,6 +49,10 @@ internal sealed record InitTranscriptionRequestOptionSet(
                 {
                     Description = @"URL to a Gladia file or to an external audio or video file",
                     Required = true,
+                },
+                Model: new Option<global::Gladia.PreRecordedTranscriptionModel?>($"--{normalizedPrefix}model")
+                {
+                    Description = @"The model used to process the audio. ""solaria-1"" is used by default. ""solaria-3"" is async pre-recorded only and requires exactly one language in language_config.languages.",
                 }
         );
     }

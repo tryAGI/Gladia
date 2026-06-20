@@ -10,11 +10,11 @@ namespace Gladia
     public enum PreRecordedTranscriptionModel
     {
         /// <summary>
-        ///
+        /// 
         /// </summary>
         Solaria1,
         /// <summary>
-        ///
+        /// 
         /// </summary>
         Solaria3,
     }

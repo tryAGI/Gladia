@@ -39,8 +39,7 @@ namespace Gladia
         /// Deprecated, If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Results { get; set; }
+        public string? Results { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -60,11 +59,11 @@ namespace Gladia
         /// <param name="execTime">
         /// Time audio intelligence model took to complete the task
         /// </param>
-        /// <param name="results">
-        /// Deprecated, If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription
-        /// </param>
         /// <param name="error">
         /// `null` if `success` is `true`. Contains the error details of the failed model
+        /// </param>
+        /// <param name="results">
+        /// Deprecated, If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -73,14 +72,14 @@ namespace Gladia
             bool success,
             bool isEmpty,
             double execTime,
-            string results,
-            global::Gladia.AddonErrorDTO? error)
+            global::Gladia.AddonErrorDTO? error,
+            string? results)
         {
             this.Success = success;
             this.IsEmpty = isEmpty;
             this.ExecTime = execTime;
             this.Error = error;
-            this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
+            this.Results = results;
         }
 
         /// <summary>

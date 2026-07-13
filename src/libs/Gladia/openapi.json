@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-07-12",
+              "example": "2026-07-13",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-07-12",
+              "example": "2026-07-13",
               "type": "string"
             }
           },
@@ -1503,7 +1503,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-07-12",
+              "example": "2026-07-13",
               "type": "string"
             }
           },
@@ -1713,7 +1713,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-07-12",
+              "example": "2026-07-13",
               "type": "string"
             }
           },
@@ -3933,7 +3933,8 @@
           },
           "results": {
             "type": "string",
-            "description": "Deprecated, If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription"
+            "description": "Deprecated, If `name_consistency` has been enabled, Gladia will improve the consistency of the names across the transcription",
+            "nullable": true
           }
         },
         "required": [
@@ -3970,7 +3971,8 @@
           },
           "results": {
             "type": "string",
-            "description": "If `structured_data_extraction` has been enabled, results of the AI structured data extraction for the defined classes."
+            "description": "If `structured_data_extraction` has been enabled, results of the AI structured data extraction for the defined classes.",
+            "nullable": true
           }
         },
         "required": [
@@ -4188,7 +4190,8 @@
           "results": {
             "type": "object",
             "description": "If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.",
-            "additionalProperties": true
+            "additionalProperties": true,
+            "nullable": true
           }
         },
         "required": [

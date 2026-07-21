@@ -14,7 +14,7 @@ namespace Gladia
         /// Default Value: 20
         /// </param>
         /// <param name="date">
-        /// Example: 2026-07-20
+        /// Example: 2026-07-21
         /// </param>
         /// <param name="beforeDate">
         /// Example: 2024-01-01T00:00:00.000Z
@@ -55,7 +55,7 @@ namespace Gladia
         /// Default Value: 20
         /// </param>
         /// <param name="date">
-        /// Example: 2026-07-20
+        /// Example: 2026-07-21
         /// </param>
         /// <param name="beforeDate">
         /// Example: 2024-01-01T00:00:00.000Z

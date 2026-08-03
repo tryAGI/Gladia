@@ -3498,6 +3498,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -3677,6 +3678,7 @@
           "error": {
             "description": "Contains the error details of the failed addon",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -3744,6 +3746,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -3785,6 +3788,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -3823,6 +3827,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -3884,6 +3889,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -3925,6 +3931,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -3963,6 +3970,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -4001,6 +4009,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -4057,6 +4066,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -4066,6 +4076,7 @@
           "results": {
             "description": "The result from a specific prompt",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AudioToLlmResultDTO"
@@ -4099,6 +4110,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -4140,6 +4152,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -4181,6 +4194,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -4220,6 +4234,7 @@
           "error": {
             "description": "`null` if `success` is `true`. Contains the error details of the failed model",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AddonErrorDTO"
@@ -4436,6 +4451,7 @@
           "file": {
             "description": "The file data you uploaded. Can be null if status is \"error\"",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/FileResponse"
@@ -4445,6 +4461,7 @@
           "request_params": {
             "description": "Parameters used for this pre-recorded transcription. Can be null if status is \"error\"",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/PreRecordedRequestParamsResponse"
@@ -4454,6 +4471,7 @@
           "result": {
             "description": "Pre-recorded transcription's result when status is \"done\"",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/TranscriptionResultDTO"
@@ -5180,6 +5198,7 @@
           "file": {
             "description": "The file data you uploaded. Can be null if status is \"error\"",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/FileResponse"
@@ -5189,6 +5208,7 @@
           "request_params": {
             "description": "Parameters used for this live transcription. Can be null if status is \"error\"",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/StreamingRequestParamsResponse"
@@ -5198,6 +5218,7 @@
           "result": {
             "description": "Live transcription's result when status is \"done\"",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/StreamingTranscriptionResultWithMessagesDTO"
@@ -5439,6 +5460,7 @@
             "description": "Error message if the action was not successfully acknowledged",
             "nullable": true,
             "example": null,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/Error"
@@ -5456,6 +5478,7 @@
           "data": {
             "description": "The message data. \"null\" if the action was not successfully acknowledged",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AudioChunkAckData"
@@ -5712,6 +5735,7 @@
             "description": "Error message if the addon failed",
             "nullable": true,
             "example": null,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/Error"
@@ -5729,6 +5753,7 @@
           "data": {
             "description": "The message data. \"null\" if the addon failed",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/TranslationData"
@@ -5823,6 +5848,7 @@
             "description": "Error message if the addon failed",
             "nullable": true,
             "example": null,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/Error"
@@ -5840,6 +5866,7 @@
           "data": {
             "description": "The message data. \"null\" if the addon failed",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/NamedEntityRecognitionData"
@@ -5995,6 +6022,7 @@
             "description": "Error message if the addon failed",
             "nullable": true,
             "example": null,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/Error"
@@ -6012,6 +6040,7 @@
           "data": {
             "description": "The message data. \"null\" if the addon failed",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/PostChapterizationMessageData"
@@ -6221,6 +6250,7 @@
             "description": "Error message if the addon failed",
             "nullable": true,
             "example": null,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/Error"
@@ -6238,6 +6268,7 @@
           "data": {
             "description": "The message data. \"null\" if the addon failed",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/PostSummarizationMessageData"
@@ -6432,6 +6463,7 @@
             "description": "Error message if the addon failed",
             "nullable": true,
             "example": null,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/Error"
@@ -6449,6 +6481,7 @@
           "data": {
             "description": "The message data. \"null\" if the addon failed",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/SentimentAnalysisData"
@@ -6657,6 +6690,7 @@
             "description": "Error message if the action was not successfully acknowledged",
             "nullable": true,
             "example": null,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/Error"
@@ -6674,6 +6708,7 @@
           "data": {
             "description": "The message data. \"null\" if the action was not successfully acknowledged",
             "nullable": true,
+            "type": "object",
             "allOf": [
               {
                 "$ref": "#/components/schemas/StopRecordingAckData"
@@ -7367,6 +7402,7 @@
     "transcription.created": {
       "post": {
         "description": "Sent when a pre-recorded transcription job has been created",
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {
@@ -7381,6 +7417,7 @@
     "transcription.success": {
       "post": {
         "description": "Sent when a pre-recorded transcription job is done and its results are available",
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {
@@ -7395,6 +7432,7 @@
     "transcription.error": {
       "post": {
         "description": "Sent when an error occurred on a pre-recorded transcription job",
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {
@@ -7409,6 +7447,7 @@
     "live.start_session": {
       "post": {
         "description": "Sent when a live session has been initiated",
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {
@@ -7423,6 +7462,7 @@
     "live.start_recording": {
       "post": {
         "description": "Sent when we received the first audio chunk of a live session",
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {
@@ -7437,6 +7477,7 @@
     "live.end_recording": {
       "post": {
         "description": "Sent when the live session recording has ended",
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {
@@ -7451,6 +7492,7 @@
     "live.end_session": {
       "post": {
         "description": "Sent when the live session post-processing has ended and the results are available",
+        "responses": {},
         "requestBody": {
           "content": {
             "application/json": {

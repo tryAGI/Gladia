@@ -15,6 +15,10 @@ namespace Gladia
         /// <summary>
         /// 
         /// </summary>
+        Batch,
+        /// <summary>
+        /// 
+        /// </summary>
         Enhanced,
     }
 
@@ -31,6 +35,7 @@ namespace Gladia
             return value switch
             {
                 TranslationModelEnum.Base => "base",
+                TranslationModelEnum.Batch => "batch",
                 TranslationModelEnum.Enhanced => "enhanced",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -43,6 +48,7 @@ namespace Gladia
             return value switch
             {
                 "base" => TranslationModelEnum.Base,
+                "batch" => TranslationModelEnum.Batch,
                 "enhanced" => TranslationModelEnum.Enhanced,
                 _ => null,
             };

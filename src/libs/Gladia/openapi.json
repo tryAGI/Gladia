@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-06",
+              "example": "2026-08-07",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-06",
+              "example": "2026-08-07",
               "type": "string"
             }
           },
@@ -1503,7 +1503,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-06",
+              "example": "2026-08-07",
               "type": "string"
             }
           },
@@ -1713,7 +1713,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-06",
+              "example": "2026-08-07",
               "type": "string"
             }
           },
@@ -2621,6 +2621,7 @@
         "type": "string",
         "enum": [
           "base",
+          "batch",
           "enhanced"
         ],
         "description": "Model you want the translation model to use to translate"

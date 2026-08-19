@@ -179,6 +179,14 @@ namespace Gladia
         public global::Gladia.LanguageConfig? LanguageConfig { get; set; }
 
         /// <summary>
+        /// The model used to process the audio. "solaria-1" is used by default. "solaria-3" is async pre-recorded only and requires exactly one language in language_config.languages.<br/>
+        /// Default Value: solaria-1
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PreRecordedTranscriptionModelJsonConverter))]
+        public global::Gladia.PreRecordedTranscriptionModel? Model { get; set; }
+
+        /// <summary>
         /// URL to a Gladia file or to an external audio or video file<br/>
         /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </summary>
@@ -186,14 +194,6 @@ namespace Gladia
         [global::System.Text.Json.Serialization.JsonPropertyName("audio_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AudioUrl { get; set; }
-
-        /// <summary>
-        /// The model used to process the audio. "solaria-1" is used by default. "solaria-3" is async pre-recorded only and requires exactly one language in language_config.languages.<br/>
-        /// Default Value: solaria-1
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PreRecordedTranscriptionModelJsonConverter))]
-        public global::Gladia.PreRecordedTranscriptionModel? Model { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -353,8 +353,8 @@ namespace Gladia
             this.Sentences = sentences;
             this.PunctuationEnhanced = punctuationEnhanced;
             this.LanguageConfig = languageConfig;
-            this.AudioUrl = audioUrl ?? throw new global::System.ArgumentNullException(nameof(audioUrl));
             this.Model = model;
+            this.AudioUrl = audioUrl ?? throw new global::System.ArgumentNullException(nameof(audioUrl));
         }
 
         /// <summary>

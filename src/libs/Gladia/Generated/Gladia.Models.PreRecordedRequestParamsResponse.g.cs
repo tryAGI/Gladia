@@ -171,17 +171,17 @@ namespace Gladia
         public global::Gladia.LanguageConfig? LanguageConfig { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("audio_url")]
-        public string? AudioUrl { get; set; }
-
-        /// <summary>
         /// The model used to process the audio.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PreRecordedTranscriptionModelJsonConverter))]
         public global::Gladia.PreRecordedTranscriptionModel? Model { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("audio_url")]
+        public string? AudioUrl { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -274,10 +274,10 @@ namespace Gladia
         /// <param name="languageConfig">
         /// Specify the language configuration
         /// </param>
-        /// <param name="audioUrl"></param>
         /// <param name="model">
         /// The model used to process the audio.
         /// </param>
+        /// <param name="audioUrl"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -305,8 +305,8 @@ namespace Gladia
             bool? sentences,
             bool? punctuationEnhanced,
             global::Gladia.LanguageConfig? languageConfig,
-            string? audioUrl,
-            global::Gladia.PreRecordedTranscriptionModel? model)
+            global::Gladia.PreRecordedTranscriptionModel? model,
+            string? audioUrl)
         {
             this.CustomVocabulary = customVocabulary;
             this.CustomVocabularyConfig = customVocabularyConfig;
@@ -331,8 +331,8 @@ namespace Gladia
             this.Sentences = sentences;
             this.PunctuationEnhanced = punctuationEnhanced;
             this.LanguageConfig = languageConfig;
-            this.AudioUrl = audioUrl;
             this.Model = model;
+            this.AudioUrl = audioUrl;
         }
 
         /// <summary>

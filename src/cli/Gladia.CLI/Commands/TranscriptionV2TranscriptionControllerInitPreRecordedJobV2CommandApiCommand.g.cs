@@ -91,8 +91,8 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                         command.Options.Add(InitTranscriptionRequestOptionSetOptions.PiiRedaction);
                         command.Options.Add(InitTranscriptionRequestOptionSetOptions.Sentences);
                         command.Options.Add(InitTranscriptionRequestOptionSetOptions.PunctuationEnhanced);
-                        command.Options.Add(InitTranscriptionRequestOptionSetOptions.AudioUrl);
-                        command.Options.Add(InitTranscriptionRequestOptionSetOptions.Model);                        command.Options.Add(CustomVocabularyConfigOptions.DefaultIntensity);                        command.Options.Add(CallbackConfigOptions.Url);
+                        command.Options.Add(InitTranscriptionRequestOptionSetOptions.Model);
+                        command.Options.Add(InitTranscriptionRequestOptionSetOptions.AudioUrl);                        command.Options.Add(CustomVocabularyConfigOptions.DefaultIntensity);                        command.Options.Add(CallbackConfigOptions.Url);
                         command.Options.Add(CallbackConfigOptions.Method);                        command.Options.Add(SubtitlesConfigOptions.Formats);
                         command.Options.Add(SubtitlesConfigOptions.MinimumDuration);
                         command.Options.Add(SubtitlesConfigOptions.MaximumDuration);
@@ -148,8 +148,8 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                         var piiRedaction = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.PiiRedaction) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.PiiRedaction) : (__requestBase is { } __PiiRedactionBaseValue ? __PiiRedactionBaseValue.PiiRedaction : default);
                         var sentences = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Sentences) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Sentences) : (__requestBase is { } __SentencesBaseValue ? __SentencesBaseValue.Sentences : default);
                         var punctuationEnhanced = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.PunctuationEnhanced) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.PunctuationEnhanced) : (__requestBase is { } __PunctuationEnhancedBaseValue ? __PunctuationEnhancedBaseValue.PunctuationEnhanced : default);
-                        var audioUrl = parseResult.GetRequiredValue(InitTranscriptionRequestOptionSetOptions.AudioUrl);
                         var model = CliRuntime.WasSpecified(parseResult, InitTranscriptionRequestOptionSetOptions.Model) ? parseResult.GetValue(InitTranscriptionRequestOptionSetOptions.Model) : (__requestBase is { } __ModelBaseValue ? __ModelBaseValue.Model : default);
+                        var audioUrl = parseResult.GetRequiredValue(InitTranscriptionRequestOptionSetOptions.AudioUrl);
 
                         var __CustomVocabularyConfigBase = __requestBase is { } __CustomVocabularyConfigBaseValue ? __CustomVocabularyConfigBaseValue.CustomVocabularyConfig : default;                        var customVocabularyConfigDefaultIntensity = CliRuntime.WasSpecified(parseResult, CustomVocabularyConfigOptions.DefaultIntensity) ? parseResult.GetValue(CustomVocabularyConfigOptions.DefaultIntensity) : (__CustomVocabularyConfigBase is { } __CustomVocabularyConfigdefaultIntensityBaseValue ? __CustomVocabularyConfigdefaultIntensityBaseValue.DefaultIntensity : default);
                         var __CustomVocabularyConfigSpecified = CliRuntime.WasSpecified(parseResult, CustomVocabularyConfigOptions.DefaultIntensity);
@@ -300,8 +300,8 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                                     piiRedaction: piiRedaction,
                                     sentences: sentences,
                                     punctuationEnhanced: punctuationEnhanced,
-                                    audioUrl: audioUrl,
                                     model: model,
+                                    audioUrl: audioUrl,
                                     customVocabularyConfig: customVocabularyConfig,
                                     callbackConfig: callbackConfig,
                                     subtitlesConfig: subtitlesConfig,

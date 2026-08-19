@@ -49,6 +49,10 @@ namespace Gladia
 
             typeof(global::Gladia.JsonConverters.PiiRedactionConfigDTOProcessedTextTypeNullableJsonConverter),
 
+            typeof(global::Gladia.JsonConverters.TranscriptionSupportedModelsJsonConverter),
+
+            typeof(global::Gladia.JsonConverters.TranscriptionSupportedModelsNullableJsonConverter),
+
             typeof(global::Gladia.JsonConverters.PreRecordedResponseStatusJsonConverter),
 
             typeof(global::Gladia.JsonConverters.PreRecordedResponseStatusNullableJsonConverter),
@@ -371,6 +375,7 @@ namespace Gladia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PiiRedactionConfigDTOProcessedTextType), TypeInfoPropertyName = "PiiRedactionConfigDTOProcessedTextType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.LanguageConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Gladia.TranscriptionLanguageCodeEnum>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.TranscriptionSupportedModels), TypeInfoPropertyName = "TranscriptionSupportedModels2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.InitTranscriptionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PreRecordedTranscriptionModel), TypeInfoPropertyName = "PreRecordedTranscriptionModel2")]

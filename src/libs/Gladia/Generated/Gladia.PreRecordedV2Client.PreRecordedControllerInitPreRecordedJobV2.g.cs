@@ -633,13 +633,13 @@ namespace Gladia
         /// <param name="languageConfig">
         /// Specify the language configuration
         /// </param>
-        /// <param name="audioUrl">
-        /// URL to a Gladia file or to an external audio or video file<br/>
-        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
-        /// </param>
         /// <param name="model">
         /// The model used to process the audio. "solaria-1" is used by default. "solaria-3" is async pre-recorded only and requires exactly one language in language_config.languages.<br/>
         /// Default Value: solaria-1
+        /// </param>
+        /// <param name="audioUrl">
+        /// URL to a Gladia file or to an external audio or video file<br/>
+        /// Example: https://files.gladia.io/example/audio-transcription/split_infinity.wav
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -700,8 +700,8 @@ namespace Gladia
                 Sentences = sentences,
                 PunctuationEnhanced = punctuationEnhanced,
                 LanguageConfig = languageConfig,
-                AudioUrl = audioUrl,
                 Model = model,
+                AudioUrl = audioUrl,
             };
 
             return await PreRecordedControllerInitPreRecordedJobV2Async(

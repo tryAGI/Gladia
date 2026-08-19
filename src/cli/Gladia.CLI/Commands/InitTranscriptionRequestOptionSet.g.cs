@@ -19,8 +19,8 @@ internal sealed record InitTranscriptionRequestOptionSet(
                      Option<bool?> PiiRedaction,
                      Option<bool?> Sentences,
                      Option<bool?> PunctuationEnhanced,
-                     Option<string> AudioUrl,
-                     Option<global::Gladia.PreRecordedTranscriptionModel?> Model)
+                     Option<global::Gladia.PreRecordedTranscriptionModel?> Model,
+                     Option<string> AudioUrl)
 {
     public static InitTranscriptionRequestOptionSet Create(string? prefix = null)
     {
@@ -45,14 +45,14 @@ internal sealed record InitTranscriptionRequestOptionSet(
                 PiiRedaction: CliRuntime.CreateNullableBoolOption(name: $"--{normalizedPrefix}pii-redaction", description: @"Enable PII redaction for this audio"),
                 Sentences: CliRuntime.CreateNullableBoolOption(name: $"--{normalizedPrefix}sentences", description: @"Enable sentences for this audio"),
                 PunctuationEnhanced: CliRuntime.CreateNullableBoolOption(name: $"--{normalizedPrefix}punctuation-enhanced", description: @"**[Alpha]** Use enhanced punctuation for this audio"),
+                Model: new Option<global::Gladia.PreRecordedTranscriptionModel?>($"--{normalizedPrefix}model")
+                {
+                    Description = @"The model used to process the audio. ""solaria-1"" is used by default. ""solaria-3"" is async pre-recorded only and requires exactly one language in language_config.languages.",
+                },
                 AudioUrl: new Option<string>($"--{normalizedPrefix}audio-url")
                 {
                     Description = @"URL to a Gladia file or to an external audio or video file",
                     Required = true,
-                },
-                Model: new Option<global::Gladia.PreRecordedTranscriptionModel?>($"--{normalizedPrefix}model")
-                {
-                    Description = @"The model used to process the audio. ""solaria-1"" is used by default. ""solaria-3"" is async pre-recorded only and requires exactly one language in language_config.languages.",
                 }
         );
     }

@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-18",
+              "example": "2026-08-19",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-18",
+              "example": "2026-08-19",
               "type": "string"
             }
           },
@@ -1503,7 +1503,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-18",
+              "example": "2026-08-19",
               "type": "string"
             }
           },
@@ -1713,7 +1713,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-18",
+              "example": "2026-08-19",
               "type": "string"
             }
           },
@@ -2888,6 +2888,14 @@
           }
         }
       },
+      "TranscriptionSupportedModels": {
+        "type": "string",
+        "enum": [
+          "solaria-1",
+          "solaria-3"
+        ],
+        "description": "The model used to process the audio. \"solaria-1\" is used by default."
+      },
       "InitTranscriptionRequest": {
         "type": "object",
         "properties": {
@@ -3051,12 +3059,6 @@
               }
             ]
           },
-          "audio_url": {
-            "type": "string",
-            "description": "URL to a Gladia file or to an external audio or video file",
-            "example": "https://files.gladia.io/example/audio-transcription/split_infinity.wav",
-            "format": "uri"
-          },
           "model": {
             "description": "The model used to process the audio. \"solaria-1\" is used by default. \"solaria-3\" is async pre-recorded only and requires exactly one language in language_config.languages.",
             "default": "solaria-1",
@@ -3065,6 +3067,12 @@
                 "$ref": "#/components/schemas/PreRecordedTranscriptionModel"
               }
             ]
+          },
+          "audio_url": {
+            "type": "string",
+            "description": "URL to a Gladia file or to an external audio or video file",
+            "example": "https://files.gladia.io/example/audio-transcription/split_infinity.wav",
+            "format": "uri"
           }
         },
         "required": [
@@ -3408,11 +3416,6 @@
               }
             ]
           },
-          "audio_url": {
-            "type": "string",
-            "format": "uri",
-            "nullable": true
-          },
           "model": {
             "description": "The model used to process the audio.",
             "allOf": [
@@ -3420,6 +3423,11 @@
                 "$ref": "#/components/schemas/PreRecordedTranscriptionModel"
               }
             ]
+          },
+          "audio_url": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
           }
         },
         "required": [

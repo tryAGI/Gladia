@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-25",
+              "example": "2026-08-26",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-25",
+              "example": "2026-08-26",
               "type": "string"
             }
           },
@@ -1503,7 +1503,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-25",
+              "example": "2026-08-26",
               "type": "string"
             }
           },
@@ -1713,7 +1713,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-25",
+              "example": "2026-08-26",
               "type": "string"
             }
           },
@@ -2892,7 +2892,8 @@
         "type": "string",
         "enum": [
           "solaria-1",
-          "solaria-3"
+          "solaria-3",
+          "solaria-fusion"
         ],
         "description": "The model used to process the audio. \"solaria-1\" is used by default."
       },

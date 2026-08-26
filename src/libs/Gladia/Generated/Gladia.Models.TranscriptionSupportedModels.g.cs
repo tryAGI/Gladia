@@ -16,6 +16,10 @@ namespace Gladia
         /// 
         /// </summary>
         Solaria3,
+        /// <summary>
+        /// 
+        /// </summary>
+        SolariaFusion,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace Gladia
             {
                 TranscriptionSupportedModels.Solaria1 => "solaria-1",
                 TranscriptionSupportedModels.Solaria3 => "solaria-3",
+                TranscriptionSupportedModels.SolariaFusion => "solaria-fusion",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace Gladia
             {
                 "solaria-1" => TranscriptionSupportedModels.Solaria1,
                 "solaria-3" => TranscriptionSupportedModels.Solaria3,
+                "solaria-fusion" => TranscriptionSupportedModels.SolariaFusion,
                 _ => null,
             };
         }

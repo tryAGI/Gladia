@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLiveAudioChunkAckMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveAudioChunk,
     }

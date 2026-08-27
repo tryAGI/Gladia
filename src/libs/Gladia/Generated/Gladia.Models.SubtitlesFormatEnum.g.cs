@@ -9,11 +9,11 @@ namespace Gladia
     public enum SubtitlesFormatEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Srt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vtt,
     }

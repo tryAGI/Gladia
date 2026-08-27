@@ -4,7 +4,7 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WebhookLiveEndRecordingPayload
     {
@@ -19,7 +19,7 @@ namespace Gladia
         public global::Gladia.WebhookLiveEndRecordingPayloadEvent Event { get; set; } = global::Gladia.WebhookLiveEndRecordingPayloadEvent.LiveEndRecording;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("payload")]
         [global::System.Text.Json.Serialization.JsonRequired]

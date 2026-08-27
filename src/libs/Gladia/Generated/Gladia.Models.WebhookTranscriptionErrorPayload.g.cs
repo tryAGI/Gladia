@@ -4,7 +4,7 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WebhookTranscriptionErrorPayload
     {
@@ -19,7 +19,7 @@ namespace Gladia
         public global::Gladia.WebhookTranscriptionErrorPayloadEvent Event { get; set; } = global::Gladia.WebhookTranscriptionErrorPayloadEvent.TranscriptionError;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("payload")]
         [global::System.Text.Json.Serialization.JsonRequired]

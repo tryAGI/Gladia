@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLiveEndSessionMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveEndSession,
     }

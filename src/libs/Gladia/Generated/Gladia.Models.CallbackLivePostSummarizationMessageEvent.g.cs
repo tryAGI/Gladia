@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLivePostSummarizationMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LivePostSummarization,
     }

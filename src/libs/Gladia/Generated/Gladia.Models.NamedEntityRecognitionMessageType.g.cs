@@ -10,7 +10,7 @@ namespace Gladia
     public enum NamedEntityRecognitionMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NamedEntityRecognition,
     }

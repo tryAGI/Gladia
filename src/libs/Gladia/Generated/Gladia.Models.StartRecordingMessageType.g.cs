@@ -10,7 +10,7 @@ namespace Gladia
     public enum StartRecordingMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartRecording,
     }

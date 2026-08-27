@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLiveNamedEntityRecognitionMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveNamedEntityRecognition,
     }

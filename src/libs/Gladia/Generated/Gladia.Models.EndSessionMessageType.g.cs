@@ -10,7 +10,7 @@ namespace Gladia
     public enum EndSessionMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndSession,
     }

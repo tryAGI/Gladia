@@ -9,15 +9,15 @@ namespace Gladia
     public enum VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutomaticMultipleLanguages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutomaticSingleLanguage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
     }

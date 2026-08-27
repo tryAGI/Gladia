@@ -9,331 +9,331 @@ namespace Gladia
     public enum PiiRedactionEntityTypeEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AccountNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Age,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Appi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AppiSensitive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BankAccount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BloodType,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cci,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Condition,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CoreEntities,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CorporateAction,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cpra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreditCard,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreditCardExpiration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cvv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Date,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DateInterval,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Day,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dob,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dose,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DriverLicense,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Drug,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Effect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmailAddress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Event,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Filename,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FinancialMetric,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gdpr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GdprSensitive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gender,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HealthcareNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HealthInformation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HipaaSafeHarbor,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Injury,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IpAddress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Language,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lidi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Location,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationAddress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationAddressStreet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationCity,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationCoordinate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationCountry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationState,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationZip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaritalStatus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MedicalCode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MedicalProcess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Money,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Month,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Name,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NameFamily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NameGiven,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NameMedicalProfessional,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NumericalExclPci,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NumericalPii,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Occupation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Organization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrganizationId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrganizationMedicalFacility,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Origin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PassportNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Password,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pci,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhysicalAttribute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PoliticalAffiliation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Product,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QuebecPrivacyAct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Religion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoutingNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sexuality,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ssn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Statistics,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trend,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Url,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Username,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VehicleId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Year,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZodiacSign,
     }

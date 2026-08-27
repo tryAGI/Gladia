@@ -9,11 +9,11 @@ namespace Gladia
     public enum SubtitlesStyleEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Compliance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
     }

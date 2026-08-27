@@ -10,7 +10,7 @@ namespace Gladia
     public enum PostSummarizationMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PostSummarization,
     }

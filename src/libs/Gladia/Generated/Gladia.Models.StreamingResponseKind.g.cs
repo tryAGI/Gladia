@@ -10,7 +10,7 @@ namespace Gladia
     public enum StreamingResponseKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Live,
     }

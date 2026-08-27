@@ -37,7 +37,7 @@ namespace Gladia
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Gladia.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -47,7 +47,7 @@ namespace Gladia
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AudioToTextClient AudioToText => new AudioToTextClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -56,7 +56,7 @@ namespace Gladia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FileManagementClient FileManagement => new FileManagementClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -65,7 +65,7 @@ namespace Gladia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JobHistoryClient JobHistory => new JobHistoryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -74,7 +74,7 @@ namespace Gladia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LiveV2Client LiveV2 => new LiveV2Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -83,7 +83,7 @@ namespace Gladia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpenRouterClient OpenRouter => new OpenRouterClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -92,7 +92,7 @@ namespace Gladia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PreRecordedV2Client PreRecordedV2 => new PreRecordedV2Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -101,7 +101,7 @@ namespace Gladia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranscriptionV1Client TranscriptionV1 => new TranscriptionV1Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -110,7 +110,7 @@ namespace Gladia
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranscriptionV2Client TranscriptionV2 => new TranscriptionV2Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

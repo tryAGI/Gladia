@@ -10,7 +10,7 @@ namespace Gladia
     public enum WebhookTranscriptionSuccessPayloadEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TranscriptionSuccess,
     }

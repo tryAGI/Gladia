@@ -10,7 +10,7 @@ namespace Gladia
     public enum TranscriptMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transcript,
     }

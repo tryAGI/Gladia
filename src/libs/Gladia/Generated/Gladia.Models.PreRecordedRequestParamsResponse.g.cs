@@ -6,7 +6,7 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PreRecordedRequestParamsResponse
     {
@@ -178,7 +178,7 @@ namespace Gladia
         public global::Gladia.PreRecordedTranscriptionModel? Model { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("audio_url")]
         public string? AudioUrl { get; set; }

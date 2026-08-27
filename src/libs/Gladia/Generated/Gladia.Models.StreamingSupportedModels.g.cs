@@ -9,7 +9,7 @@ namespace Gladia
     public enum StreamingSupportedModels
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Solaria1,
     }

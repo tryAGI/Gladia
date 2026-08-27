@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLiveSpeechEndMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveSpeechEnd,
     }

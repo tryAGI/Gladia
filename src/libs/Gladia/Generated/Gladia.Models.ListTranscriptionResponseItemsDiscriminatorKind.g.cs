@@ -4,16 +4,16 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ListTranscriptionResponseItemsDiscriminatorKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Live,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PreRecorded,
     }

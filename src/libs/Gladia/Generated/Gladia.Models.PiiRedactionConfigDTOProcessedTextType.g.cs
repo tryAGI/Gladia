@@ -10,11 +10,11 @@ namespace Gladia
     public enum PiiRedactionConfigDTOProcessedTextType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mask,
     }

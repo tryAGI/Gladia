@@ -9,15 +9,15 @@ namespace Gladia
     public enum TranslationModelEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Base,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Batch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enhanced,
     }

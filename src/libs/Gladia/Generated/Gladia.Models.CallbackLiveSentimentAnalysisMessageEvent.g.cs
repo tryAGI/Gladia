@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLiveSentimentAnalysisMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveSentimentAnalysis,
     }

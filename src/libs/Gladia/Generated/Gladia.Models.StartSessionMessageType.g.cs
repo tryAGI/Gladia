@@ -10,7 +10,7 @@ namespace Gladia
     public enum StartSessionMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartSession,
     }

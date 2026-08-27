@@ -10,7 +10,7 @@ namespace Gladia
     public enum StopRecordingActionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StopRecording,
     }

@@ -10,7 +10,7 @@ namespace Gladia
     public enum AudioChunkActionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioChunk,
     }

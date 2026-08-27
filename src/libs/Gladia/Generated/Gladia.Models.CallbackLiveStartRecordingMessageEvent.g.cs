@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLiveStartRecordingMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveStartRecording,
     }

@@ -10,7 +10,7 @@ namespace Gladia
     public enum PostFinalTranscriptMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PostFinalTranscript,
     }

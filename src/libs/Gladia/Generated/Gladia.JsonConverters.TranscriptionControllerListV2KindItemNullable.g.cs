@@ -20,7 +20,7 @@ namespace Gladia.JsonConverters
                     {
                         return global::Gladia.TranscriptionControllerListV2KindItemExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

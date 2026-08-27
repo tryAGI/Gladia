@@ -11,7 +11,7 @@ namespace Gladia
     public enum CallbackTranscriptionErrorPayloadEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TranscriptionError,
     }

@@ -10,7 +10,7 @@ namespace Gladia
     public enum SentimentAnalysisMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SentimentAnalysis,
     }

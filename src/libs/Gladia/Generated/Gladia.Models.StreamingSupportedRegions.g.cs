@@ -4,16 +4,16 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum StreamingSupportedRegions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuWest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsWest,
     }

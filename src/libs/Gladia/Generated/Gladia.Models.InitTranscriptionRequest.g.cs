@@ -6,7 +6,7 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class InitTranscriptionRequest
     {

@@ -9,23 +9,23 @@ namespace Gladia
     public enum AudioToTextControllerAudioTranscriptionRequestOutputFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Plain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Srt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Txt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vtt,
     }

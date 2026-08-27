@@ -9,15 +9,15 @@ namespace Gladia
     public enum SummaryTypesEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BulletPoints,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Concise,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         General,
     }

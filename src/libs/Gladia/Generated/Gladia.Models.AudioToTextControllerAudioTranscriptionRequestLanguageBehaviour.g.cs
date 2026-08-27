@@ -9,15 +9,15 @@ namespace Gladia
     public enum AudioToTextControllerAudioTranscriptionRequestLanguageBehaviour
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutomaticMultipleLanguages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutomaticSingleLanguage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
     }

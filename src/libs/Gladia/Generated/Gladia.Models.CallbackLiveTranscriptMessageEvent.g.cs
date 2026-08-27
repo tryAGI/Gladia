@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLiveTranscriptMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveTranscript,
     }

@@ -10,12 +10,12 @@ namespace Gladia
     public readonly partial struct TranscriptionControllerGetTranscriptV2Response : global::System.IEquatable<TranscriptionControllerGetTranscriptV2Response>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Gladia.TranscriptionControllerGetTranscriptV2ResponseDiscriminatorKind? Kind { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Gladia.PreRecordedResponse? PreRecorded { get; init; }
@@ -24,7 +24,7 @@ namespace Gladia
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PreRecorded))]
@@ -32,7 +32,7 @@ namespace Gladia
         public bool IsPreRecorded => PreRecorded != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPreRecorded(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Gladia.PreRecordedResponse PickPreRecorded() => IsPreRecorded
             ? PreRecorded!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PreRecorded' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Gladia.StreamingResponse? Live { get; init; }
@@ -61,7 +61,7 @@ namespace Gladia
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Live))]
@@ -69,7 +69,7 @@ namespace Gladia
         public bool IsLive => Live != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickLive(
 #if NET6_0_OR_GREATER
@@ -82,23 +82,23 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Gladia.StreamingResponse PickLive() => IsLive
             ? Live!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Live' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator TranscriptionControllerGetTranscriptV2Response(global::Gladia.PreRecordedResponse value) => new TranscriptionControllerGetTranscriptV2Response((global::Gladia.PreRecordedResponse?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Gladia.PreRecordedResponse?(TranscriptionControllerGetTranscriptV2Response @this) => @this.PreRecorded;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranscriptionControllerGetTranscriptV2Response(global::Gladia.PreRecordedResponse? value)
         {
@@ -106,22 +106,22 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static TranscriptionControllerGetTranscriptV2Response FromPreRecorded(global::Gladia.PreRecordedResponse? value) => new TranscriptionControllerGetTranscriptV2Response(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator TranscriptionControllerGetTranscriptV2Response(global::Gladia.StreamingResponse value) => new TranscriptionControllerGetTranscriptV2Response((global::Gladia.StreamingResponse?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Gladia.StreamingResponse?(TranscriptionControllerGetTranscriptV2Response @this) => @this.Live;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranscriptionControllerGetTranscriptV2Response(global::Gladia.StreamingResponse? value)
         {
@@ -129,12 +129,12 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static TranscriptionControllerGetTranscriptV2Response FromLive(global::Gladia.StreamingResponse? value) => new TranscriptionControllerGetTranscriptV2Response(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranscriptionControllerGetTranscriptV2Response(
             global::Gladia.TranscriptionControllerGetTranscriptV2ResponseDiscriminatorKind? kind,
@@ -149,23 +149,23 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Live as object ??
-            PreRecorded as object 
+            PreRecorded as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             PreRecorded?.ToString() ??
-            Live?.ToString() 
+            Live?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -173,7 +173,7 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Gladia.PreRecordedResponse, TResult>? preRecorded = null,
@@ -198,7 +198,7 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Gladia.PreRecordedResponse>? preRecorded = null,
@@ -222,7 +222,7 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Gladia.PreRecordedResponse>? preRecorded = null,
@@ -245,7 +245,7 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -266,18 +266,18 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(TranscriptionControllerGetTranscriptV2Response other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Gladia.PreRecordedResponse?>.Default.Equals(PreRecorded, other.PreRecorded) &&
-                global::System.Collections.Generic.EqualityComparer<global::Gladia.StreamingResponse?>.Default.Equals(Live, other.Live) 
+                global::System.Collections.Generic.EqualityComparer<global::Gladia.StreamingResponse?>.Default.Equals(Live, other.Live)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(TranscriptionControllerGetTranscriptV2Response obj1, TranscriptionControllerGetTranscriptV2Response obj2)
         {
@@ -285,7 +285,7 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(TranscriptionControllerGetTranscriptV2Response obj1, TranscriptionControllerGetTranscriptV2Response obj2)
         {
@@ -293,7 +293,7 @@ namespace Gladia
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

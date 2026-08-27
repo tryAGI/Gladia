@@ -39,48 +39,48 @@ namespace Gladia
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AudioToTextClient AudioToText { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FileManagementClient FileManagement { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JobHistoryClient JobHistory { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LiveV2Client LiveV2 { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpenRouterClient OpenRouter { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PreRecordedV2Client PreRecordedV2 { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranscriptionV1Client TranscriptionV1 { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TranscriptionV2Client TranscriptionV2 { get; }
 

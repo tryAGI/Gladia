@@ -9,15 +9,15 @@ namespace Gladia
     public enum TranscriptionSupportedModels
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Solaria1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Solaria3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SolariaFusion,
     }

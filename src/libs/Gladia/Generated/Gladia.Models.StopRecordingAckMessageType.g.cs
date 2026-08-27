@@ -10,7 +10,7 @@ namespace Gladia
     public enum StopRecordingAckMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StopRecording,
     }

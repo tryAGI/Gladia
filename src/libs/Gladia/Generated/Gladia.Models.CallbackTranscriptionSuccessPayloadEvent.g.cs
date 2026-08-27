@@ -11,7 +11,7 @@ namespace Gladia
     public enum CallbackTranscriptionSuccessPayloadEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TranscriptionSuccess,
     }

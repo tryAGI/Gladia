@@ -4,18 +4,18 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VideoToTextControllerVideoTranscriptionRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("video")]
         public byte[]? Video { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("videoname")]
         public string? Videoname { get; set; }
@@ -34,14 +34,14 @@ namespace Gladia
         public global::Gladia.VideoToTextControllerVideoTranscriptionRequestLanguageBehaviour? LanguageBehaviour { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.VideoToTextControllerVideoTranscriptionRequestLanguageJsonConverter))]
         public global::Gladia.VideoToTextControllerVideoTranscriptionRequestLanguage? Language { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("transcription_hint")]
         public string? TranscriptionHint { get; set; }
@@ -53,19 +53,19 @@ namespace Gladia
         public bool? ToggleDiarization { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("diarization_num_speakers")]
         public int? DiarizationNumSpeakers { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("diarization_min_speakers")]
         public int? DiarizationMinSpeakers { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("diarization_max_speakers")]
         public int? DiarizationMaxSpeakers { get; set; }
@@ -77,7 +77,7 @@ namespace Gladia
         public bool? ToggleDirectTranslate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_translation_language")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.VideoToTextControllerVideoTranscriptionRequestTargetTranslationLanguageJsonConverter))]
@@ -103,7 +103,7 @@ namespace Gladia
         public bool? ToggleAccurateWordsTimestamps { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhook_url")]
         public string? WebhookUrl { get; set; }

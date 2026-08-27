@@ -4,12 +4,12 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ListTranscriptionResponseItemsDiscriminator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("kind")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.ListTranscriptionResponseItemsDiscriminatorKindJsonConverter))]

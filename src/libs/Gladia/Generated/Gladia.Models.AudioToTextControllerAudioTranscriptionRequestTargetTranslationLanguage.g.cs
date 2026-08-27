@@ -4,408 +4,408 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AudioToTextControllerAudioTranscriptionRequestTargetTranslationLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Afrikaans,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Albanian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amharic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arabic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Armenian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assamese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azerbaijani,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bashkir,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Basque,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Belarusian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bengali,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bosnian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Breton,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulgarian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Catalan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chinese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Croatian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Czech,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Danish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dutch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         English,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Estonian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Faroese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Finnish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         French,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Galician,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Georgian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         German,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Greek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gujarati,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HaitianCreole,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hausa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hawaiian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hebrew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hindi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hungarian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Icelandic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Indonesian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Italian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Japanese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Javanese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kannada,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kazakh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Khmer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Korean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lao,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Latin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Latvian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lingala,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lithuanian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Luxembourgish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Macedonian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Malagasy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Malay,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Malayalam,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Maltese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Maori,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marathi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mongolian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Myanmar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nepali,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Norwegian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nynorsk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Occitan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pashto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Persian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Portuguese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Punjabi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Romanian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Russian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sanskrit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Serbian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shona,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sindhi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sinhala,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slovak,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slovenian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Somali,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spanish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sundanese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swahili,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swedish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tagalog,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tajik,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tamil,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tatar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Telugu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tibetan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Turkish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Turkmen,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ukrainian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Urdu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uzbek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vietnamese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Welsh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wolof,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Yiddish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Yoruba,
     }

@@ -4,16 +4,16 @@
 namespace Gladia
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TranscriptionControllerGetTranscriptV2ResponseDiscriminatorKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Live,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PreRecorded,
     }

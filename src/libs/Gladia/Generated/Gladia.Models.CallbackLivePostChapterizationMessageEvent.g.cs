@@ -10,7 +10,7 @@ namespace Gladia
     public enum CallbackLivePostChapterizationMessageEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LivePostChapterization,
     }

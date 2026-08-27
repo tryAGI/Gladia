@@ -63,7 +63,7 @@ namespace Gladia
         /// Default Value: 20
         /// </param>
         /// <param name="date">
-        /// Example: 2026-08-26
+        /// Example: 2026-08-27
         /// </param>
         /// <param name="beforeDate">
         /// Example: 2024-01-01T00:00:00.000Z
@@ -115,7 +115,7 @@ namespace Gladia
         /// Default Value: 20
         /// </param>
         /// <param name="date">
-        /// Example: 2026-08-26
+        /// Example: 2026-08-27
         /// </param>
         /// <param name="beforeDate">
         /// Example: 2024-01-01T00:00:00.000Z
@@ -217,7 +217,7 @@ namespace Gladia
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Gladia.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

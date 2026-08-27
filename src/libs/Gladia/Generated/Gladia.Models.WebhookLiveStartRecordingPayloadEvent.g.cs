@@ -10,7 +10,7 @@ namespace Gladia
     public enum WebhookLiveStartRecordingPayloadEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveStartRecording,
     }

@@ -13,15 +13,15 @@ namespace Gladia
     public enum StreamingSupportedEncodingEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WavAlaw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WavPcm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WavUlaw,
     }

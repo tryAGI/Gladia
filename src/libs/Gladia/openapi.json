@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-30",
+              "example": "2026-08-31",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-30",
+              "example": "2026-08-31",
               "type": "string"
             }
           },
@@ -1503,7 +1503,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-30",
+              "example": "2026-08-31",
               "type": "string"
             }
           },
@@ -1713,7 +1713,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-08-30",
+              "example": "2026-08-31",
               "type": "string"
             }
           },
@@ -4186,46 +4186,6 @@
           "results"
         ]
       },
-      "ChapterizationDTO": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean",
-            "description": "The audio intelligence model succeeded to get a valid output"
-          },
-          "is_empty": {
-            "type": "boolean",
-            "description": "The audio intelligence model returned an empty value"
-          },
-          "exec_time": {
-            "type": "number",
-            "description": "Time audio intelligence model took to complete the task"
-          },
-          "error": {
-            "description": "`null` if `success` is `true`. Contains the error details of the failed model",
-            "nullable": true,
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AddonErrorDTO"
-              }
-            ]
-          },
-          "results": {
-            "type": "object",
-            "description": "If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.",
-            "additionalProperties": true,
-            "nullable": true
-          }
-        },
-        "required": [
-          "success",
-          "is_empty",
-          "exec_time",
-          "error",
-          "results"
-        ]
-      },
       "DiarizationDTO": {
         "type": "object",
         "properties": {
@@ -4364,14 +4324,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/DisplayModeDTO"
-              }
-            ]
-          },
-          "chapterization": {
-            "description": "If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ChapterizationDTO"
               }
             ]
           },
@@ -4838,7 +4790,7 @@
           },
           "chapterization": {
             "type": "boolean",
-            "description": "If true, generates chapters for the whole transcription.",
+            "description": "Deprecated: this parameter is ignored.",
             "default": false
           }
         }
@@ -5112,14 +5064,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/SentimentAnalysisDTO"
-              }
-            ]
-          },
-          "chapterization": {
-            "description": "If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ChapterizationDTO"
               }
             ]
           },
@@ -5924,180 +5868,6 @@
           "payload"
         ]
       },
-      "ChapterizationSentence": {
-        "type": "object",
-        "properties": {
-          "sentence": {
-            "type": "string"
-          },
-          "start": {
-            "type": "number"
-          },
-          "end": {
-            "type": "number"
-          },
-          "words": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/WordDTO"
-            }
-          }
-        },
-        "required": [
-          "sentence",
-          "start",
-          "end",
-          "words"
-        ]
-      },
-      "PostChapterizationResult": {
-        "type": "object",
-        "properties": {
-          "abstractive_summary": {
-            "type": "string"
-          },
-          "extractive_summary": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "headline": {
-            "type": "string"
-          },
-          "gist": {
-            "type": "string"
-          },
-          "keywords": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "start": {
-            "type": "number"
-          },
-          "end": {
-            "type": "number"
-          },
-          "sentences": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChapterizationSentence"
-            }
-          },
-          "text": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "headline",
-          "gist",
-          "keywords",
-          "start",
-          "end",
-          "sentences",
-          "text"
-        ]
-      },
-      "PostChapterizationMessageData": {
-        "type": "object",
-        "properties": {
-          "results": {
-            "description": "The chapters",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PostChapterizationResult"
-            }
-          }
-        },
-        "required": [
-          "results"
-        ]
-      },
-      "PostChapterizationMessage": {
-        "type": "object",
-        "properties": {
-          "session_id": {
-            "type": "string",
-            "description": "Id of the live session",
-            "example": "4a39145c-2844-4557-8f34-34883f7be7d9"
-          },
-          "created_at": {
-            "type": "string",
-            "description": "Date of creation of the message. The date is formatted as an ISO 8601 string",
-            "example": "2024-01-01T00:00:00.000Z"
-          },
-          "error": {
-            "description": "Error message if the addon failed",
-            "nullable": true,
-            "example": null,
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Error"
-              }
-            ]
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "post_chapterization"
-            ],
-            "example": "post_chapterization",
-            "default": "post_chapterization"
-          },
-          "data": {
-            "description": "The message data. \"null\" if the addon failed",
-            "nullable": true,
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/PostChapterizationMessageData"
-              }
-            ]
-          }
-        },
-        "required": [
-          "session_id",
-          "created_at",
-          "error",
-          "type",
-          "data"
-        ]
-      },
-      "CallbackLivePostChapterizationMessage": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "Id of the job",
-            "format": "uuid",
-            "example": "45463597-20b7-4af7-b3b3-f5fb778203ab"
-          },
-          "event": {
-            "type": "string",
-            "enum": [
-              "live.post_chapterization"
-            ],
-            "example": "live.post_chapterization",
-            "default": "live.post_chapterization"
-          },
-          "payload": {
-            "description": "The live message payload as sent to the WebSocket",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/PostChapterizationMessage"
-              }
-            ]
-          }
-        },
-        "required": [
-          "id",
-          "event",
-          "payload"
-        ]
-      },
       "StreamingTranscriptionResultDTO": {
         "type": "object",
         "properties": {
@@ -6146,14 +5916,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/SentimentAnalysisDTO"
-              }
-            ]
-          },
-          "chapterization": {
-            "description": "If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ChapterizationDTO"
               }
             ]
           }

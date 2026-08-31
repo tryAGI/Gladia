@@ -46,12 +46,6 @@ namespace Gladia
         public global::Gladia.SentimentAnalysisDTO? SentimentAnalysis { get; set; }
 
         /// <summary>
-        /// If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("chapterization")]
-        public global::Gladia.ChapterizationDTO? Chapterization { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -78,9 +72,6 @@ namespace Gladia
         /// <param name="sentimentAnalysis">
         /// If `sentiment_analysis` has been enabled, sentiment analysis of the audio speech transcription
         /// </param>
-        /// <param name="chapterization">
-        /// If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -90,8 +81,7 @@ namespace Gladia
             global::Gladia.TranslationDTO? translation,
             global::Gladia.SummarizationDTO? summarization,
             global::Gladia.NamedEntityRecognitionDTO? namedEntityRecognition,
-            global::Gladia.SentimentAnalysisDTO? sentimentAnalysis,
-            global::Gladia.ChapterizationDTO? chapterization)
+            global::Gladia.SentimentAnalysisDTO? sentimentAnalysis)
         {
             this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
             this.Transcription = transcription;
@@ -99,7 +89,6 @@ namespace Gladia
             this.Summarization = summarization;
             this.NamedEntityRecognition = namedEntityRecognition;
             this.SentimentAnalysis = sentimentAnalysis;
-            this.Chapterization = chapterization;
         }
 
         /// <summary>

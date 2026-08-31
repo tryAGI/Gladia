@@ -22,7 +22,7 @@ namespace Gladia
         public global::Gladia.SummarizationConfigDTO? SummarizationConfig { get; set; }
 
         /// <summary>
-        /// If true, generates chapters for the whole transcription.<br/>
+        /// Deprecated: this parameter is ignored.<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chapterization")]
@@ -45,7 +45,7 @@ namespace Gladia
         /// Summarization configuration, if `summarization` is enabled
         /// </param>
         /// <param name="chapterization">
-        /// If true, generates chapters for the whole transcription.<br/>
+        /// Deprecated: this parameter is ignored.<br/>
         /// Default Value: false
         /// </param>
 #if NET7_0_OR_GREATER

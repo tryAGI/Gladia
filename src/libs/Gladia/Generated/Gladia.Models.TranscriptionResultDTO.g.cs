@@ -82,12 +82,6 @@ namespace Gladia
         public global::Gladia.DisplayModeDTO? DisplayMode { get; set; }
 
         /// <summary>
-        /// If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("chapterization")]
-        public global::Gladia.ChapterizationDTO? Chapterization { get; set; }
-
-        /// <summary>
         /// If `diarization` has been requested and an error has occurred, the result will appear here
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("diarization")]
@@ -135,9 +129,6 @@ namespace Gladia
         /// <param name="displayMode">
         /// If `display_mode` has been enabled, the output will be reordered, creating new utterances when speakers overlapped
         /// </param>
-        /// <param name="chapterization">
-        /// If `chapterization` has been enabled, will generate chapters name for different parts of the given audio.
-        /// </param>
         /// <param name="diarization">
         /// If `diarization` has been requested and an error has occurred, the result will appear here
         /// </param>
@@ -156,7 +147,6 @@ namespace Gladia
             global::Gladia.SentimentAnalysisDTO? sentimentAnalysis,
             global::Gladia.AudioToLlmListDTO? audioToLlm,
             global::Gladia.DisplayModeDTO? displayMode,
-            global::Gladia.ChapterizationDTO? chapterization,
             global::Gladia.DiarizationDTO? diarization)
         {
             this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
@@ -170,7 +160,6 @@ namespace Gladia
             this.SentimentAnalysis = sentimentAnalysis;
             this.AudioToLlm = audioToLlm;
             this.DisplayMode = displayMode;
-            this.Chapterization = chapterization;
             this.Diarization = diarization;
         }
 

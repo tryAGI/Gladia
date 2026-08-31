@@ -141,14 +141,6 @@ namespace Gladia
 
             typeof(global::Gladia.JsonConverters.CallbackLiveNamedEntityRecognitionMessageEventNullableJsonConverter),
 
-            typeof(global::Gladia.JsonConverters.PostChapterizationMessageTypeJsonConverter),
-
-            typeof(global::Gladia.JsonConverters.PostChapterizationMessageTypeNullableJsonConverter),
-
-            typeof(global::Gladia.JsonConverters.CallbackLivePostChapterizationMessageEventJsonConverter),
-
-            typeof(global::Gladia.JsonConverters.CallbackLivePostChapterizationMessageEventNullableJsonConverter),
-
             typeof(global::Gladia.JsonConverters.PostFinalTranscriptMessageTypeJsonConverter),
 
             typeof(global::Gladia.JsonConverters.PostFinalTranscriptMessageTypeNullableJsonConverter),
@@ -413,7 +405,6 @@ namespace Gladia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.AudioToLlmListDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Gladia.AudioToLlmDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.DisplayModeDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.ChapterizationDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.DiarizationDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.TranscriptionResultDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PreRecordedResponse))]
@@ -482,15 +473,6 @@ namespace Gladia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.NamedEntityRecognitionMessageType), TypeInfoPropertyName = "NamedEntityRecognitionMessageType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.CallbackLiveNamedEntityRecognitionMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.CallbackLiveNamedEntityRecognitionMessageEvent), TypeInfoPropertyName = "CallbackLiveNamedEntityRecognitionMessageEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.ChapterizationSentence))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PostChapterizationResult))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Gladia.ChapterizationSentence>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PostChapterizationMessageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Gladia.PostChapterizationResult>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PostChapterizationMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PostChapterizationMessageType), TypeInfoPropertyName = "PostChapterizationMessageType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.CallbackLivePostChapterizationMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.CallbackLivePostChapterizationMessageEvent), TypeInfoPropertyName = "CallbackLivePostChapterizationMessageEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.StreamingTranscriptionResultDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PostFinalTranscriptMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.PostFinalTranscriptMessageType), TypeInfoPropertyName = "PostFinalTranscriptMessageType2")]
@@ -605,8 +587,6 @@ namespace Gladia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Gladia.OneOf<global::Gladia.PreRecordedResponse, global::Gladia.StreamingResponse>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<long>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<double>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Gladia.ChapterizationSentence>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Gladia.PostChapterizationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Gladia.SentimentAnalysisResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Gladia.StreamingResponse>), TypeInfoPropertyName = "ListStreamingResponse_System_Collections_Generic_List_global_Gladia_StreamingResponse")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Gladia.PreRecordedControllerGetPreRecordedJobsV2Statu>))]

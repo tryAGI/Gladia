@@ -34,7 +34,7 @@ namespace Gladia
         /// <inheritdoc/>
         public global::Gladia.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Gladia.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Gladia.TranscriptionV1SourceGenerationContext.Default);
 
         /// <summary>
         ///

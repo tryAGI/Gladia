@@ -2642,7 +2642,7 @@
           },
           "model": {
             "description": "Model you want the translation model to use to translate",
-            "default": "base",
+            "default": "batch",
             "allOf": [
               {
                 "$ref": "#/components/schemas/TranslationModelEnum"

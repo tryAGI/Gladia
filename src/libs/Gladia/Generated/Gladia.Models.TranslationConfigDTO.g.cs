@@ -19,7 +19,7 @@ namespace Gladia
 
         /// <summary>
         /// Model you want the translation model to use to translate<br/>
-        /// Default Value: base
+        /// Default Value: batch
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.TranslationModelEnumJsonConverter))]
@@ -74,7 +74,7 @@ namespace Gladia
         /// </param>
         /// <param name="model">
         /// Model you want the translation model to use to translate<br/>
-        /// Default Value: base
+        /// Default Value: batch
         /// </param>
         /// <param name="matchOriginalUtterances">
         /// Align translated utterances with the original ones<br/>

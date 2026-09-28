@@ -153,6 +153,8 @@ Note: No need to add WAV headers to raw audio as the API supports both formats."
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"streaming-controller-init-streaming-session-v2", @"Initiate a new live job");
@@ -302,6 +304,7 @@ Note: No need to add WAV headers to raw audio as the API supports both formats."
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

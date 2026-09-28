@@ -69,6 +69,8 @@ internal static partial class LiveV2StreamingControllerGetStreamingJobsV2Command
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"streaming-controller-get-streaming-jobs-v2", @"Get live jobs based on query parameters");
@@ -120,6 +122,7 @@ internal static partial class LiveV2StreamingControllerGetStreamingJobsV2Command
                                     cancellationToken).ConfigureAwait(false);
                                 }
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

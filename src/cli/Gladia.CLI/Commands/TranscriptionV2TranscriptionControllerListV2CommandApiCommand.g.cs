@@ -75,6 +75,8 @@ internal static partial class TranscriptionV2TranscriptionControllerListV2Comman
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"transcription-controller-list-v2", @"Get transcription jobs based on query parameters");
@@ -129,6 +131,7 @@ internal static partial class TranscriptionV2TranscriptionControllerListV2Comman
                                     cancellationToken).ConfigureAwait(false);
                                 }
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

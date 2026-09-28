@@ -75,6 +75,8 @@ internal static partial class JobHistoryHistoryControllerGetListV1CommandApiComm
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"history-controller-get-list-v1", @"Get the history of all your jobs");
@@ -129,6 +131,7 @@ internal static partial class JobHistoryHistoryControllerGetListV1CommandApiComm
                                     cancellationToken).ConfigureAwait(false);
                                 }
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

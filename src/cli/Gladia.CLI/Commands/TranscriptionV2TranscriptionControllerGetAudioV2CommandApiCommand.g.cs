@@ -13,6 +13,8 @@ internal static partial class TranscriptionV2TranscriptionControllerGetAudioV2Co
         Description = @"Id of the transcription job",
     };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"transcription-controller-get-audio-v2", @"Download the audio file used for this transcription job");
@@ -32,6 +34,7 @@ internal static partial class TranscriptionV2TranscriptionControllerGetAudioV2Co
 
                                 await CliRuntime.WriteBinaryAsync(parseResult, response, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

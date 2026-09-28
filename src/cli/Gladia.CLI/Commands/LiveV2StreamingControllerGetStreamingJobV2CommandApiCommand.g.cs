@@ -33,6 +33,8 @@ internal static partial class LiveV2StreamingControllerGetStreamingJobV2CommandA
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"streaming-controller-get-streaming-job-v2", @"Get the live job's metadata");
@@ -58,6 +60,7 @@ internal static partial class LiveV2StreamingControllerGetStreamingJobV2CommandA
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

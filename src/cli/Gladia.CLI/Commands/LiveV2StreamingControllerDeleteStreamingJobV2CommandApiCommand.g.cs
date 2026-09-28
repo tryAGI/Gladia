@@ -13,6 +13,8 @@ internal static partial class LiveV2StreamingControllerDeleteStreamingJobV2Comma
         Description = @"Id of the live job",
     };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"streaming-controller-delete-streaming-job-v2", @"Delete the live job");
@@ -32,6 +34,7 @@ internal static partial class LiveV2StreamingControllerDeleteStreamingJobV2Comma
 
                                 await CliRuntime.WriteSuccessAsync(parseResult, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

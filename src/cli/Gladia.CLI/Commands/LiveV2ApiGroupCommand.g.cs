@@ -4,8 +4,10 @@ using System.CommandLine;
 
 namespace Gladia.CLI.Commands;
 
-internal static class LiveV2ApiGroupCommand
+internal static partial class LiveV2ApiGroupCommand
 {
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"live-v2", @"Live V2 endpoint commands.");
@@ -15,6 +17,7 @@ internal static class LiveV2ApiGroupCommand
                          command.Subcommands.Add(LiveV2StreamingControllerGetStreamingJobsV2CommandApiCommand.Create());
                          command.Subcommands.Add(LiveV2StreamingControllerInitStreamingSessionV2CommandApiCommand.Create());
                          command.Subcommands.Add(LiveV2StreamingControllerPatchRequestParamsV2CommandApiCommand.Create());
+        CustomizeCommand(ref command);
         return command;
     }
 }

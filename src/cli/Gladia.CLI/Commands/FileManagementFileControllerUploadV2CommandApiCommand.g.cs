@@ -55,6 +55,8 @@ internal static partial class FileManagementFileControllerUploadV2CommandApiComm
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"file-controller-upload-v2", @"Upload an audio file or provide an audio URL for processing");
@@ -103,6 +105,7 @@ internal static partial class FileManagementFileControllerUploadV2CommandApiComm
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

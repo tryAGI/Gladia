@@ -74,6 +74,8 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"transcription-controller-init-pre-recorded-job-v2", @"Initiate a new transcription job");
@@ -321,6 +323,7 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

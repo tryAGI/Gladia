@@ -90,6 +90,8 @@ internal static partial class PreRecordedV2PreRecordedControllerInitPreRecordedJ
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"pre-recorded-controller-init-pre-recorded-job-v2", @"Initiate a new pre recorded job");
@@ -394,6 +396,7 @@ internal static partial class PreRecordedV2PreRecordedControllerInitPreRecordedJ
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

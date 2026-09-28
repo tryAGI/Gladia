@@ -4,8 +4,10 @@ using System.CommandLine;
 
 namespace Gladia.CLI.Commands;
 
-internal static class ApiCommand
+internal static partial class ApiCommand
 {
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command("api", "Generated endpoint commands.");
@@ -18,6 +20,7 @@ internal static class ApiCommand
                          command.Subcommands.Add(PreRecordedV2ApiGroupCommand.Create());
                          command.Subcommands.Add(TranscriptionV1ApiGroupCommand.Create());
                          command.Subcommands.Add(TranscriptionV2ApiGroupCommand.Create());
+        CustomizeCommand(ref command);
         return command;
     }
 }

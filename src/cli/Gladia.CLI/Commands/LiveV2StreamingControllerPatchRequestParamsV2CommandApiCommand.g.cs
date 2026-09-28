@@ -29,6 +29,8 @@ internal static partial class LiveV2StreamingControllerPatchRequestParamsV2Comma
           Hidden = true,
       };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"streaming-controller-patch-request-params-v2", @"For debugging purposes, send post session metadata in the request params of the job");
@@ -69,6 +71,7 @@ internal static partial class LiveV2StreamingControllerPatchRequestParamsV2Comma
 
                                 await CliRuntime.WriteSuccessAsync(parseResult, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

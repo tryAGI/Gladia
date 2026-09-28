@@ -13,6 +13,8 @@ internal static partial class LiveV2StreamingControllerGetAudioV2CommandApiComma
         Description = @"Id of the live job",
     };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"streaming-controller-get-audio-v2", @"Download the audio file used for this live job");
@@ -32,6 +34,7 @@ internal static partial class LiveV2StreamingControllerGetAudioV2CommandApiComma
 
                                 await CliRuntime.WriteBinaryAsync(parseResult, response, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

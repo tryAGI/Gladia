@@ -69,6 +69,8 @@ internal static partial class PreRecordedV2PreRecordedControllerGetPreRecordedJo
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"pre-recorded-controller-get-pre-recorded-jobs-v2", @"Get pre recorded jobs based on query parameters");
@@ -120,6 +122,7 @@ internal static partial class PreRecordedV2PreRecordedControllerGetPreRecordedJo
                                     cancellationToken).ConfigureAwait(false);
                                 }
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

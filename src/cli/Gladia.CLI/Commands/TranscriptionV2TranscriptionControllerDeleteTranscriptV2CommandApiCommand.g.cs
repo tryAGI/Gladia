@@ -13,6 +13,8 @@ internal static partial class TranscriptionV2TranscriptionControllerDeleteTransc
         Description = @"Id of the transcription job",
     };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"transcription-controller-delete-transcript-v2", @"Delete the transcription job");
@@ -32,6 +34,7 @@ internal static partial class TranscriptionV2TranscriptionControllerDeleteTransc
 
                                 await CliRuntime.WriteSuccessAsync(parseResult, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

@@ -13,6 +13,8 @@ internal static partial class PreRecordedV2PreRecordedControllerDeletePreRecorde
         Description = @"Id of the pre recorded job",
     };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"pre-recorded-controller-delete-pre-recorded-job-v2", @"Delete the pre recorded job");
@@ -32,6 +34,7 @@ internal static partial class PreRecordedV2PreRecordedControllerDeletePreRecorde
 
                                 await CliRuntime.WriteSuccessAsync(parseResult, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

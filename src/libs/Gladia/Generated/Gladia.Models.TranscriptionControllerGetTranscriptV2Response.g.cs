@@ -47,8 +47,8 @@ namespace Gladia
         /// <summary>
         ///
         /// </summary>
-        public global::Gladia.PreRecordedResponse PickPreRecorded() => IsPreRecorded
-            ? PreRecorded!
+        public global::Gladia.PreRecordedResponse PickPreRecorded() => PreRecorded is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PreRecorded' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Gladia
         /// <summary>
         ///
         /// </summary>
-        public global::Gladia.StreamingResponse PickLive() => IsLive
-            ? Live!
+        public global::Gladia.StreamingResponse PickLive() => Live is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Live' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -185,13 +185,13 @@ namespace Gladia
                 Validate();
             }
 
-            if (IsPreRecorded && preRecorded != null)
+            if (PreRecorded is { } __value0 && preRecorded != null)
             {
-                return preRecorded(PreRecorded!);
+                return preRecorded(__value0);
             }
-            else if (IsLive && live != null)
+            else if (Live is { } __value1 && live != null)
             {
-                return live(Live!);
+                return live(__value1);
             }
 
             return default(TResult);
@@ -211,13 +211,13 @@ namespace Gladia
                 Validate();
             }
 
-            if (IsPreRecorded)
+            if (PreRecorded is { } __value0)
             {
-                preRecorded?.Invoke(PreRecorded!);
+                preRecorded?.Invoke(__value0);
             }
-            else if (IsLive)
+            else if (Live is { } __value1)
             {
-                live?.Invoke(Live!);
+                live?.Invoke(__value1);
             }
         }
 
@@ -234,13 +234,13 @@ namespace Gladia
                 Validate();
             }
 
-            if (IsPreRecorded)
+            if (PreRecorded is { } __value0)
             {
-                preRecorded?.Invoke(PreRecorded!);
+                preRecorded?.Invoke(__value0);
             }
-            else if (IsLive)
+            else if (Live is { } __value1)
             {
-                live?.Invoke(Live!);
+                live?.Invoke(__value1);
             }
         }
 

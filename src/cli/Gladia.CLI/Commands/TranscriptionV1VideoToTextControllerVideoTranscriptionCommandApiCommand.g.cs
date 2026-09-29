@@ -113,9 +113,9 @@ internal static partial class TranscriptionV1VideoToTextControllerVideoTranscrip
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"video-to-text-controller-video-transcription", @"");
+        var command = new Command(commandName ?? @"video-to-text-controller-video-transcription", @"");
                         command.Options.Add(Video);
                         command.Options.Add(Videoname);
                         command.Options.Add(VideoUrl);

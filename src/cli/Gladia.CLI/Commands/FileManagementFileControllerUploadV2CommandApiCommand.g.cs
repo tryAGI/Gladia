@@ -57,9 +57,9 @@ internal static partial class FileManagementFileControllerUploadV2CommandApiComm
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"file-controller-upload-v2", @"Upload an audio file or provide an audio URL for processing");
+        var command = new Command(commandName ?? @"file-controller-upload-v2", @"Upload an audio file or provide an audio URL for processing");
                         command.Options.Add(Audio);
                         command.Options.Add(Audioname);
           command.Options.Add(Input);

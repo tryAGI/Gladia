@@ -71,9 +71,9 @@ internal static partial class LiveV2StreamingControllerGetStreamingJobsV2Command
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"streaming-controller-get-streaming-jobs-v2", @"Get live jobs based on query parameters");
+        var command = new Command(commandName ?? @"streaming-controller-get-streaming-jobs-v2", @"Get live jobs based on query parameters");
                         command.Options.Add(Offset);
                         command.Options.Add(Limit);
                         command.Options.Add(Date);

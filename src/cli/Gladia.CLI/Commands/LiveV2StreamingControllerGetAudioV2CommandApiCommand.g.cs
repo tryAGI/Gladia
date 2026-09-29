@@ -15,9 +15,9 @@ internal static partial class LiveV2StreamingControllerGetAudioV2CommandApiComma
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"streaming-controller-get-audio-v2", @"Download the audio file used for this live job");
+        var command = new Command(commandName ?? @"streaming-controller-get-audio-v2", @"Download the audio file used for this live job");
                         command.Arguments.Add(Id);
 
 

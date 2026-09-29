@@ -31,9 +31,9 @@ internal static partial class LiveV2StreamingControllerPatchRequestParamsV2Comma
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"streaming-controller-patch-request-params-v2", @"For debugging purposes, send post session metadata in the request params of the job");
+        var command = new Command(commandName ?? @"streaming-controller-patch-request-params-v2", @"For debugging purposes, send post session metadata in the request params of the job");
                         command.Arguments.Add(Id);
           command.Options.Add(Input);
           command.Options.Add(RequestJson);

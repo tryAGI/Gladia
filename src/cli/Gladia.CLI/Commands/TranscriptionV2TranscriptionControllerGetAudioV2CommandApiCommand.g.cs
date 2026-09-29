@@ -15,9 +15,9 @@ internal static partial class TranscriptionV2TranscriptionControllerGetAudioV2Co
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"transcription-controller-get-audio-v2", @"Download the audio file used for this transcription job");
+        var command = new Command(commandName ?? @"transcription-controller-get-audio-v2", @"Download the audio file used for this transcription job");
                         command.Arguments.Add(Id);
 
 

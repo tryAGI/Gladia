@@ -15,9 +15,9 @@ internal static partial class PreRecordedV2PreRecordedControllerDeletePreRecorde
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"pre-recorded-controller-delete-pre-recorded-job-v2", @"Delete the pre recorded job");
+        var command = new Command(commandName ?? @"pre-recorded-controller-delete-pre-recorded-job-v2", @"Delete the pre recorded job");
                         command.Arguments.Add(Id);
 
 

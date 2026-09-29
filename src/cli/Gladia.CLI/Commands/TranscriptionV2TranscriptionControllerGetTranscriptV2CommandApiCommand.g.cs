@@ -35,9 +35,9 @@ internal static partial class TranscriptionV2TranscriptionControllerGetTranscrip
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"transcription-controller-get-transcript-v2", @"Get the transcription job's metadata");
+        var command = new Command(commandName ?? @"transcription-controller-get-transcript-v2", @"Get the transcription job's metadata");
                         command.Arguments.Add(Id);
 
 

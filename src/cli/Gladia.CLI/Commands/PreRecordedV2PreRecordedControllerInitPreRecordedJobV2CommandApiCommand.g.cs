@@ -92,9 +92,9 @@ internal static partial class PreRecordedV2PreRecordedControllerInitPreRecordedJ
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"pre-recorded-controller-init-pre-recorded-job-v2", @"Initiate a new pre recorded job");
+        var command = new Command(commandName ?? @"pre-recorded-controller-init-pre-recorded-job-v2", @"Initiate a new pre recorded job");
                         command.Options.Add(CustomSpellingConfig);
                         command.Options.Add(CustomMetadata);                        command.Options.Add(InitTranscriptionRequestOptionSetOptions.CustomVocabulary);
                         command.Options.Add(InitTranscriptionRequestOptionSetOptions.Callback);

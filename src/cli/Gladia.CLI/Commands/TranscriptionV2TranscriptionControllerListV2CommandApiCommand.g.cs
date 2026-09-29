@@ -77,9 +77,9 @@ internal static partial class TranscriptionV2TranscriptionControllerListV2Comman
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"transcription-controller-list-v2", @"Get transcription jobs based on query parameters");
+        var command = new Command(commandName ?? @"transcription-controller-list-v2", @"Get transcription jobs based on query parameters");
                         command.Options.Add(Offset);
                         command.Options.Add(Limit);
                         command.Options.Add(Date);

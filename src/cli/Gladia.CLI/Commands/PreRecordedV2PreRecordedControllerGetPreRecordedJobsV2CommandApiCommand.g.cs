@@ -71,9 +71,9 @@ internal static partial class PreRecordedV2PreRecordedControllerGetPreRecordedJo
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"pre-recorded-controller-get-pre-recorded-jobs-v2", @"Get pre recorded jobs based on query parameters");
+        var command = new Command(commandName ?? @"pre-recorded-controller-get-pre-recorded-jobs-v2", @"Get pre recorded jobs based on query parameters");
                         command.Options.Add(Offset);
                         command.Options.Add(Limit);
                         command.Options.Add(Date);

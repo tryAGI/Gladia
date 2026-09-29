@@ -77,9 +77,9 @@ internal static partial class JobHistoryHistoryControllerGetListV1CommandApiComm
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"history-controller-get-list-v1", @"Get the history of all your jobs");
+        var command = new Command(commandName ?? @"history-controller-get-list-v1", @"Get the history of all your jobs");
                         command.Options.Add(Offset);
                         command.Options.Add(Limit);
                         command.Options.Add(Date);

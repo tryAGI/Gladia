@@ -113,9 +113,9 @@ internal static partial class AudioToTextAudioToTextControllerAudioTranscription
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"controller-audio-transcription", @"");
+        var command = new Command(commandName ?? @"controller-audio-transcription", @"");
                         command.Options.Add(Audio);
                         command.Options.Add(Audioname);
                         command.Options.Add(AudioUrl);

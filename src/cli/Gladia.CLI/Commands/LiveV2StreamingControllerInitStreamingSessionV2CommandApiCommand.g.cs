@@ -155,9 +155,9 @@ Note: No need to add WAV headers to raw audio as the API supports both formats."
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"streaming-controller-init-streaming-session-v2", @"Initiate a new live job");
+        var command = new Command(commandName ?? @"streaming-controller-init-streaming-session-v2", @"Initiate a new live job");
                         command.Options.Add(Region);
                         command.Options.Add(Encoding);
                         command.Options.Add(BitDepth);

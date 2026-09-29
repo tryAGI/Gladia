@@ -35,9 +35,9 @@ internal static partial class LiveV2StreamingControllerGetStreamingJobV2CommandA
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"streaming-controller-get-streaming-job-v2", @"Get the live job's metadata");
+        var command = new Command(commandName ?? @"streaming-controller-get-streaming-job-v2", @"Get the live job's metadata");
                         command.Arguments.Add(Id);
 
 

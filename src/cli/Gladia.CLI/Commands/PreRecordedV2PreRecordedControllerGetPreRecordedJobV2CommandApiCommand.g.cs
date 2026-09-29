@@ -35,9 +35,9 @@ internal static partial class PreRecordedV2PreRecordedControllerGetPreRecordedJo
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"pre-recorded-controller-get-pre-recorded-job-v2", @"Get the pre recorded job's metadata");
+        var command = new Command(commandName ?? @"pre-recorded-controller-get-pre-recorded-job-v2", @"Get the pre recorded job's metadata");
                         command.Arguments.Add(Id);
 
 

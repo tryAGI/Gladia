@@ -11,9 +11,9 @@ internal static partial class OpenRouterModelsControllerListV1CommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"models-controller-list-v1", @"List Gladia's available transcription models as per OpenRouter integration spec");
+        var command = new Command(commandName ?? @"models-controller-list-v1", @"List Gladia's available transcription models as per OpenRouter integration spec");
 
 
 

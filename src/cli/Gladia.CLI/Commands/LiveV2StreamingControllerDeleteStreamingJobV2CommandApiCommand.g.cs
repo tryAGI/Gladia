@@ -15,9 +15,9 @@ internal static partial class LiveV2StreamingControllerDeleteStreamingJobV2Comma
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"streaming-controller-delete-streaming-job-v2", @"Delete the live job");
+        var command = new Command(commandName ?? @"streaming-controller-delete-streaming-job-v2", @"Delete the live job");
                         command.Arguments.Add(Id);
 
 

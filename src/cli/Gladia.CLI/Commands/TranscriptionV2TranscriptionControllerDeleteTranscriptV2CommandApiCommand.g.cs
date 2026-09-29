@@ -15,9 +15,9 @@ internal static partial class TranscriptionV2TranscriptionControllerDeleteTransc
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"transcription-controller-delete-transcript-v2", @"Delete the transcription job");
+        var command = new Command(commandName ?? @"transcription-controller-delete-transcript-v2", @"Delete the transcription job");
                         command.Arguments.Add(Id);
 
 

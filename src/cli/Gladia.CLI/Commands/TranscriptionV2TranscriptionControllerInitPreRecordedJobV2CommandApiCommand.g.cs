@@ -76,9 +76,9 @@ internal static partial class TranscriptionV2TranscriptionControllerInitPreRecor
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"transcription-controller-init-pre-recorded-job-v2", @"Initiate a new transcription job");
+        var command = new Command(commandName ?? @"transcription-controller-init-pre-recorded-job-v2", @"Initiate a new transcription job");
                         command.Options.Add(CustomSpellingConfig);
                         command.Options.Add(CustomMetadata);                        command.Options.Add(InitTranscriptionRequestOptionSetOptions.CustomVocabulary);
                         command.Options.Add(InitTranscriptionRequestOptionSetOptions.Callback);

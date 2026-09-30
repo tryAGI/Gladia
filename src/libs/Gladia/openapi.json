@@ -676,7 +676,6 @@
                       "translation": false,
                       "summarization": false,
                       "sentences": false,
-                      "moderation": false,
                       "named_entity_recognition": false,
                       "name_consistency": false,
                       "custom_spelling": false,
@@ -3819,45 +3818,6 @@
           "results"
         ]
       },
-      "ModerationDTO": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean",
-            "description": "The audio intelligence model succeeded to get a valid output"
-          },
-          "is_empty": {
-            "type": "boolean",
-            "description": "The audio intelligence model returned an empty value"
-          },
-          "exec_time": {
-            "type": "number",
-            "description": "Time audio intelligence model took to complete the task"
-          },
-          "error": {
-            "description": "`null` if `success` is `true`. Contains the error details of the failed model",
-            "nullable": true,
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AddonErrorDTO"
-              }
-            ]
-          },
-          "results": {
-            "type": "string",
-            "description": "If `moderation` has been enabled, moderated transcription",
-            "nullable": true
-          }
-        },
-        "required": [
-          "success",
-          "is_empty",
-          "exec_time",
-          "error",
-          "results"
-        ]
-      },
       "NamedEntityRecognitionResult": {
         "type": "object",
         "properties": {
@@ -4259,14 +4219,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/SummarizationDTO"
-              }
-            ]
-          },
-          "moderation": {
-            "description": "If `moderation` has been enabled, moderation of the audio speech transcription",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ModerationDTO"
               }
             ]
           },

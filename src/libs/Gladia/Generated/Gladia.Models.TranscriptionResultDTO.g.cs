@@ -34,12 +34,6 @@ namespace Gladia
         public global::Gladia.SummarizationDTO? Summarization { get; set; }
 
         /// <summary>
-        /// If `moderation` has been enabled, moderation of the audio speech transcription
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("moderation")]
-        public global::Gladia.ModerationDTO? Moderation { get; set; }
-
-        /// <summary>
         /// If `named_entity_recognition` has been enabled, the detected entities
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("named_entity_recognition")]
@@ -108,9 +102,6 @@ namespace Gladia
         /// <param name="summarization">
         /// If `summarization` has been enabled, summarization of the audio speech transcription
         /// </param>
-        /// <param name="moderation">
-        /// If `moderation` has been enabled, moderation of the audio speech transcription
-        /// </param>
         /// <param name="namedEntityRecognition">
         /// If `named_entity_recognition` has been enabled, the detected entities
         /// </param>
@@ -140,7 +131,6 @@ namespace Gladia
             global::Gladia.TranscriptionDTO? transcription,
             global::Gladia.TranslationDTO? translation,
             global::Gladia.SummarizationDTO? summarization,
-            global::Gladia.ModerationDTO? moderation,
             global::Gladia.NamedEntityRecognitionDTO? namedEntityRecognition,
             global::Gladia.NamesConsistencyDTO? nameConsistency,
             global::Gladia.StructuredDataExtractionDTO? structuredDataExtraction,
@@ -153,7 +143,6 @@ namespace Gladia
             this.Transcription = transcription;
             this.Translation = translation;
             this.Summarization = summarization;
-            this.Moderation = moderation;
             this.NamedEntityRecognition = namedEntityRecognition;
             this.NameConsistency = nameConsistency;
             this.StructuredDataExtraction = structuredDataExtraction;

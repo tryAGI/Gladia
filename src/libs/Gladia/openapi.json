@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-01",
+              "example": "2026-10-02",
               "type": "string"
             }
           },
@@ -522,7 +522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-01",
+              "example": "2026-10-02",
               "type": "string"
             }
           },
@@ -1502,7 +1502,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-01",
+              "example": "2026-10-02",
               "type": "string"
             }
           },
@@ -1712,7 +1712,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-01",
+              "example": "2026-10-02",
               "type": "string"
             }
           },

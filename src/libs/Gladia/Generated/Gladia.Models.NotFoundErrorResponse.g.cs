@@ -54,6 +54,14 @@ namespace Gladia
         public required string Message { get; set; }
 
         /// <summary>
+        /// Stable code identifying the error, if any: `retention_period_expired` when the data retention period of the job has passed, `stored_file_not_found` when its audio or result was deleted before that, `zero_data_retention_enabled` when zero data retention is enabled and nothing was stored<br/>
+        /// Example: retention_period_expired
+        /// </summary>
+        /// <example>retention_period_expired</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error_code")]
+        public string? ErrorCode { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -82,6 +90,10 @@ namespace Gladia
         /// Error message<br/>
         /// Example: Not found
         /// </param>
+        /// <param name="errorCode">
+        /// Stable code identifying the error, if any: `retention_period_expired` when the data retention period of the job has passed, `stored_file_not_found` when its audio or result was deleted before that, `zero_data_retention_enabled` when zero data retention is enabled and nothing was stored<br/>
+        /// Example: retention_period_expired
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -90,13 +102,15 @@ namespace Gladia
             string path,
             string requestId,
             double statusCode,
-            string message)
+            string message,
+            string? errorCode)
         {
             this.Timestamp = timestamp ?? throw new global::System.ArgumentNullException(nameof(timestamp));
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.RequestId = requestId ?? throw new global::System.ArgumentNullException(nameof(requestId));
             this.StatusCode = statusCode;
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
+            this.ErrorCode = errorCode;
         }
 
         /// <summary>

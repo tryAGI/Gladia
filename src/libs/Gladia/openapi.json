@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-26",
+              "example": "2026-10-27",
               "type": "string"
             }
           },
@@ -321,6 +321,16 @@
         "responses": {
           "202": {
             "description": "The pre recorded job has been successfully deleted"
+          },
+          "400": {
+            "description": "The pre recorded job id is not a UUID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestErrorResponse"
+                }
+              }
+            }
           },
           "401": {
             "description": "You don't have the permissions to delete this pre recorded job",
@@ -522,7 +532,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-26",
+              "example": "2026-10-27",
               "type": "string"
             }
           },
@@ -767,6 +777,16 @@
         "responses": {
           "202": {
             "description": "The transcription job has been successfully deleted"
+          },
+          "400": {
+            "description": "The transcription job id is not a UUID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestErrorResponse"
+                }
+              }
+            }
           },
           "401": {
             "description": "You don't have the permissions to delete this transcription job",
@@ -1502,7 +1522,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-26",
+              "example": "2026-10-27",
               "type": "string"
             }
           },
@@ -1712,7 +1732,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-26",
+              "example": "2026-10-27",
               "type": "string"
             }
           },
@@ -1879,6 +1899,16 @@
         "responses": {
           "202": {
             "description": "The live job has been successfully deleted"
+          },
+          "400": {
+            "description": "The live job id is not a UUID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestErrorResponse"
+                }
+              }
+            }
           },
           "401": {
             "description": "You don't have the permissions to delete this live job",

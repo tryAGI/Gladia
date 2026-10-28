@@ -22,13 +22,6 @@ namespace Gladia
         public global::Gladia.SummarizationConfigDTO? SummarizationConfig { get; set; }
 
         /// <summary>
-        /// Deprecated: this parameter is ignored.<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("chapterization")]
-        public bool? Chapterization { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -44,21 +37,15 @@ namespace Gladia
         /// <param name="summarizationConfig">
         /// Summarization configuration, if `summarization` is enabled
         /// </param>
-        /// <param name="chapterization">
-        /// Deprecated: this parameter is ignored.<br/>
-        /// Default Value: false
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PostProcessingConfig(
             bool? summarization,
-            global::Gladia.SummarizationConfigDTO? summarizationConfig,
-            bool? chapterization)
+            global::Gladia.SummarizationConfigDTO? summarizationConfig)
         {
             this.Summarization = summarization;
             this.SummarizationConfig = summarizationConfig;
-            this.Chapterization = chapterization;
         }
 
         /// <summary>

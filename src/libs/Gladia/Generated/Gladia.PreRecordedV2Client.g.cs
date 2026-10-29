@@ -41,7 +41,7 @@ namespace Gladia
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
-            get => JsonSerializerContextProvider?.Value ?? global::Gladia.SourceGenerationContext.Default;
+            get => JsonSerializerContextProvider?.Value ?? global::Gladia.PreRecordedV2SourceGenerationContext.Default;
             set => JsonSerializerContextProvider = new(() => value);
         }
 

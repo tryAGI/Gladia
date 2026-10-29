@@ -46,12 +46,6 @@ namespace Gladia
         public global::Gladia.NamesConsistencyDTO? NameConsistency { get; set; }
 
         /// <summary>
-        /// If `structured_data_extraction` has been enabled, structured data extraction results
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("structured_data_extraction")]
-        public global::Gladia.StructuredDataExtractionDTO? StructuredDataExtraction { get; set; }
-
-        /// <summary>
         /// If `sentiment_analysis` has been enabled, sentiment analysis of the audio speech transcription
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sentiment_analysis")]
@@ -108,9 +102,6 @@ namespace Gladia
         /// <param name="nameConsistency">
         /// If `name_consistency` has been enabled, Gladia will improve consistency of the names accross the transcription
         /// </param>
-        /// <param name="structuredDataExtraction">
-        /// If `structured_data_extraction` has been enabled, structured data extraction results
-        /// </param>
         /// <param name="sentimentAnalysis">
         /// If `sentiment_analysis` has been enabled, sentiment analysis of the audio speech transcription
         /// </param>
@@ -133,7 +124,6 @@ namespace Gladia
             global::Gladia.SummarizationDTO? summarization,
             global::Gladia.NamedEntityRecognitionDTO? namedEntityRecognition,
             global::Gladia.NamesConsistencyDTO? nameConsistency,
-            global::Gladia.StructuredDataExtractionDTO? structuredDataExtraction,
             global::Gladia.SentimentAnalysisDTO? sentimentAnalysis,
             global::Gladia.AudioToLlmListDTO? audioToLlm,
             global::Gladia.DisplayModeDTO? displayMode,
@@ -145,7 +135,6 @@ namespace Gladia
             this.Summarization = summarization;
             this.NamedEntityRecognition = namedEntityRecognition;
             this.NameConsistency = nameConsistency;
-            this.StructuredDataExtraction = structuredDataExtraction;
             this.SentimentAnalysis = sentimentAnalysis;
             this.AudioToLlm = audioToLlm;
             this.DisplayMode = displayMode;

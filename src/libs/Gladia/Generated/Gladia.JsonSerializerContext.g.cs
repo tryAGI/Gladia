@@ -397,7 +397,6 @@ namespace Gladia
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.NamedEntityRecognitionDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Gladia.NamedEntityRecognitionResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.NamesConsistencyDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.StructuredDataExtractionDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.SentimentAnalysisDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.AudioToLlmResultDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Gladia.AudioToLlmDTO))]

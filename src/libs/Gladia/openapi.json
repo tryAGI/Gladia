@@ -154,7 +154,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-28",
+              "example": "2026-10-29",
               "type": "string"
             }
           },
@@ -532,7 +532,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-28",
+              "example": "2026-10-29",
               "type": "string"
             }
           },
@@ -689,7 +689,6 @@
                       "named_entity_recognition": false,
                       "name_consistency": false,
                       "custom_spelling": false,
-                      "structured_data_extraction": false,
                       "sentiment_analysis": false,
                       "display_mode": false,
                       "audio_enhancer": false,
@@ -1521,7 +1520,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-28",
+              "example": "2026-10-29",
               "type": "string"
             }
           },
@@ -1731,7 +1730,7 @@
             "description": "Filter items relevant to a specific date in ISO format (YYYY-MM-DD).",
             "schema": {
               "format": "date-time",
-              "example": "2026-10-28",
+              "example": "2026-10-29",
               "type": "string"
             }
           },
@@ -3951,45 +3950,6 @@
           "results"
         ]
       },
-      "StructuredDataExtractionDTO": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean",
-            "description": "The audio intelligence model succeeded to get a valid output"
-          },
-          "is_empty": {
-            "type": "boolean",
-            "description": "The audio intelligence model returned an empty value"
-          },
-          "exec_time": {
-            "type": "number",
-            "description": "Time audio intelligence model took to complete the task"
-          },
-          "error": {
-            "description": "`null` if `success` is `true`. Contains the error details of the failed model",
-            "nullable": true,
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AddonErrorDTO"
-              }
-            ]
-          },
-          "results": {
-            "type": "string",
-            "description": "If `structured_data_extraction` has been enabled, results of the AI structured data extraction for the defined classes.",
-            "nullable": true
-          }
-        },
-        "required": [
-          "success",
-          "is_empty",
-          "exec_time",
-          "error",
-          "results"
-        ]
-      },
       "SentimentAnalysisDTO": {
         "type": "object",
         "properties": {
@@ -4264,14 +4224,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/NamesConsistencyDTO"
-              }
-            ]
-          },
-          "structured_data_extraction": {
-            "description": "If `structured_data_extraction` has been enabled, structured data extraction results",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/StructuredDataExtractionDTO"
               }
             ]
           },

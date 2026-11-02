@@ -4,7 +4,7 @@
 namespace Gladia
 {
     /// <summary>
-    /// The entity types to redact
+    /// The presets and entity types to redact. When omitted or empty, the full default detection set is redacted. When non-empty, only the listed presets and entity types are redacted (not the default set plus these). Each preset covers different entity types: for instance `HEALTH_INFORMATION` only covers clinical content and does not redact names, contact details or SSN, which `HIPAA_SAFE_HARBOR` does. See https://docs.gladia.io/chapters/audio-intelligence/pii-redaction for the content of each preset.
     /// </summary>
     public enum PiiRedactionEntityTypeEnum
     {
@@ -133,11 +133,11 @@ namespace Gladia
         /// </summary>
         HealthcareNumber,
         /// <summary>
-        ///
+        /// for instance `HEALTH_INFORMATION` only covers clinical content and does not redact names, contact details or SSN, which `HIPAA_SAFE_HARBOR` does. See https://docs.gladia.io/chapters/audio-intelligence/pii-redaction for the content of each preset.
         /// </summary>
         HealthInformation,
         /// <summary>
-        ///
+        /// for instance `HEALTH_INFORMATION` only covers clinical content and does not redact names, contact details or SSN, which `HIPAA_SAFE_HARBOR` does. See https://docs.gladia.io/chapters/audio-intelligence/pii-redaction for the content of each preset.
         /// </summary>
         HipaaSafeHarbor,
         /// <summary>
@@ -301,7 +301,7 @@ namespace Gladia
         /// </summary>
         Sexuality,
         /// <summary>
-        ///
+        /// for instance `HEALTH_INFORMATION` only covers clinical content and does not redact names, contact details or SSN, which `HIPAA_SAFE_HARBOR` does. See https://docs.gladia.io/chapters/audio-intelligence/pii-redaction for the content of each preset.
         /// </summary>
         Ssn,
         /// <summary>

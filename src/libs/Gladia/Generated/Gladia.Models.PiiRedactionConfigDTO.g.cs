@@ -9,13 +9,12 @@ namespace Gladia
     public sealed partial class PiiRedactionConfigDTO
     {
         /// <summary>
-        /// The entity types to redact<br/>
-        /// Example: [GDPR, HEALTH_INFORMATION, HIPAA_SAFE_HARBOR, QUEBEC_PRIVACY_ACT, EMAIL_ADDRESS, NAME, PHONE_NUMBER]
+        /// The presets and entity types to redact. When omitted or empty, the full default detection set is redacted. When non-empty, only the listed presets and entity types are redacted (not the default set plus these). Each preset covers different entity types: for instance `HEALTH_INFORMATION` only covers clinical content and does not redact names, contact details or SSN, which `HIPAA_SAFE_HARBOR` does. See https://docs.gladia.io/chapters/audio-intelligence/pii-redaction for the content of each preset.<br/>
+        /// Example: [GDPR]
         /// </summary>
-        /// <example>[GDPR, HEALTH_INFORMATION, HIPAA_SAFE_HARBOR, QUEBEC_PRIVACY_ACT, EMAIL_ADDRESS, NAME, PHONE_NUMBER]</example>
+        /// <example>[GDPR]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_types")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Gladia.JsonConverters.PiiRedactionEntityTypeEnumJsonConverter))]
-        public global::Gladia.PiiRedactionEntityTypeEnum? EntityTypes { get; set; }
+        public global::System.Collections.Generic.IList<global::Gladia.PiiRedactionEntityTypeEnum>? EntityTypes { get; set; }
 
         /// <summary>
         /// The type of processed text to return (marker or mask)<br/>
@@ -36,8 +35,8 @@ namespace Gladia
         /// Initializes a new instance of the <see cref="PiiRedactionConfigDTO" /> class.
         /// </summary>
         /// <param name="entityTypes">
-        /// The entity types to redact<br/>
-        /// Example: [GDPR, HEALTH_INFORMATION, HIPAA_SAFE_HARBOR, QUEBEC_PRIVACY_ACT, EMAIL_ADDRESS, NAME, PHONE_NUMBER]
+        /// The presets and entity types to redact. When omitted or empty, the full default detection set is redacted. When non-empty, only the listed presets and entity types are redacted (not the default set plus these). Each preset covers different entity types: for instance `HEALTH_INFORMATION` only covers clinical content and does not redact names, contact details or SSN, which `HIPAA_SAFE_HARBOR` does. See https://docs.gladia.io/chapters/audio-intelligence/pii-redaction for the content of each preset.<br/>
+        /// Example: [GDPR]
         /// </param>
         /// <param name="processedTextType">
         /// The type of processed text to return (marker or mask)<br/>
@@ -47,7 +46,7 @@ namespace Gladia
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PiiRedactionConfigDTO(
-            global::Gladia.PiiRedactionEntityTypeEnum? entityTypes,
+            global::System.Collections.Generic.IList<global::Gladia.PiiRedactionEntityTypeEnum>? entityTypes,
             global::Gladia.PiiRedactionConfigDTOProcessedTextType? processedTextType)
         {
             this.EntityTypes = entityTypes;

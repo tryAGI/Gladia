@@ -57,7 +57,7 @@ Note: No need to add WAV headers to raw audio as the API supports both formats."
     private static Option<double?> Endpointing { get; } = new(
         name: @"--endpointing")
     {
-        Description = @"The endpointing duration in seconds. Endpointing is the duration of silence which will cause an utterance to be considered as finished",
+        Description = @"The endpointing duration in seconds. Endpointing is the duration of silence which will cause an utterance to be considered as finished. Only whole milliseconds are supported: the value is rounded to the nearest millisecond (e.g. 0.3825 becomes 0.383)",
     };
 
     private static Option<double?> MaximumDurationWithoutEndpointing { get; } = new(

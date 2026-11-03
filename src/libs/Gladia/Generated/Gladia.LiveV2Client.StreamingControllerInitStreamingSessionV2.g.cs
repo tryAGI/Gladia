@@ -587,7 +587,7 @@ namespace Gladia
         /// Default Value: solaria-1
         /// </param>
         /// <param name="endpointing">
-        /// The endpointing duration in seconds. Endpointing is the duration of silence which will cause an utterance to be considered as finished<br/>
+        /// The endpointing duration in seconds. Endpointing is the duration of silence which will cause an utterance to be considered as finished. Only whole milliseconds are supported: the value is rounded to the nearest millisecond (e.g. 0.3825 becomes 0.383)<br/>
         /// Default Value: 0.05F
         /// </param>
         /// <param name="maximumDurationWithoutEndpointing">

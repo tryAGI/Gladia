@@ -15,6 +15,18 @@ gladia --help
 gladia audio-to-text --help
 ```
 
+## Shell completion
+
+The `completion` command prints a script built from the live command tree, so
+subcommands, option names and the values of enum-typed options stay correct after the
+spec is refreshed and the CLI regenerated — there is no word list to maintain.
+
+```bash
+gladia completion bash > /usr/local/etc/bash_completion.d/gladia
+gladia completion zsh  > _gladia   # then put it on your zsh fpath
+gladia completion fish > ~/.config/fish/completions/gladia.fish
+```
+
 ## Customization
 
 Generated operation, tag, and API group command classes are partial. Implement

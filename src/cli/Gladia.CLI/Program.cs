@@ -19,5 +19,6 @@ rootCommand.Subcommands.Add(OpenRouterApiGroupCommand.Create());
 rootCommand.Subcommands.Add(PreRecordedV2ApiGroupCommand.Create());
 rootCommand.Subcommands.Add(TranscriptionV1ApiGroupCommand.Create());
 rootCommand.Subcommands.Add(TranscriptionV2ApiGroupCommand.Create());
+rootCommand.Subcommands.Add(CliCompletion.CreateCommand(rootCommand, @"gladia"));
 
 return await rootCommand.Parse(args).InvokeAsync().ConfigureAwait(false);

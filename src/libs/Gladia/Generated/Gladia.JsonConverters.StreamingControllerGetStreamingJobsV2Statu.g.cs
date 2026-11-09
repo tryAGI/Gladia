@@ -18,7 +18,7 @@ namespace Gladia.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Gladia.StreamingControllerGetStreamingJobsV2StatuExtensions.ToEnum(stringValue) ?? default;
+                        return global::Gladia.StreamingControllerGetStreamingJobsV2StatuExtensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::Gladia.StreamingControllerGetStreamingJobsV2Statu.");
                     }
 
                     break;

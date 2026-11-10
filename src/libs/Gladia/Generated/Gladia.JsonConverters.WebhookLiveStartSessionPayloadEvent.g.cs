@@ -18,7 +18,7 @@ namespace Gladia.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Gladia.WebhookLiveStartSessionPayloadEventExtensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::Gladia.WebhookLiveStartSessionPayloadEvent.");
+                        return global::Gladia.WebhookLiveStartSessionPayloadEventExtensions.ToEnum(stringValue) ?? default;
                     }
 
                     break;

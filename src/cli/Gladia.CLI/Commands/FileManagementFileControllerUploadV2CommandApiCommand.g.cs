@@ -80,7 +80,7 @@ internal static partial class FileManagementFileControllerUploadV2CommandApiComm
         command.SetAction(async (ParseResult parseResult, CancellationToken cancellationToken) =>
             await CliRuntime.RunAsync(async () =>
             {
-                        var __requestBase = await CliRuntime.ReadRequestOrDefaultAsync<global::Gladia.FileControllerUploadV2Request>(
+                        var __requestBase = await CliRuntime.ReadRequestOrDefaultAsync<global::Gladia.FileControllerUploadV2Request2>(
                             parseResult,
                             Input,
                             RequestJson,

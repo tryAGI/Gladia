@@ -878,11 +878,11 @@ namespace Gladia
         /// <summary>
         ///
         /// </summary>
-        public global::Gladia.FileControllerUploadV2Request? Type210 { get; set; }
+        public global::Gladia.FileControllerUploadV2Request2? Type210 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Gladia.FileControllerUploadV2Request2? Type211 { get; set; }
+        public global::Gladia.FileControllerUploadV2Request? Type211 { get; set; }
         /// <summary>
         ///
         /// </summary>

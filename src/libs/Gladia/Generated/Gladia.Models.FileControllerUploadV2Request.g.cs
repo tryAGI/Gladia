@@ -9,16 +9,10 @@ namespace Gladia
     public sealed partial class FileControllerUploadV2Request
     {
         /// <summary>
-        /// The file to be uploaded. This should be an audio or video file.
+        /// The URL of the audio or video file to be uploaded.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("audio")]
-        public byte[]? Audio { get; set; }
-
-        /// <summary>
-        /// The file to be uploaded. This should be an audio or video file.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("audioname")]
-        public string? Audioname { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("audio_url")]
+        public string? AudioUrl { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,21 +23,16 @@ namespace Gladia
         /// <summary>
         /// Initializes a new instance of the <see cref="FileControllerUploadV2Request" /> class.
         /// </summary>
-        /// <param name="audio">
-        /// The file to be uploaded. This should be an audio or video file.
-        /// </param>
-        /// <param name="audioname">
-        /// The file to be uploaded. This should be an audio or video file.
+        /// <param name="audioUrl">
+        /// The URL of the audio or video file to be uploaded.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public FileControllerUploadV2Request(
-            byte[]? audio,
-            string? audioname)
+            string? audioUrl)
         {
-            this.Audio = audio;
-            this.Audioname = audioname;
+            this.AudioUrl = audioUrl;
         }
 
         /// <summary>

@@ -27,11 +27,11 @@ namespace Gladia
             };
         partial void PrepareFileControllerUploadV2Arguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Gladia.FileControllerUploadV2Request request);
+            global::Gladia.FileControllerUploadV2Request2 request);
         partial void PrepareFileControllerUploadV2Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Gladia.FileControllerUploadV2Request request);
+            global::Gladia.FileControllerUploadV2Request2 request);
         partial void ProcessFileControllerUploadV2Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -50,7 +50,7 @@ namespace Gladia
         /// <exception cref="global::Gladia.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Gladia.AudioUploadResponse> FileControllerUploadV2Async(
 
-            global::Gladia.FileControllerUploadV2Request request,
+            global::Gladia.FileControllerUploadV2Request2 request,
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -72,7 +72,7 @@ namespace Gladia
         /// <exception cref="global::Gladia.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse<global::Gladia.AudioUploadResponse>> FileControllerUploadV2AsResponseAsync(
 
-            global::Gladia.FileControllerUploadV2Request request,
+            global::Gladia.FileControllerUploadV2Request2 request,
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -490,7 +490,7 @@ namespace Gladia
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Gladia.FileControllerUploadV2Request
+            var __request = new global::Gladia.FileControllerUploadV2Request2
             {
                 Audio = audio,
                 Audioname = audioname,

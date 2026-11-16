@@ -13,7 +13,7 @@ namespace Gladia
         /// <exception cref="global::Gladia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.AudioUploadResponse> FileControllerUploadV2Async(
 
-            global::Gladia.FileControllerUploadV2Request request,
+            global::Gladia.FileControllerUploadV2Request2 request,
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -25,7 +25,7 @@ namespace Gladia
         /// <exception cref="global::Gladia.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Gladia.AutoSDKHttpResponse<global::Gladia.AudioUploadResponse>> FileControllerUploadV2AsResponseAsync(
 
-            global::Gladia.FileControllerUploadV2Request request,
+            global::Gladia.FileControllerUploadV2Request2 request,
             global::Gladia.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
